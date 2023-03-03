@@ -1,35 +1,374 @@
 ﻿@page "/index"
-@layout NoLayout
+
 <PageTitle>Portal Remedios</PageTitle>
 
 <br />
 <div class="container">
-    <div class="form-medicamento">
+    <div class="div-form-medicamento">
         <center>
-            <h1>Consulte aqui o seu medicamento</h1>
+            <h1 class="mb-3 class_cabecalho_medicamento" id="Cabecalho">@cabecalho</h1>
         </center>
-        <center>
-            <div class="mb-2 form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                      <label class="form-check-label" for="inlineRadio1">Medicamento</label>
-            </div>  
-                <div class="mb-2 form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                      <label class="form-check-label" for="inlineRadio2">Pessoa</label>
-            </div>
-                <div class="mb-2 form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                    <label class="form-check-label" for="inlineRadio3">Alguma coisa</label>
-            </div>   
-        </center>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
+        <form id="Form-medicamentos">
+            <center>
+                @foreach (var item in new string[] { "Cadastro de Medicamento", "Cadastro de paciente", "Consulta de Medicamento" })
+                {
+                    <div class="mb-4 form-check form-check-inline">
+                        <input type="radio" name="OpcaoRadioInput" id="@item" value="@item" @onchange="RadioSelection" checked=@(RadioValue.Equals(item,StringComparison.OrdinalIgnoreCase)) />
+                        <label for="@item">@item</label>
+                    </div>
+                }
+            </center>
+            @if (@RadioValue == "Cadastro de Medicamento")
+            {
+            <style>
+                    .LabelEmailPessoa{
+                        display: none;
+                    }
+                    .EmailPessoa{
+                        display:none;
+                    }
+
+                    .LabelCaixaTexto {
+                        display: none;
+                    }
+
+                    .CaixaTexto {
+                        display:none;
+                    }
+
+                    .ArquivoBula {
+                        display: none;
+                    }
+
+                    .EnviaArquivoBula{
+                        display:none;
+                    }
+
+                   #Labelcadastrodemedicamento{
+                        text-align: -webkit-center;
+                   }
+
+                    #Inputareceberlocaldeposito{
+                        background-color: gainsboro;
+                        opacity: 0.7;
+                    }
+
+            </style>
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Nome</label>
+                                <input type="text" class="form-control Nomemedicamento" placeholder="Nome do medicamento">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código</label>
+                                <input type="text" class="form-control Codmedicamento" placeholder="Código medicamento">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código ANS</label>
+                                    <input type="text" class="form-control" id="CodAns" placeholder="Código ANS">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data lote:</label>
+                                <input type="date" class="form-control" id="CodAns" placeholder="data de fabricação">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-3">
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data de depósito</label>
+                                <input type="date" class="form-control" id="CodAns" placeholder="data de chegada">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
+                                <input class="form-control" type="text" value="@localavagardeposito"  placeholder="" readonly>
+                                <!--<input type="text" id="Inputareceberlocaldeposito" name=""readonly>-->
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo:</label>
+                                <select class="form-select Escolaridadeselect" aria-label="Tipo:">
+                                <option selected>Medicamento Fitoterápico</option>
+                                <option value="1">Medicamento Alopático</option>
+                                <option>Medicamento Homeopático</option>
+                                <option value="1">Medicamento Similar</option>
+                                <option value="2">Medicamento Genérico</option>
+                                <option value="3">Medicamento de Referência</option>
+                                <option value="4">Medicamento Manipulado</option>
+                                    <option value="5">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Classificação:</label>
+                                <select class="form-select Escolaridadeselect" aria-label="Cor:">
+                                    <option selected>Livre</option>
+                                    <option value="1">Amarela</option>
+                                    <option value="2">Vermelha</option>
+                                    <option value="3">Preta</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <button class="btn btn-outline-secondary" type="button" id="EnviaMedicamento">Consultar</button>
+                        </div>
+                    </div>
+            }
+            @if (@RadioValue == "Cadastro de paciente")
+            {
+                <style>
+                    .EmailPessoa{
+                    display: initial;
+                    }
+
+                    .col-2, .col-4, .col-3, .col-1 {
+                        text-align: -webkit-center;
+                    }
+                </style>
+                <div class="row">
+                    <div class="col-4 mb-3">
+                        <label for="exampleFormControlInput1" class="form-label Nomepessoa">Nome</label>
+                        <input type="text" class="form-control Emailpessoa" placeholder="Nome completo">
+                    </div>
+                    <div class="col-2 mb-3">
+                        <label for="exampleFormControlInput1" class="form-label Cpfpessoa">Cpf</label>
+                        <input type="text" class="form-control Cpfpessoa" placeholder="Cpf">
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label Labeldatadenascimentopessoa">Data nascimento</label>
+                            <input type="date" class="form-control Datadenascimentopessoa" placeholder="Data de nascimento">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label Labelsexopessoa">Sexo</label>
+                            <select class="form-select Escolaridadeselect" aria-label="Sexo">
+                                <option selected>Masculino</option>
+                                <option value="1">Feminino</option>
+                                <option value="2">Gênero Neutro</option>
+                                <option value="3">Transgênero</option>
+                                <option value="4">Não-binário</option>
+                                <option value="5">Outros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label Labelceppessoa">Cep</label>
+                            <input type="text" class="form-control Ceppessoa" placeholder="Cep">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label Labelenderecopessoa">Rua</label>
+                            <input type="text" class="form-control Enderecopessoa" placeholder="Endereço">
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <label for="exampleFormControlInput1" class="form-label Labelnumeropessoa">Nº</label>
+                        <input type="text" class="form-control numeropessoa" placeholder="Nº">
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label Labelbairropessoa">Bairro</label>
+                            <input type="text" class="form-control Bairropessoa" placeholder="Bairro">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <label for="exampleFormControlInput1" class="form-label Labelcidadepessoa">Cidade</label>
+                        <input type="text" class="form-control cidadepessoa" placeholder="Cidade">
+                    </div>
+                    <div class="col-2">
+                        <label for="exampleFormControlInput1" class="form-label Labelocupacaopessoa">Ocupação</label>
+                        <input type="text" class="form-control Labelocupacaopessoa" placeholder="Ocupação">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label Labeldatadenascimentopessoa">Nº NIS</label>
+                            <input type="text" class="form-control Datadenascimentopessoa" placeholder="NIS">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <label for="exampleFormControlInput1" class="form-label Labelescolaridadepessoa">Escolaridade</label>
+                        <select class="form-select Escolaridadeselect" aria-label="Escolaridade">
+                            <option selected>Ensino fundamental completo</option>
+                            <option value="1">Ensino fundamental incompleto</option>
+                            <option value="2">Ensino médio completo</option>
+                            <option value="3">Ensino médio incompleto</option>
+                            <option value="4">Ensino superior completo</option>
+                            <option value="5">Ensino superior incompleto</option>
+                        </select>
+                    </div>
+                    <div class="col-3 mb-3">
+                        <label for="exampleFormControlInput1" class="form-label Labelmotivodocadastropessoa">Motivo do cadastro</label>
+                        <select class="form-select Motivopacienteselect" aria-label="Motivo do cadastro">
+                            <option selected>Baixa renda</option>
+                            <option value="1">Auxílio saúde</option>
+                            <option value="3">Outro benefício social</option>
+                        </select>
+                    </div>
+                </div>
+            }
+
+            @if (@RadioValue == "Consulta de Medicamento")
+            {
+                <style>
+                    .EmailPessoa{
+                    display: none;
+                    }
+                </style>
+                <center>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Selecione:</label>
+                                <select class="form-select text-center Motivopacienteselect" id="consulta_opcao" aria-label="Motivo do cadastro" value="@verifica" @onchange="TrocaOpcao">
+                                    <option value="Código do medicamento">@opcao_codmed</option>
+                                    <option value="Código da ANS">@opcao_codans</option>
+                                    <option value="NIS do paciente">@opcao_nis_paciente</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    @if(@verifica == true){
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control text-center Datadenascimentopessoa" placeholder="@titulo_opcao">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-3">
+                                <button class="btn btn-primary" type="submit">Consultar</button>
+                            </div>
+                        </div>
+                        }
+                        @if(@verifica == false)
+                        {   <div class="row d-flex justify-content-center">
+                                <div class="col-3">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control text-center Datadenascimentopessoa" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-3">
+                                    <button class="btn btn-primary" type="submit">Consultar</button>
+                                </div>
+                            </div>
+                        }
+                </center>
+            }
+
+
+
+
+        </form>
     </div>
 <SurveyPrompt Title="Tem algum erro no site ou uma sugestão a fazer?" />
 </div>
+
+@code{
+    string localavagardeposito { get; set; } = "";
+    string titulo_opcao { get; set; }
+    string opcao_codmed { get; set; } = "Código do medicamento";
+    string opcao_codans { get; set; } = "Código da ANS";
+    string opcao_nis_paciente { get; set; } = "NIS do paciente";
+    bool verifica { get; set; } = false;
+
+
+
+    async void ZeraBool(ChangeEventArgs args)
+    {
+        verifica = false;
+        await InvokeAsync(StateHasChanged);
+    }
+    async void TrocaOpcao(ChangeEventArgs args)
+    {
+        verifica = true;
+        titulo_opcao = args.Value.ToString();
+        await InvokeAsync(StateHasChanged);
+    }
+    
+    // if(opcao_codmed == "Codigodomedicamento"){
+    //    break
+   // }
+}
+@functions
+{
+    string seleciona;
+    string RadioValue = "aspnetcore";
+    string cabecalho;
+    string class_cabecalho_default = "";
+    string class_cabecalho_medicamento = "";
+    string class_cabecalho_pessoa = "";
+    string class_cabecalho_bula = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        titulo_opcao = "Selecione";
+        cabecalho = "Pegamed";
+        await InvokeAsync(StateHasChanged);
+        await base.OnInitializedAsync();
+    }
+    async void RadioSelection(ChangeEventArgs args)
+    {
+        RadioValue = args.Value.ToString();
+
+        if (RadioValue == "Cadastro de Medicamento")
+        {
+            cabecalho = "Cadastro de Medicamento";
+        }
+        else if (RadioValue == "Cadastro de paciente")
+        {
+            cabecalho = "Cadastro de paciente";
+        }
+        else if (RadioValue == "Consulta de Medicamento")
+        {
+            cabecalho = "Consulta de Medicamento";
+        }
+        //cabecalho = RadioValue;
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Tc7Zah0a4BEOJZTRKq5wFKixr0muIkMVwv8qVNMDkdg=",
+  "Hash": "ykCYRmHSJg3XBOPjSTuSNEi7Zz2f9oA9xOeX0qEQ4rI=",
   "Source": "Portal-Remedios",
   "BasePath": "_content/Portal-Remedios",
   "Mode": "Default",
@@ -119,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\Index.css",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\index.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
-      "RelativePath": "css/Index.css",
+      "RelativePath": "css/index.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +133,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Index.css"
+      "OriginalItemSpec": "wwwroot\\css\\index.css"
     },
     {
       "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",

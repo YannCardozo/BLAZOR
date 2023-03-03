@@ -5,16 +5,16 @@
       "PackagePath": "staticwebassets\\Portal-Remedios.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\Index.css",
-      "PackagePath": "staticwebassets\\css\\Index.css"
-    },
-    {
       "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
       "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
     },
     {
       "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
