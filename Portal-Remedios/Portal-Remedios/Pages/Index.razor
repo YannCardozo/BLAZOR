@@ -1,5 +1,4 @@
 ﻿@page "/index"
-
 <PageTitle>Portal Remedios</PageTitle>
 
 <br />
@@ -10,7 +9,7 @@
         </center>
         <form id="Form-medicamentos">
             <center>
-                @foreach (var item in new string[] { "Cadastro de Medicamento", "Cadastro de paciente", "Consulta de Medicamento" })
+                @foreach (var item in new string[] { "Cadastro de Medicamento", "Cadastro de beneficiário", "Consulta de Medicamento" })
                 {
                     <div class="mb-4 form-check form-check-inline">
                         <input type="radio" name="OpcaoRadioInput" id="@item" value="@item" @onchange="RadioSelection" checked=@(RadioValue.Equals(item,StringComparison.OrdinalIgnoreCase)) />
@@ -20,86 +19,77 @@
             </center>
             @if (@RadioValue == "Cadastro de Medicamento")
             {
-            <style>
+                <style>
                     .LabelEmailPessoa{
-                        display: none;
+                    display: none;
                     }
                     .EmailPessoa{
-                        display:none;
+                    display:none;
                     }
 
                     .LabelCaixaTexto {
-                        display: none;
+                    display: none;
                     }
 
                     .CaixaTexto {
-                        display:none;
+                    display:none;
                     }
 
                     .ArquivoBula {
-                        display: none;
+                    display: none;
                     }
 
                     .EnviaArquivoBula{
-                        display:none;
+                    display:none;
                     }
-
-                   #Labelcadastrodemedicamento{
-                        text-align: -webkit-center;
-                   }
-
+                    .col-2, .col-4, .col-3, .col-1 {
+                    text-align: -webkit-center;
+                    }
                     #Inputareceberlocaldeposito{
-                        background-color: gainsboro;
-                        opacity: 0.7;
+                    background-color: gainsboro;
+                    opacity: 0.7;
                     }
 
-            </style>
-                    <div class="row mb-3">
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Nome</label>
-                                <input type="text" class="form-control Nomemedicamento" placeholder="Nome do medicamento">
-                            </div>
+                </style>
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Nome</label>
+                            <input type="text" class="form-control Nomemedicamento" placeholder="Nome do medicamento">
                         </div>
-                        <div class="col-3">
-                            <div class="mb-3">
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código</label>
-                                <input type="text" class="form-control Codmedicamento" placeholder="Código medicamento">
-                            </div>
+                            <input type="text" class="form-control Codmedicamento" placeholder="Código medicamento">
                         </div>
-                        <div class="col-3">
-                            <div class="mb-3">
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código ANS</label>
-                                    <input type="text" class="form-control" id="CodAns" placeholder="Código ANS">
-                            </div>
+                            <input type="text" class="form-control" id="CodAns" placeholder="Código ANS">
                         </div>
-                        <div class="col-2">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data lote:</label>
-                                <input type="date" class="form-control" id="CodAns" placeholder="data de fabricação">
-                            </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data lote:</label>
+                            <input type="date" class="form-control" id="CodAns" placeholder="data de fabricação">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data de depósito</label>
+                            <input type="date" class="form-control" id="CodAns" placeholder="data de chegada">
                         </div>
                     </div>
 
-
-                    <div class="row mb-3">
-                        <div class="col-2">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data de depósito</label>
-                                <input type="date" class="form-control" id="CodAns" placeholder="data de chegada">
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
-                                <input class="form-control" type="text" value="@localavagardeposito"  placeholder="" readonly>
-                                <!--<input type="text" id="Inputareceberlocaldeposito" name=""readonly>-->
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo:</label>
-                                <select class="form-select Escolaridadeselect" aria-label="Tipo:">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo:</label>
+                            <select class="form-select Escolaridadeselect" aria-label="Tipo:">
                                 <option selected>Medicamento Fitoterápico</option>
                                 <option value="1">Medicamento Alopático</option>
                                 <option>Medicamento Homeopático</option>
@@ -107,32 +97,93 @@
                                 <option value="2">Medicamento Genérico</option>
                                 <option value="3">Medicamento de Referência</option>
                                 <option value="4">Medicamento Manipulado</option>
-                                    <option value="5">Outros</option>
-                                </select>
-                            </div>
+                                <option value="5">Outros</option>
+                            </select>
                         </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Classificação:</label>
+                            <select class="form-select Escolaridadeselect" aria-label="Cor:">
+                                <option selected>Livre</option>
+                                <option value="1">Amarela</option>
+                                <option value="2">Vermelha</option>
+                                <option value="3">Preta</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Região:</label>
+                            <select class="form-select Escolaridadeselect" aria-label="Cor:" value="@ValueRegiao" @onchange="LiberaUnidade">
+                                <option value="Niterói" selected>Niterói</option>
+                                <option value="São Gonçalo">São Gonçalo</option>
+                                <option value="Itaboraí">Itaboraí</option>
+                                <option value="Maricá">Maricá</option>
+                            </select>
+                        </div>
+                    </div>
+                    @if (ValueRegiao == true)
+                    {
                         <div class="col-2">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Classificação:</label>
-                                <select class="form-select Escolaridadeselect" aria-label="Cor:">
-                                    <option selected>Livre</option>
-                                    <option value="1">Amarela</option>
-                                    <option value="2">Vermelha</option>
-                                    <option value="3">Preta</option>
+                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Unidade:</label>
+                                <select class="form-select Escolaridadeselect" aria-label="Cor:" >
+                                    <option selected>Niterói</option>
+                                    <option value="1">São Gonçalo</option>
+                                    <option value="2">Itaboraí</option>
+                                    <option value="3">Maricá</option>
                                 </select>
                             </div>
                         </div>
-                    </div>
+                        }
+                </div>
 
 
-
-                    <div class="row mb-3">
-                        <div class="col-4">
-                            <button class="btn btn-outline-secondary" type="button" id="EnviaMedicamento">Consultar</button>
+                <div class="row mb-3">
+                    <div class="col-10 mx-auto text-center">
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Anexar Imagem do medicamento:</label>
+                            <input class="form-control" type="file" id="formFile" accept="image/png, image/jpeg">
                         </div>
                     </div>
+                </div>
+                <!-- <div class="col-2">
+                <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
+                <input class="form-control" type="text" value="@localavagardeposito" placeholder="" readonly>
+                <input type="text" id="Inputareceberlocaldeposito" name=""readonly>
+                </div>
+                </div>
+                -->
+                <div class="row mb-3">
+                    <div class="col-4 mx-auto">
+                        <button class="btn btn-outline-secondary" type="button" id="EnviaMedicamento" value="@ValueMedicamento" @onchange="CadastraRemedioClica" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</button>
+                    </div>
+                </div>
+                @if(ValueMedicamento == true)
+                {
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Understood</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
             }
-            @if (@RadioValue == "Cadastro de paciente")
+            @if (@RadioValue == "Cadastro de beneficiário")
             {
                 <style>
                     .EmailPessoa{
@@ -231,6 +282,11 @@
                         </select>
                     </div>
                 </div>
+                <div class="row mb-3">
+                    <div class="col-4 mx-auto">
+                        <button class="btn btn-outline-secondary" type="button" id="EnviaMedicamento">Cadastrar</button>
+                    </div>
+                </div>
             }
 
             @if (@RadioValue == "Consulta de Medicamento")
@@ -267,20 +323,6 @@
                             </div>
                         </div>
                         }
-                        @if(@verifica == false)
-                        {   <div class="row d-flex justify-content-center">
-                                <div class="col-3">
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control text-center Datadenascimentopessoa" placeholder="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <div class="col-3">
-                                    <button class="btn btn-primary" type="submit">Consultar</button>
-                                </div>
-                            </div>
-                        }
                 </center>
             }
 
@@ -292,7 +334,11 @@
 <SurveyPrompt Title="Tem algum erro no site ou uma sugestão a fazer?" />
 </div>
 
+
+
 @code{
+    bool ValueMedicamento { get; set; } = false;
+    bool ValueRegiao { get; set; } = false;
     string localavagardeposito { get; set; } = "";
     string titulo_opcao { get; set; }
     string opcao_codmed { get; set; } = "Código do medicamento";
@@ -301,6 +347,19 @@
     bool verifica { get; set; } = false;
 
 
+
+    public async void CadastraRemedioClica(ChangeEventArgs args)
+    {
+        ValueMedicamento = true;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    async void LiberaUnidade(ChangeEventArgs args)
+    {
+        ValueRegiao = true;
+
+        await InvokeAsync(StateHasChanged);
+    }
 
     async void ZeraBool(ChangeEventArgs args)
     {
@@ -313,13 +372,15 @@
         titulo_opcao = args.Value.ToString();
         await InvokeAsync(StateHasChanged);
     }
-    
+
     // if(opcao_codmed == "Codigodomedicamento"){
     //    break
-   // }
+    // }
 }
 @functions
 {
+    string Regiao;
+    string Unidade;
     string seleciona;
     string RadioValue = "aspnetcore";
     string cabecalho;
@@ -335,6 +396,9 @@
         await InvokeAsync(StateHasChanged);
         await base.OnInitializedAsync();
     }
+
+
+
     async void RadioSelection(ChangeEventArgs args)
     {
         RadioValue = args.Value.ToString();
@@ -343,12 +407,13 @@
         {
             cabecalho = "Cadastro de Medicamento";
         }
-        else if (RadioValue == "Cadastro de paciente")
+        else if (RadioValue == "Cadastro de beneficiário")
         {
-            cabecalho = "Cadastro de paciente";
+            cabecalho = "Cadastro de beneficiário";
         }
         else if (RadioValue == "Consulta de Medicamento")
         {
+            verifica = false;
             cabecalho = "Consulta de Medicamento";
         }
         //cabecalho = RadioValue;
