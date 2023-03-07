@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ykCYRmHSJg3XBOPjSTuSNEi7Zz2f9oA9xOeX0qEQ4rI=",
+  "Hash": "17l09Jv+2waxe8v40nf9Kppv5tWlYyXc2eEO/Wbp6i4=",
   "Source": "Portal-Remedios",
   "BasePath": "_content/Portal-Remedios",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "Portal-Remedios\\wwwroot",
       "Source": "Portal-Remedios",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "Pattern": "**"
     }
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-latest.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Portal-Remedios.styles.css",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Portal-Remedios.styles.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "Portal-Remedios.styles.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Portal-Remedios.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Portal-Remedios.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portal-Remedios.bundle.scp.css",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portal-Remedios.bundle.scp.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "Portal-Remedios.bundle.scp.css",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portal-Remedios.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portal-Remedios.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -119,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\index.css",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\Index.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
-      "RelativePath": "css/index.css",
+      "RelativePath": "css/Index.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\index.css"
+      "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\site.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\favicon.png",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -321,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\js\\JavaScript.js",
+      "SourceId": "Portal-Remedios",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "BasePath": "_content/Portal-Remedios",
+      "RelativePath": "js/JavaScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\JavaScript.js"
     }
   ]
 }

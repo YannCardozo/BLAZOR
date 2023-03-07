@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dt7HSCVjqjUvkjVDurw+Y/SPgrTTNHutlNERvEgbT2kT5pQwW/E382e0fBtN5soy3vxz0qr4rEh+jSp+WKxiXg==",
+  "dgSpecHash": "gTxbInoewom8P7WNn4pzOJW3X9AOR2vSH7jDhdacBI632REjIG6Oqz/95u6giEKAQIydmC+t46ZIcG6Yf0oYDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj",
+  "projectFilePath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yann S.O\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.13\\microsoft.aspnetcore.authorization.6.0.13.nupkg.sha512",
     "C:\\Users\\Yann S.O\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.13\\microsoft.aspnetcore.components.6.0.13.nupkg.sha512",

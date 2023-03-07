@@ -9,49 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Portal_Remedios
 build_property.RootNamespace = Portal_Remedios
-build_property.ProjectDir = C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\
+build_property.ProjectDir = C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios
+build_property.MSBuildProjectDirectory = C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/App.razor]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/Pages/FaleConosco.razor]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Pages/Estoque.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXN0b3F1ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Pages/FaleConosco.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFsZUNvbm9zY28ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/Pages/Index.razor]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/Shared/NoLayout.razor]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Shared/NoLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5vTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/Shared/SurveyPrompt.razor]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/_Imports.razor]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/Shared/MainLayout.razor]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-yrbrs8nyr8
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/Shared/NavMenu.razor]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-j3dhnuleos
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/Pages/Error.cshtml]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Portal-Remedios/Portal-Remedios/Portal-Remedios/Pages/_Host.cshtml]
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

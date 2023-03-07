@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj": {}
+    "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj": {
+    "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj",
+        "projectUniqueName": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj",
         "projectName": "Portal-Remedios",
-        "projectPath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj",
+        "projectPath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj",
         "packagesPath": "C:\\Users\\Yann S.O\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios\\obj\\",
+        "outputPath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

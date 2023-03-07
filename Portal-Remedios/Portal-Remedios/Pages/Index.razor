@@ -1,4 +1,6 @@
 ﻿@page "/index"
+@inject HttpClient Http
+
 <PageTitle>Portal Remedios</PageTitle>
 
 <br />
@@ -149,6 +151,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <!-- <div class="col-2">
                 <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
@@ -337,6 +341,7 @@
 
 
 @code{
+
     bool ValueMedicamento { get; set; } = false;
     bool ValueRegiao { get; set; } = false;
     string localavagardeposito { get; set; } = "";
@@ -348,8 +353,23 @@
 
 
 
+    static async void Rodar()
+    {
+        try
+        {
+            HttpClient cliente = new HttpClient();
+
+            string resultado = await cliente.GetStringAsync("https://localhost:5001/swagger/index.html");
+            Console.WriteLine(resultado);
+        }
+        catch
+        {
+            throw;
+        }
+    }
     public async void CadastraRemedioClica(ChangeEventArgs args)
     {
+
         ValueMedicamento = true;
         await InvokeAsync(StateHasChanged);
     }
