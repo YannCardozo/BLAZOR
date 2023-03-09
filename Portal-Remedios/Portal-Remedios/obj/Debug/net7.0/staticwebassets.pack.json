@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\js\\JavaScript.js"
     },
     {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\js\\jquery-3.6.3.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.6.3.min.js"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Portal-Remedios.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

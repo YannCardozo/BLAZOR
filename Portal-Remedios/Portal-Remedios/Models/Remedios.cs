@@ -1,27 +1,33 @@
-﻿namespace Portal_Remedios.Models
+﻿using System;
+using System.Text;
+
+namespace Remedios
 {
 
-        public enum Classificacao
-        {
-            Livre,
-            Amarela,
-            Vermelha,
-            Preta
 
-        }
+    public enum Classificacao
+    {
+        Livre,
+        Amarela,
+        Vermelha,
+        Preta
 
-
-
-        public class Remedios
-        {
-            public int Id { get; set; }
-            public string? Nome { get; set; }
-            public Classificacao Cor { get; set; }
-            public string? Descricao { get; set; }
-            public DateTime Hora_Cadastro { get; set; }
-            public string? Link_Bula { get; set; }
+    }
 
 
-        }
+
+    public class Remedios
+    {
+        public int Id { get; set; }
+        public string? Nome { get; set; }
+        public Classificacao Cor { get; set; }
+        public string? Descricao { get; set; }
+        public DateTime Hora_Cadastro { get; set; }
+        public string? Link_Bula { get; set; }
+
+
+    }
+
+
 
 }

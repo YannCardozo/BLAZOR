@@ -1,5 +1,6 @@
 ﻿@page "/index"
 @inject HttpClient Http
+@inject IJSRuntime JsRuntime
 
 <PageTitle>Portal Remedios</PageTitle>
 
@@ -9,7 +10,8 @@
         <center>
             <h1 class="mb-3 class_cabecalho_medicamento" id="Cabecalho">@cabecalho</h1>
         </center>
-        <form id="Form-medicamentos">
+
+
             <center>
                 @foreach (var item in new string[] { "Cadastro de Medicamento", "Cadastro de beneficiário", "Consulta de Medicamento" })
                 {
@@ -19,6 +21,7 @@
                     </div>
                 }
             </center>
+        <EditForm Model="@modelRemedio">
             @if (@RadioValue == "Cadastro de Medicamento")
             {
                 <style>
@@ -53,17 +56,20 @@
                     }
 
                 </style>
+
+
+                
                 <div class="row mb-3">
                     <div class="col-4">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Nome</label>
-                            <input type="text" class="form-control Nomemedicamento" placeholder="Nome do medicamento">
-                        </div>
+                            <InputText class="form-control Nomemedicamento" placeholder="Nome do medicamento" @bind-Value="modelRemedio.Nome"></InputText>
+                    </div>
                     </div>
                     <div class="col-3">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código</label>
-                            <input type="text" class="form-control Codmedicamento" placeholder="Código medicamento">
+                            <input type="text" class="form-control Codmedicamento" value="@Código_medicamento_modal" placeholder="Código medicamento">
                         </div>
                     </div>
                     <div class="col-3">
@@ -161,32 +167,65 @@
                 </div>
                 </div>
                 -->
+
+
+
+
+
+
+
+
                 <div class="row mb-3">
                     <div class="col-4 mx-auto">
-                        <button class="btn btn-outline-secondary" type="button" id="EnviaMedicamento" value="@ValueMedicamento" @onchange="CadastraRemedioClica" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</button>
+                        <button class="btn btn-outline-secondary" type="button" id="CadastraMedicamento" @onclick="ConfirmaModal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</button>
                     </div>
                 </div>
-                @if(ValueMedicamento == true)
-                {
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            }
+
+             @if (confirmamedicamento == true)
+            {
+                <div class="modal" tabindex="-1" style="display:block">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-center">Confirma?</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row mb-3 mx-auto text-center">
+                                    <p>@modelRemedio.Nome</p>
+                                    <p>Código: </p>
+                                    <p>Código ANS: começando a ficar legal</p>
+                                    <p>Data/lote: começando a ficar legal</p>
+                                    <p>Dt Depósito: começando a ficar legal</p>
+                                    <p>Tipo: começando a ficar legal</p>
+                                    <p>Classificação: começando a ficar legal</p>
+                                    <p>Região: começando a ficar legal</p>
+                                    <p>Unidade: começando a ficar legal</p>
+                                    <p>Imagem: começando a ficar legal</p>
                                 </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Understood</button>
-                                </div>
+                            </div>
+                            <div class="modal-footer text-center">
+                                <hr>
+                                <button type="button" class="btn btn-success" @onclick=SalvaCadastroRemedio>Confirmar</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick=CancelaCadastroRemedio>Cancelar</button>
                             </div>
                         </div>
                     </div>
-                }
+                </div>
             }
+
+
+
+
+
+
+
+
+
+
+
+
             @if (@RadioValue == "Cadastro de beneficiário")
             {
                 <style>
@@ -333,7 +372,7 @@
 
 
 
-        </form>
+        </EditForm>
     </div>
 <SurveyPrompt Title="Tem algum erro no site ou uma sugestão a fazer?" />
 </div>
@@ -341,8 +380,37 @@
 
 
 @code{
+    public Remedios modelRemedio = new();
+    public List<Remedios> lstRemedios = new();
 
-    bool ValueMedicamento { get; set; } = false;
+    //public Remedios modelRemedio = new();
+    //public List<Remedios> lstRemedios = new();
+    //modal cadastro remedio aqui:
+    public string Nome_medicamento_modal { get; set; } = "afafafa";
+    public string Código_medicamento_modal { get; set; } = "";
+    public string Código_Ans_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    // public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    // public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    // public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+
+
+
+    public string Text { get; set; }
+    private void UpdateText(ChangeEventArgs e)
+    {
+        Text = e.Value.ToString();
+    }
+
+
+
+    private bool confirmamedicamento { get; set; } = false;
     bool ValueRegiao { get; set; } = false;
     string localavagardeposito { get; set; } = "";
     string titulo_opcao { get; set; }
@@ -351,7 +419,38 @@
     string opcao_nis_paciente { get; set; } = "NIS do paciente";
     bool verifica { get; set; } = false;
 
+    private async Task ConfirmaModal()
+    {
 
+
+        //remedios = new Remedios();
+        confirmamedicamento = true;
+        //titulo_opcao = args.Value.ToString();
+        await InvokeAsync(StateHasChanged);
+
+
+    }
+    private void FechaModal()
+    {
+        confirmamedicamento = false;
+    }
+    private async void CancelaCadastroRemedio()
+    {
+        //to clear textboxes and model
+       // remedios = new Remedios();
+        confirmamedicamento = false;
+        await JsRuntime.InvokeVoidAsync("alert", "Dados deletados com sucesso");
+    }
+    private async void SalvaCadastroRemedio()
+    {
+        //here we save the changes --add to database
+        //await _Remedios.addNewRemediosAsync(Remedios);
+        //Close the dialog
+        confirmamedicamento = false;
+        //clear the model
+        //Remedios = new Remedios();
+        await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!");
+    }
 
     static async void Rodar()
     {
@@ -359,7 +458,7 @@
         {
             HttpClient cliente = new HttpClient();
 
-            string resultado = await cliente.GetStringAsync("https://localhost:5001/swagger/index.html");
+            string resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios");
             Console.WriteLine(resultado);
         }
         catch
@@ -367,11 +466,12 @@
             throw;
         }
     }
-    public async void CadastraRemedioClica(ChangeEventArgs args)
+
+    async void CadastraRemedioClica()
     {
 
-        ValueMedicamento = true;
-        await InvokeAsync(StateHasChanged);
+        Console.WriteLine("From C#");
+        await JsRuntime.InvokeVoidAsync("console.log", "estou funcionando");
     }
 
     async void LiberaUnidade(ChangeEventArgs args)
@@ -392,10 +492,14 @@
         titulo_opcao = args.Value.ToString();
         await InvokeAsync(StateHasChanged);
     }
+    async void SalvaFormularioMedicamento(ChangeEventArgs args)
+    {
+        verifica = true;
+        titulo_opcao = args.Value.ToString();
+        await InvokeAsync(StateHasChanged);
+    }
 
-    // if(opcao_codmed == "Codigodomedicamento"){
-    //    break
-    // }
+
 }
 @functions
 {
@@ -409,10 +513,14 @@
     string class_cabecalho_pessoa = "";
     string class_cabecalho_bula = "";
 
+
     protected override async Task OnInitializedAsync()
     {
+
         titulo_opcao = "Selecione";
         cabecalho = "Pegamed";
+        //await JsRuntime.InvokeVoidAsync("console.log", "valor do remedio: " + remedios[].Nome);
+        
         await InvokeAsync(StateHasChanged);
         await base.OnInitializedAsync();
     }

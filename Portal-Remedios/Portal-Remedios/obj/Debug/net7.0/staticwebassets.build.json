@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "17l09Jv+2waxe8v40nf9Kppv5tWlYyXc2eEO/Wbp6i4=",
+  "Hash": "hAh2wJmPtKsXUGNcEhRh+wTmEv/nU5kOTOtXuQi06cA=",
   "Source": "Portal-Remedios",
   "BasePath": "_content/Portal-Remedios",
   "Mode": "Default",
@@ -338,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\JavaScript.js"
+    },
+    {
+      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\js\\jquery-3.6.3.min.js",
+      "SourceId": "Portal-Remedios",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "BasePath": "_content/Portal-Remedios",
+      "RelativePath": "js/jquery-3.6.3.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery-3.6.3.min.js"
     }
   ]
 }

@@ -28,20 +28,31 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 
-static async void Rodar()
-{
-    try
-    {
-        HttpClient cliente = new HttpClient();
 
-        string resultado = await cliente.GetStringAsync("http://www.macoratti.net/vbn_jqsm.htm");
-        Console.WriteLine(resultado);
-    }
-    catch
-    {
-        throw;
-    }
-}
+
+/*
+var remedios = new List<Remedios>
+{
+    new Remedios {Id = 1, Nome ="Novalgina" , Descricao = "Alfa beta gama" , Hora_Cadastro= DateTime.Now ,Link_Bula = ""}
+
+};
+
+var unidade = new List<Unidades>
+{
+    new Unidades {Nome = "UPA Mario Monteiro", Id = 1},
+    new Unidades {Nome = "Hospital Estadual Azevedo Lima", Id = 2},
+    new Unidades {Nome = "Policlinica Largo da Batalha", Id = 3},
+    new Unidades {Nome = "Hospital Municipal Carlos Tortelly", Id = 4},
+    new Unidades {Nome = "Hospital Universitario Antonio Pedro", Id = 5}
+};
+
+var regiao = new List<Regiao>
+{
+    new Regiao {Nome = "Niteroi" , Id = 1}
+};
+
+*/
+
 
 app.UseStaticFiles();
 
