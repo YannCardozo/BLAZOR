@@ -1,6 +1,8 @@
 ﻿@page "/index"
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
+@using remedios;
+
 
 <PageTitle>Portal Remedios</PageTitle>
 
@@ -10,8 +12,6 @@
         <center>
             <h1 class="mb-3 class_cabecalho_medicamento" id="Cabecalho">@cabecalho</h1>
         </center>
-
-
             <center>
                 @foreach (var item in new string[] { "Cadastro de Medicamento", "Cadastro de beneficiário", "Consulta de Medicamento" })
                 {
@@ -64,24 +64,24 @@
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Nome</label>
                             <InputText class="form-control Nomemedicamento" placeholder="Nome do medicamento" @bind-Value="modelRemedio.Nome"></InputText>
-                    </div>
+                        </div>
                     </div>
                     <div class="col-3">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código</label>
-                            <input type="text" class="form-control Codmedicamento" value="@Código_medicamento_modal" placeholder="Código medicamento">
+                            <InputNumber class="form-control Codmedicamento" placeholder="Código medicamento" @bind-Value="modelRemedio.Codigo"></InputNumber>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código ANS</label>
-                            <input type="text" class="form-control" id="CodAns" placeholder="Código ANS">
+                            <InputText class="form-control" id="CodAns" placeholder="Código ANS" @bind-Value="modelRemedio.Codigo_ANS"></InputText>
                         </div>
                     </div>
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data lote:</label>
-                            <input type="date" class="form-control" id="CodAns" placeholder="data de fabricação">
+                            <input type="datetime" class="form-control" id="CodAns" placeholder="data de fabricação" @bind-value="modelRemedio.Data_lote">
                         </div>
                     </div>
                 </div>
@@ -90,25 +90,21 @@
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data de depósito</label>
-                            <input type="date" class="form-control" id="CodAns" placeholder="data de chegada">
+                            <input type="date" class="form-control" id="CodAns" placeholder="data de chegada" @bind-value="modelRemedio.Hora_Cadastro">
                         </div>
                     </div>
 
-                    <div class="col-4">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo:</label>
-                            <select class="form-select Escolaridadeselect" aria-label="Tipo:">
-                                <option selected>Medicamento Fitoterápico</option>
-                                <option value="1">Medicamento Alopático</option>
-                                <option>Medicamento Homeopático</option>
-                                <option value="1">Medicamento Similar</option>
-                                <option value="2">Medicamento Genérico</option>
-                                <option value="3">Medicamento de Referência</option>
-                                <option value="4">Medicamento Manipulado</option>
-                                <option value="5">Outros</option>
-                            </select>
-                        </div>
+                <div class="col-4">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo:</label>
+                        <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Tipo_remedio">
+                            @foreach (var Tipo_remedio in Enum.GetValues(typeof(Tipo)))
+                            {
+                                <option value="@Tipo_remedio">@Tipo_remedio</option>
+                            }
+                        </InputSelect>
                     </div>
+                </div>
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Classificação:</label>
@@ -145,7 +141,8 @@
                                 </select>
                             </div>
                         </div>
-                        }
+                    }
+
                 </div>
 
 
@@ -159,14 +156,7 @@
                 </div>
 
 
-                <!-- <div class="col-2">
-                <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
-                <input class="form-control" type="text" value="@localavagardeposito" placeholder="" readonly>
-                <input type="text" id="Inputareceberlocaldeposito" name=""readonly>
-                </div>
-                </div>
-                -->
+
 
 
 
@@ -182,7 +172,7 @@
                 </div>
             }
 
-             @if (confirmamedicamento == true)
+             @if(confirmamedicamento == true)
             {
                 <div class="modal" tabindex="-1" style="display:block">
                     <div class="modal-dialog">
@@ -193,16 +183,24 @@
                             </div>
                             <div class="modal-body">
                                 <div class="row mb-3 mx-auto text-center">
-                                    <p>@modelRemedio.Nome</p>
-                                    <p>Código: </p>
-                                    <p>Código ANS: começando a ficar legal</p>
-                                    <p>Data/lote: começando a ficar legal</p>
-                                    <p>Dt Depósito: começando a ficar legal</p>
-                                    <p>Tipo: começando a ficar legal</p>
-                                    <p>Classificação: começando a ficar legal</p>
-                                    <p>Região: começando a ficar legal</p>
-                                    <p>Unidade: começando a ficar legal</p>
-                                    <p>Imagem: começando a ficar legal</p>
+                                    <p>Nome: @modelRemedio.Nome</p>
+                                    <p>Código: @modelRemedio.Codigo</p>
+                                    <p>Código ANS: @modelRemedio.Codigo_ANS</p>
+                                    <p>Data/lote: @modelRemedio.Data_lote</p>
+                                    <p>Dt Depósito: @modelRemedio.Data_deposito</p>
+                                    <p>Tipo: @modelRemedio.Tipo_remedio</p>
+                                    <p>Classificação: @modelRemedio.Cor</p>
+                                    <p>Região: @modelRemedio.Nome_Regiao</p>
+                                    <p>Unidade: @modelRemedio.Nome_Unidade</p>
+                                    <p>Imagem: @modelRemedio.Img_Remedio</p>
+                                        <!-- <div class="col-2">
+                                        <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
+                                        <input class="form-control" type="text" value="@localavagardeposito" placeholder="" readonly>
+                                        <input type="text" id="Inputareceberlocaldeposito" name=""readonly>
+                                        </div>
+                                        </div>
+                                        -->
                                 </div>
                             </div>
                             <div class="modal-footer text-center">
@@ -213,6 +211,8 @@
                         </div>
                     </div>
                 </div>
+
+
             }
 
 
@@ -226,7 +226,7 @@
 
 
 
-            @if (@RadioValue == "Cadastro de beneficiário")
+            @if(@RadioValue == "Cadastro de beneficiário")
             {
                 <style>
                     .EmailPessoa{
@@ -237,6 +237,8 @@
                         text-align: -webkit-center;
                     }
                 </style>
+
+
                 <div class="row">
                     <div class="col-4 mb-3">
                         <label for="exampleFormControlInput1" class="form-label Nomepessoa">Nome</label>
@@ -332,13 +334,15 @@
                 </div>
             }
 
-            @if (@RadioValue == "Consulta de Medicamento")
+            @if(@RadioValue == "Consulta de Medicamento")
             {
                 <style>
                     .EmailPessoa{
                     display: none;
                     }
                 </style>
+
+
                 <center>
                     <div class="row d-flex justify-content-center">
                         <div class="col-3">
@@ -380,9 +384,11 @@
 
 
 @code{
+
+
+
     public Remedios modelRemedio = new();
     public List<Remedios> lstRemedios = new();
-
     //public Remedios modelRemedio = new();
     //public List<Remedios> lstRemedios = new();
     //modal cadastro remedio aqui:
