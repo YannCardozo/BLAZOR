@@ -3,9 +3,7 @@
 @inject IJSRuntime JsRuntime
 @using remedios;
 
-
 <PageTitle>Portal Remedios</PageTitle>
-
 <br />
 <div class="container">
     <div class="div-form-medicamento">
@@ -81,7 +79,7 @@
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data lote:</label>
-                            <input type="datetime" class="form-control" id="CodAns" placeholder="data de fabricação" @bind-value="modelRemedio.Data_lote">
+                            <input type="datetime-local" class="form-control" id="CodAns" placeholder="data de fabricação" @bind-value="modelRemedio.Data_lote">
                         </div>
                     </div>
                 </div>
@@ -96,7 +94,7 @@
 
                 <div class="col-4">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo:</label>
+                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo do remédio:</label>
                         <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Tipo_remedio">
                             @foreach (var Tipo_remedio in Enum.GetValues(typeof(Tipo)))
                             {
@@ -108,68 +106,75 @@
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Classificação:</label>
-                            <select class="form-select Escolaridadeselect" aria-label="Cor:">
-                                <option selected>Livre</option>
-                                <option value="1">Amarela</option>
-                                <option value="2">Vermelha</option>
-                                <option value="3">Preta</option>
-                            </select>
+                            <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Cor">
+                                @foreach (var Cor in Enum.GetValues(typeof(Classificacao)))
+                                {
+                                    <option value="@Cor">@Cor</option>
+                                }
+                            </InputSelect>
                         </div>
                     </div>
 
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Região:</label>
-                            <select class="form-select Escolaridadeselect" aria-label="Cor:" value="@ValueRegiao" @onchange="LiberaUnidade">
-                                <option value="Niterói" selected>Niterói</option>
-                                <option value="São Gonçalo">São Gonçalo</option>
-                                <option value="Itaboraí">Itaboraí</option>
-                                <option value="Maricá">Maricá</option>
-                            </select>
+                            <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @onchange="LiberaUnidade"  @bind-Value="modelRemedio.Nome_Regiao">
+                                @foreach (var Nome_Regiao in Enum.GetValues(typeof(Regiao)))
+                                {
+                                    <option value="@Nome_Regiao">@Nome_Regiao</option>
+                                }
+                            </InputSelect>
                         </div>
                     </div>
-                    @if (ValueRegiao == true)
-                    {
                         <div class="col-2">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Unidade:</label>
-                                <select class="form-select Escolaridadeselect" aria-label="Cor:" >
-                                    <option selected>Niterói</option>
-                                    <option value="1">São Gonçalo</option>
-                                    <option value="2">Itaboraí</option>
-                                    <option value="3">Maricá</option>
-                                </select>
+                                <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Nome_Unidade">
+                                    @foreach (var Nome_Unidade in Enum.GetValues(typeof(Unidade)))
+                                    {
+                                        <option value="@Nome_Unidade">@Nome_Unidade</option>
+                                    }
+                                </InputSelect>
                             </div>
                         </div>
-                    }
 
                 </div>
 
 
-                <div class="row mb-3">
+                <div class="row mb-3 Area-do-arquivo ">
                     <div class="col-10 mx-auto text-center">
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Anexar Imagem do medicamento:</label>
-                            <input class="form-control" type="file" id="formFile" accept="image/png, image/jpeg">
+                            <InputFile multiple class="form-control" type="file" id="formFile" OnChange="@CarregaImagem" />
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
+                <div class="row mb-3">
+                    <div class="col-10 mx-auto text-center">
+                        <div class="mb-3 Imagem-carregada">
+                            @foreach(var fonteimagem in Imagens)
+                            {
+                                <img src="@Imagens" style="width:100px;height:100px;" />
+                            }
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row mb-3">
                     <div class="col-4 mx-auto">
                         <button class="btn btn-outline-secondary" type="button" id="CadastraMedicamento" @onclick="ConfirmaModal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</button>
                     </div>
                 </div>
+
+
+
+
+                <div class="row mb-3">
+                    <div class="col-4 mx-auto">
+                        
+                    </div>
+                </div>
+
             }
 
              @if(confirmamedicamento == true)
@@ -179,7 +184,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title text-center">Confirma?</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick=FechaModal></button>
                             </div>
                             <div class="modal-body">
                                 <div class="row mb-3 mx-auto text-center">
@@ -214,17 +219,6 @@
 
 
             }
-
-
-
-
-
-
-
-
-
-
-
 
             @if(@RadioValue == "Cadastro de beneficiário")
             {
@@ -385,6 +379,9 @@
 
 @code{
 
+    //2MB
+    private const int TamanhoImgMaximo = 2 * 1024 * 1024;
+    private List<string> Imagens = new List<string>();
 
 
     public Remedios modelRemedio = new();
@@ -408,13 +405,29 @@
 
 
 
+
+    /*
     public string Text { get; set; }
     private void UpdateText(ChangeEventArgs e)
-    {
+        {
         Text = e.Value.ToString();
     }
+    */
+    private async void Rodar()
+    {
+        try
+        {
+            HttpClient cliente = new HttpClient();
 
-
+            string resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios");
+            Console.WriteLine(resultado);
+            await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!" + resultado + "funcionou");
+        }
+        catch
+        {
+            throw;
+        }
+    }
 
     private bool confirmamedicamento { get; set; } = false;
     bool ValueRegiao { get; set; } = false;
@@ -443,7 +456,7 @@
     private async void CancelaCadastroRemedio()
     {
         //to clear textboxes and model
-       // remedios = new Remedios();
+        // remedios = new Remedios();
         confirmamedicamento = false;
         await JsRuntime.InvokeVoidAsync("alert", "Dados deletados com sucesso");
     }
@@ -458,20 +471,7 @@
         await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!");
     }
 
-    static async void Rodar()
-    {
-        try
-        {
-            HttpClient cliente = new HttpClient();
 
-            string resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios");
-            Console.WriteLine(resultado);
-        }
-        catch
-        {
-            throw;
-        }
-    }
 
     async void CadastraRemedioClica()
     {
@@ -506,6 +506,19 @@
     }
 
 
+    async Task CarregaImagem(InputFileChangeEventArgs e)
+    {
+        foreach(var arquivo in e.GetMultipleFiles())
+        {
+            using var stream = arquivo.OpenReadStream(TamanhoImgMaximo);
+            using var ms = new MemoryStream();
+            await stream.CopyToAsync(ms);
+            Imagens.Add($"data:{arquivo.ContentType};base64,{Convert.ToBase64String(ms.ToArray())}");
+        }
+    }
+
+
+
 }
 @functions
 {
@@ -520,16 +533,16 @@
     string class_cabecalho_bula = "";
 
 
-    protected override async Task OnInitializedAsync()
-    {
+        protected override async Task OnInitializedAsync()
+        {
 
-        titulo_opcao = "Selecione";
-        cabecalho = "Pegamed";
-        //await JsRuntime.InvokeVoidAsync("console.log", "valor do remedio: " + remedios[].Nome);
-        
-        await InvokeAsync(StateHasChanged);
-        await base.OnInitializedAsync();
-    }
+            titulo_opcao = "Selecione";
+            cabecalho = "Pegamed";
+            //await JsRuntime.InvokeVoidAsync("console.log", "valor do remedio: " + remedios[].Nome);
+
+            await InvokeAsync(StateHasChanged);
+            await base.OnInitializedAsync();
+        }
 
 
 

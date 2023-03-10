@@ -7,6 +7,18 @@
         console.log("funcionei");
 
     });
+
+
+    var op = new SwalOption()
+    {
+        Category = SwalCategory.Success,
+            Title = "I am Title",
+            Content = "I am Content",
+            ShowClose = false
+    };
+    await SwalService.Show(op);
+
+
 });
 
 
@@ -19,3 +31,6 @@ function showModal(elementID) {
         return "error";
     }
 }
+
+
+
