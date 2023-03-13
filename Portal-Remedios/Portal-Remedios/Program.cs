@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Portal_Remedios.Models;
+using Portal_Remedios.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System;
 using System.Net.Http;
@@ -22,7 +23,6 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 
 
 

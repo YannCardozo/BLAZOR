@@ -2,6 +2,9 @@
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @using remedios;
+@using Newtonsoft.Json;
+@using Portal_Remedios.Models;
+
 
 <PageTitle>Portal Remedios</PageTitle>
 <br />
@@ -262,9 +265,9 @@
                         </div>
                     </div>
                     <div class="col-2">
-                        <div class="mb-3">
+                        <div class="mb-3">      
                             <label for="exampleFormControlInput1" class="form-label Labelceppessoa">Cep</label>
-                            <input type="text" class="form-control Ceppessoa" placeholder="Cep">
+                            <Input type="text" class="form-control Ceppessoa" placeholder="Cep" @onchange="ConsultarCep" />
                         </div>
                     </div>
                 </div>
@@ -272,7 +275,7 @@
                     <div class="col-4">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label Labelenderecopessoa">Rua</label>
-                            <input type="text" class="form-control Enderecopessoa" placeholder="Endereço">
+                            <input type="text" class="form-control Enderecopessoa" placeholder="Endereço"/>
                         </div>
                     </div>
                     <div class="col-1">
@@ -522,6 +525,10 @@
 }
 @functions
 {
+    public string message { get; set; }
+    public Cep Cep = new();
+    public Cep valordocep { get; set; }
+    public string cep { get; set; }
     string Regiao;
     string Unidade;
     string seleciona;
@@ -533,16 +540,16 @@
     string class_cabecalho_bula = "";
 
 
-        protected override async Task OnInitializedAsync()
-        {
+    protected override async Task OnInitializedAsync()
+    {
 
-            titulo_opcao = "Selecione";
-            cabecalho = "Pegamed";
-            //await JsRuntime.InvokeVoidAsync("console.log", "valor do remedio: " + remedios[].Nome);
+        titulo_opcao = "Selecione";
+        cabecalho = "Pegamed";
+        //await JsRuntime.InvokeVoidAsync("console.log", "valor do remedio: " + remedios[].Nome);
 
-            await InvokeAsync(StateHasChanged);
-            await base.OnInitializedAsync();
-        }
+        await InvokeAsync(StateHasChanged);
+        await base.OnInitializedAsync();
+    }
 
 
 
@@ -565,6 +572,85 @@
         }
         //cabecalho = RadioValue;
         await InvokeAsync(StateHasChanged);
+    }
+
+
+
+
+    async Task ConsultarCep(ChangeEventArgs cep)
+    {
+        message = string.Empty;
+        if(cep.Value is not null)
+        {
+
+
+            HttpClient httpClient = new HttpClient();
+            var response = await httpClient.GetAsync($"https://viacep.com.br/ws/{cep}/json/");
+            var jsonString = await response.Content.ReadAsStringAsync();
+
+            Cep jsonObject = JsonConvert.DeserializeObject<Cep>(jsonString);
+
+            if (jsonObject != null)
+            {
+
+                Cep.bairro = jsonObject.bairro;
+                Cep.logradouro = jsonObject.logradouro;
+                Cep.complemento = jsonObject.complemento;
+                Cep.cep = jsonObject.cep;
+                Cep.uf = jsonObject.uf;
+                await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + Cep.bairro + Cep.logradouro + Cep.complemento + Cep.cep + Cep.uf);
+                await InvokeAsync(StateHasChanged);
+
+
+            }
+        }
+            else
+            {
+                Cep.Vericacao = true;
+                    await InvokeAsync(StateHasChanged);
+
+            }
+
+
+                await InvokeAsync(StateHasChanged);
+
+
+/*
+            async Task CheckUsername(ChangeEventArgs e)
+            {
+
+        public string cep { get; set; }
+        public string logradouro { get; set; }
+        public string complemento { get; set; }
+        public string bairro { get; set; }
+        public string localidade { get; set; }
+        public string uf { get; set; }
+        public string ibge { get; set; }
+        public string ddd { get; set; }
+
+        public bool Vericacao = false; 
+
+
+                message = string.Empty;
+                if (e.Value is not null)
+                {
+                    username = e.Value.ToString();
+                    var valid = await http.GetFromJsonAsync<bool>($"/checkusername?username={username}");
+                    if (!valid)
+                    {
+                        message = "You must choose another user name";
+                    }
+                }
+            }
+            */
+
+
+
+            //await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!" + CepInteiro + "funcionou");
+            
+        
+
+
     }
 
 
