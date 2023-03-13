@@ -105,3 +105,4 @@ C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\ne
 C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.genruntimeconfig.cache
 C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\ref\Portal-Remedios.dll
 C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Newtonsoft.Json.dll

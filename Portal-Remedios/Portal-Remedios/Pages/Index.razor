@@ -6,6 +6,7 @@
 @using Portal_Remedios.Models;
 
 
+
 <PageTitle>Portal Remedios</PageTitle>
 <br />
 <div class="container">
@@ -243,7 +244,7 @@
                     </div>
                     <div class="col-2 mb-3">
                         <label for="exampleFormControlInput1" class="form-label Cpfpessoa">Cpf</label>
-                        <input type="text" class="form-control Cpfpessoa" placeholder="Cpf">
+                        <Input type="text" class="form-control Cpfpessoa" placeholder="Cpf" />
                     </div>
                     <div class="col-2">
                         <div class="mb-3">
@@ -267,7 +268,7 @@
                     <div class="col-2">
                         <div class="mb-3">      
                             <label for="exampleFormControlInput1" class="form-label Labelceppessoa">Cep</label>
-                            <Input type="text" class="form-control Ceppessoa" placeholder="Cep" @onchange="ConsultarCep" />
+                            <InputText @bind-Value="@cep" class="form-control Ceppessoa" placeholder="Cep"  @onblur="@(() => ConsultarCep(cep))"/>
                         </div>
                     </div>
                 </div>
@@ -275,7 +276,7 @@
                     <div class="col-4">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label Labelenderecopessoa">Rua</label>
-                            <input type="text" class="form-control Enderecopessoa" placeholder="Endereço"/>
+                            <input type="text" @bind-value="@Cep.logradouro" id="rua" class="form-control Enderecopessoa" placeholder="Endereço" />
                         </div>
                     </div>
                     <div class="col-1">
@@ -285,19 +286,23 @@
                     <div class="col-3">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label Labelbairropessoa">Bairro</label>
-                            <input type="text" class="form-control Bairropessoa" placeholder="Bairro">
+                            <input type="text" @bind-value="@Cep.bairro" id="bairro" class="form-control Bairropessoa" placeholder="Bairro"/>
                         </div>
                     </div>
                     <div class="col-2">
                         <label for="exampleFormControlInput1" class="form-label Labelcidadepessoa">Cidade</label>
-                        <input type="text" class="form-control cidadepessoa" placeholder="Cidade">
+                        <input type="text" id="cidade" @bind-value="@Cep.cidade" class="form-control cidadepessoa" placeholder="Cidade">
                     </div>
+                    <div class="col-2">
+                        <label for="exampleFormControlInput1" class="form-label Labelocupacaopessoa">uf</label>
+                        <input type="text" @bind-value="@Cep.uf" class="form-control Labelocupacaopessoa" placeholder="uf">
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-2">
                         <label for="exampleFormControlInput1" class="form-label Labelocupacaopessoa">Ocupação</label>
                         <input type="text" class="form-control Labelocupacaopessoa" placeholder="Ocupação">
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label Labeldatadenascimentopessoa">Nº NIS</label>
@@ -321,6 +326,15 @@
                             <option selected>Baixa renda</option>
                             <option value="1">Auxílio saúde</option>
                             <option value="3">Outro benefício social</option>
+                        </select>
+                    </div>
+                    <div class="col-3 mb-3">
+                        <label for="exampleFormControlInput1" class="form-label Labelmotivodocadastropessoa">Renda Familiar Mensal</label>
+                        <select class="form-select Motivopacienteselect" aria-label="Motivo do cadastro">
+                            <option selected>Abaixo de R$2500,00</option>
+                            <option value="1">Acima de R$2500,00</option>
+                            <option value="3">Renda de R$2500,00</option>
+                            <option value="3">Outros</option>
                         </select>
                     </div>
                 </div>
@@ -528,7 +542,7 @@
     public string message { get; set; }
     public Cep Cep = new();
     public Cep valordocep { get; set; }
-    public string cep { get; set; }
+    string cep = "";
     string Regiao;
     string Unidade;
     string seleciona;
@@ -575,15 +589,15 @@
     }
 
 
-
-
-    async Task ConsultarCep(ChangeEventArgs cep)
+    async Task ConsultarCep(string cep)
     {
-        message = string.Empty;
-        if(cep.Value is not null)
+
+        await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + cep + Cep.bairro + Cep.logradouro + Cep.complemento + Cep.cep + Cep.uf);
+
+        if(cep is not null)
         {
 
-
+            await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + " entrei aqui no cep is not null");
             HttpClient httpClient = new HttpClient();
             var response = await httpClient.GetAsync($"https://viacep.com.br/ws/{cep}/json/");
             var jsonString = await response.Content.ReadAsStringAsync();
@@ -594,25 +608,43 @@
             {
 
                 Cep.bairro = jsonObject.bairro;
+                Cep.localidade = jsonObject.localidade;
                 Cep.logradouro = jsonObject.logradouro;
                 Cep.complemento = jsonObject.complemento;
                 Cep.cep = jsonObject.cep;
                 Cep.uf = jsonObject.uf;
+                await JsRuntime.InvokeVoidAsync("console.log", "Meu jsonobject nao e nulo");
                 await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + Cep.bairro + Cep.logradouro + Cep.complemento + Cep.cep + Cep.uf);
                 await InvokeAsync(StateHasChanged);
+                cep = null;
+                jsonObject = null;
 
+            }
+            else
+            {
+                cep = null;
+                jsonObject = null;
+                await JsRuntime.InvokeVoidAsync("console.log", "Cep digitado é inválido");
+                Cep.bairro = "";
+                Cep.localidade = "";
+                Cep.logradouro = "";
+                Cep.complemento = "";
+                Cep.cep = "";
+                Cep.uf = "";
+
+                await InvokeAsync(StateHasChanged);
 
             }
         }
-            else
-            {
-                Cep.Vericacao = true;
-                    await InvokeAsync(StateHasChanged);
-
-            }
 
 
-                await InvokeAsync(StateHasChanged);
+
+
+
+
+
+
+        //await InvokeAsync(StateHasChanged);
 
 
 /*
