@@ -291,7 +291,7 @@
                     </div>
                     <div class="col-2">
                         <label for="exampleFormControlInput1" class="form-label Labelcidadepessoa">Cidade</label>
-                        <input type="text" id="cidade" @bind-value="@Cep.cidade" class="form-control cidadepessoa" placeholder="Cidade">
+                        <input type="text" id="cidade" @bind-value="@Cep.localidade" class="form-control cidadepessoa" placeholder="Cidade">
                     </div>
                     <div class="col-2">
                         <label for="exampleFormControlInput1" class="form-label Labelocupacaopessoa">uf</label>
@@ -589,7 +589,7 @@
     }
 
 
-    async Task ConsultarCep(string cep)
+    public async Task ConsultarCep(string cep)
     {
 
         await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + cep + Cep.bairro + Cep.logradouro + Cep.complemento + Cep.cep + Cep.uf);
@@ -635,6 +635,7 @@
                 await InvokeAsync(StateHasChanged);
 
             }
+
         }
 
 
