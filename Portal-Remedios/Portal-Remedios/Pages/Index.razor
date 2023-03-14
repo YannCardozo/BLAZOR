@@ -100,6 +100,7 @@
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo do remédio:</label>
                         <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Tipo_remedio">
+                            <option disabled selected value>Selecione</option>
                             @foreach (var Tipo_remedio in Enum.GetValues(typeof(Tipo)))
                             {
                                 <option value="@Tipo_remedio">@Tipo_remedio</option>
@@ -111,6 +112,7 @@
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Classificação:</label>
                             <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Cor">
+                                <option disabled selected value>Selecione</option>
                                 @foreach (var Cor in Enum.GetValues(typeof(Classificacao)))
                                 {
                                     <option value="@Cor">@Cor</option>
@@ -123,6 +125,7 @@
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Região:</label>
                             <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @onchange="LiberaUnidade"  @bind-Value="modelRemedio.Nome_Regiao">
+                                <option disabled selected value>Selecione</option>
                                 @foreach (var Nome_Regiao in Enum.GetValues(typeof(Regiao)))
                                 {
                                     <option value="@Nome_Regiao">@Nome_Regiao</option>
@@ -134,6 +137,7 @@
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Unidade:</label>
                                 <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Nome_Unidade">
+                                    <option disabled selected value>Selecione</option>
                                     @foreach (var Nome_Unidade in Enum.GetValues(typeof(Unidade)))
                                     {
                                         <option value="@Nome_Unidade">@Nome_Unidade</option>
@@ -223,9 +227,10 @@
 
 
             }
-
+        </EditForm>
             @if(@RadioValue == "Cadastro de beneficiário")
             {
+            <EditForm Model="@modelBeneficiario">
                 <style>
                     .EmailPessoa{
                     display: initial;
@@ -240,29 +245,28 @@
                 <div class="row">
                     <div class="col-4 mb-3">
                         <label for="exampleFormControlInput1" class="form-label Nomepessoa">Nome</label>
-                        <input type="text" class="form-control Emailpessoa" placeholder="Nome completo">
+                        <InputText class="form-control Emailpessoa" placeholder="Nome completo" @bind-Value=modelBeneficiario.Nome />
                     </div>
                     <div class="col-2 mb-3">
                         <label for="exampleFormControlInput1" class="form-label Cpfpessoa">Cpf</label>
-                        <Input type="text" class="form-control Cpfpessoa" placeholder="Cpf" />
+                        <InputText class="form-control Cpfpessoa" placeholder="Cpf" @bind-Value=modelBeneficiario.CPF />
                     </div>
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label Labeldatadenascimentopessoa">Data nascimento</label>
-                            <input type="date" class="form-control Datadenascimentopessoa" placeholder="Data de nascimento">
+                            <input type="datetime" class="form-control Datadenascimentopessoa" placeholder="Data de nascimento" @bind-value=modelBeneficiario.data_nasc />
                         </div>
                     </div>
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label Labelsexopessoa">Sexo</label>
-                            <select class="form-select Escolaridadeselect" aria-label="Sexo">
-                                <option selected>Masculino</option>
-                                <option value="1">Feminino</option>
-                                <option value="2">Gênero Neutro</option>
-                                <option value="3">Transgênero</option>
-                                <option value="4">Não-binário</option>
-                                <option value="5">Outros</option>
-                            </select>
+                            <InputSelect class="form-select Escolaridadeselect" aria-label="Sexo" @bind-Value="modelBeneficiario.sexo">
+                                <option disabled selected value>Selecione</option>
+                                @foreach (var sexo in new string[] { "Masculino", "Feminino", "Gênero Neutro", "Transgênero", "Não-binário", "Outros" })
+                                {
+                                    <option value="@sexo">@sexo</option>
+                                }
+                            </InputSelect>
                         </div>
                     </div>
                     <div class="col-2">
@@ -281,7 +285,7 @@
                     </div>
                     <div class="col-1">
                         <label for="exampleFormControlInput1" class="form-label Labelnumeropessoa">Nº</label>
-                        <input type="text" class="form-control numeropessoa" placeholder="Nº">
+                        <input type="text" @bind-value="@numero_residencia" class="form-control numeropessoa" placeholder="Nº">
                     </div>
                     <div class="col-3">
                         <div class="mb-3">
@@ -301,52 +305,104 @@
                 <div class="row">
                     <div class="col-2">
                         <label for="exampleFormControlInput1" class="form-label Labelocupacaopessoa">Ocupação</label>
-                        <input type="text" class="form-control Labelocupacaopessoa" placeholder="Ocupação">
+                        <input type="text" @bind-value="@modelBeneficiario.ocupacao" class="form-control Labelocupacaopessoa" placeholder="Ocupação">
                     </div>
                     <div class="col-2">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label Labeldatadenascimentopessoa">Nº NIS</label>
-                            <input type="text" class="form-control Datadenascimentopessoa" placeholder="NIS">
+                            <input type="text" @bind-value="@modelBeneficiario.NIS" class="form-control Datadenascimentopessoa" placeholder="NIS">
                         </div>
                     </div>
                     <div class="col-2">
                         <label for="exampleFormControlInput1" class="form-label Labelescolaridadepessoa">Escolaridade</label>
-                        <select class="form-select Escolaridadeselect" aria-label="Escolaridade">
-                            <option selected>Ensino fundamental completo</option>
-                            <option value="1">Ensino fundamental incompleto</option>
-                            <option value="2">Ensino médio completo</option>
-                            <option value="3">Ensino médio incompleto</option>
-                            <option value="4">Ensino superior completo</option>
-                            <option value="5">Ensino superior incompleto</option>
-                        </select>
+                        <InputSelect @bind-Value="@modelBeneficiario.escolaridade" class="form-select Escolaridadeselect" aria-label="Escolaridade">
+                            <option disabled selected value>Selecione</option>
+                            @foreach (var grau in new string[] { "Ensino fundamental completo", "Ensino fundamental incompleto", "Ensino médio completo", "Ensino médio incompleto", "Ensino superior completo", "Ensino superior incompleto" })
+                            {
+                                <option value="@grau">@grau</option>
+                            }
+                        </InputSelect>
                     </div>
                     <div class="col-3 mb-3">
                         <label for="exampleFormControlInput1" class="form-label Labelmotivodocadastropessoa">Motivo do cadastro</label>
-                        <select class="form-select Motivopacienteselect" aria-label="Motivo do cadastro">
-                            <option selected>Baixa renda</option>
-                            <option value="1">Auxílio saúde</option>
-                            <option value="3">Outro benefício social</option>
-                        </select>
+                        <InputSelect @bind-Value="@modelBeneficiario.motivo_cadastro" class="form-select Escolaridadeselect" aria-label="Escolaridade">
+                            <option disabled selected value>Selecione</option>
+                            @foreach (var renda in new string[] { "Baixa renda", "Auxílio saúde" ,"Outro benefício social" })
+                            {
+                                <option value="@renda">@renda</option>
+                            }
+                        </InputSelect>
                     </div>
                     <div class="col-3 mb-3">
                         <label for="exampleFormControlInput1" class="form-label Labelmotivodocadastropessoa">Renda Familiar Mensal</label>
-                        <select class="form-select Motivopacienteselect" aria-label="Motivo do cadastro">
-                            <option selected>Abaixo de R$2500,00</option>
-                            <option value="1">Acima de R$2500,00</option>
-                            <option value="3">Renda de R$2500,00</option>
-                            <option value="3">Outros</option>
-                        </select>
+                        <InputSelect @bind-Value="@modelBeneficiario.renda_familiar" class="form-select Escolaridadeselect" aria-label="Escolaridade">
+                            <option disabled selected value>Selecione</option>
+                            @foreach (var motivo in new string[] { "Abaixo de R$2500,00", "Acima de R$2500,00", "Renda de R$2500,00", "Outros" })
+                            {
+                                <option value="@motivo">@motivo</option>
+                            }
+                        </InputSelect>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-4 mx-auto">
-                        <button class="btn btn-outline-secondary" type="button" id="EnviaMedicamento">Cadastrar</button>
+                    <div class="col-4 mx-auto mt-3">
+                        <button class="btn btn-outline-secondary" type="button" @onclick="ConfirmaModalBeneficiario" id="EnviaMedicamento">Cadastrar</button>
                     </div>
                 </div>
+
+                @if (confirmabeneficiario == true && modal == true)
+                {
+                    <div class="modal" tabindex="-1" style="display:block">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center">Confirma?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick=FechaModalBeneficiario></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row mb-3 mx-auto text-center">
+                                        <p>Nome: @modelBeneficiario.Nome</p>
+                                        <p>Cpf: @modelBeneficiario.CPF</p>
+                                        <p>Data de nascimento: @modelBeneficiario.data_nasc</p>
+                                        <p>Sexo: @modelBeneficiario.sexo</p>
+                                        <p>Cep: @cep</p>
+                                        <p>Rua: @rua</p>
+                                        <p>Nº: @numero_residencia</p>
+                                        <p>Bairro: @bairro</p>
+                                        <p>Cidade: @cidade</p>
+                                        <p>Uf: @uf</p>
+                                        <p>Ocupação: @modelBeneficiario.ocupacao</p>
+                                        <p>NIS: @modelBeneficiario.NIS</p>
+                                        <p>Escolaridade: @modelBeneficiario.escolaridade</p>
+                                        <p>Motivo: @modelBeneficiario.motivo_cadastro</p>
+                                        <p>Renda familiar mensal: @modelBeneficiario.renda_familiar</p>
+                                        <!-- <div class="col-2">
+                                        <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
+                                        <input class="form-control" type="text" value="@localavagardeposito" placeholder="" readonly>
+                                        <input type="text" id="Inputareceberlocaldeposito" name=""readonly>
+                                        </div>
+                                        </div>
+                                        -->
+                                    </div> 
+                                </div>
+                                <div class="modal-footer text-center">
+                                    <hr>
+                                    <button type="button" class="btn btn-success" @onclick=SalvaCadastroBeneficiario>Confirmar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick=CancelaCadastroBeneficiario>Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+            </EditForm>
             }
 
             @if(@RadioValue == "Consulta de Medicamento")
             {
+            <EditForm Model="@modelRemedio">
                 <style>
                     .EmailPessoa{
                     display: none;
@@ -382,12 +438,10 @@
                         </div>
                         }
                 </center>
+
+            </EditForm>
             }
 
-
-
-
-        </EditForm>
     </div>
 <SurveyPrompt Title="Tem algum erro no site ou uma sugestão a fazer?" />
 </div>
@@ -399,8 +453,8 @@
     //2MB
     private const int TamanhoImgMaximo = 2 * 1024 * 1024;
     private List<string> Imagens = new List<string>();
-
-
+    public Beneficiario modelBeneficiario = new();
+    public Cep modelCep = new();
     public Remedios modelRemedio = new();
     public List<Remedios> lstRemedios = new();
     //public Remedios modelRemedio = new();
@@ -446,7 +500,9 @@
         }
     }
 
+    private bool confirmabeneficiario { get; set; } = false;
     private bool confirmamedicamento { get; set; } = false;
+    private bool modal { get; set; } = false;
     bool ValueRegiao { get; set; } = false;
     string localavagardeposito { get; set; } = "";
     string titulo_opcao { get; set; }
@@ -454,6 +510,19 @@
     string opcao_codans { get; set; } = "Código da ANS";
     string opcao_nis_paciente { get; set; } = "NIS do paciente";
     bool verifica { get; set; } = false;
+
+    private async Task ConfirmaModalBeneficiario()
+    {
+        //remedios = new Remedios();
+        confirmabeneficiario = true;  
+        modal = true;
+        //titulo_opcao = args.Value.ToString();
+        await InvokeAsync(StateHasChanged);
+    }
+    private void FechaModalBeneficiario()
+    {
+        modal = false;
+    }
 
     private async Task ConfirmaModal()
     {
@@ -475,6 +544,7 @@
         //to clear textboxes and model
         // remedios = new Remedios();
         confirmamedicamento = false;
+        modal = false;
         await JsRuntime.InvokeVoidAsync("alert", "Dados deletados com sucesso");
     }
     private async void SalvaCadastroRemedio()
@@ -483,11 +553,44 @@
         //await _Remedios.addNewRemediosAsync(Remedios);
         //Close the dialog
         confirmamedicamento = false;
+        modal = false;
         //clear the model
         //Remedios = new Remedios();
-        await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!");
+        await JsRuntime.InvokeVoidAsync("alert", "Cadastro do Medicamento" + " efetuado com sucesso!");
     }
 
+
+    private async void CancelaCadastroBeneficiario()
+    {
+        //to clear textboxes and model
+        // remedios = new Remedios();
+        confirmabeneficiario = false;
+        modelBeneficiario.escolaridade = "";
+        modelBeneficiario.ocupacao = "";
+        modelBeneficiario.motivo_cadastro = "";
+        modelBeneficiario.renda_familiar = "";
+        modelBeneficiario.Nome = "";
+        modelBeneficiario.CPF = "";
+        modelBeneficiario.data_nasc = DateTime.MinValue;
+        modelBeneficiario.motivo_cadastro = "";
+        modelBeneficiario.NIS = "";
+        modelBeneficiario.sexo = "";
+        cep = "";
+        Cep.bairro = "";
+        Cep.localidade = "";
+        Cep.logradouro = "";
+        Cep.complemento = "";
+        Cep.cep = "";
+        Cep.uf = "";
+        await JsRuntime.InvokeVoidAsync("alert", "Cadastro do beneficiario cancelado" + "Dados deletados com sucesso");
+        await InvokeAsync(StateHasChanged);
+    }
+    private async void SalvaCadastroBeneficiario()
+    {
+        confirmabeneficiario = false;
+        await JsRuntime.InvokeVoidAsync("alert", "Cadastro do beneficiario" + " efetuado com sucesso!");
+        await InvokeAsync(StateHasChanged);
+    }
 
 
     async void CadastraRemedioClica()
@@ -543,6 +646,11 @@
     public Cep Cep = new();
     public Cep valordocep { get; set; }
     string cep = "";
+    string bairro = "";
+    string cidade = "";
+    string numero_residencia = "";
+    string uf = "";
+    string rua = "";
     string Regiao;
     string Unidade;
     string seleciona;
@@ -613,6 +721,12 @@
                 Cep.complemento = jsonObject.complemento;
                 Cep.cep = jsonObject.cep;
                 Cep.uf = jsonObject.uf;
+
+                bairro = Cep.bairro;
+                rua = Cep.logradouro;
+                cidade = Cep.localidade;
+                uf = Cep.uf;
+
                 await JsRuntime.InvokeVoidAsync("console.log", "Meu jsonobject nao e nulo");
                 await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + Cep.bairro + Cep.logradouro + Cep.complemento + Cep.cep + Cep.uf);
                 await InvokeAsync(StateHasChanged);
