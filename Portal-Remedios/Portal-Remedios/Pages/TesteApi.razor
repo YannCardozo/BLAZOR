@@ -1,0 +1,105 @@
+﻿@page "/TesteApi"
+@inject HttpClient Http
+@inject IJSRuntime JsRuntime
+@using remedios;
+@using Newtonsoft.Json;
+@using Portal_Remedios.Models;
+
+
+    <div class="row mb-3 text-center">
+        <div class="col-12">
+            <h3 class="mx-auto">Espaço para testes de api aqui</h3>
+        </div>
+    </div>
+                <div class="row mb-3">
+                    <div class="col-4 mx-auto">
+                        <button type="button" class="btn btn-outline-secondary" @onclick="Rodar">
+                            Requisitar API
+                        </button>
+                    </div>
+                </div>
+                @if (rodando == true)
+                {
+
+    <h3>ESTOU RODANDO !!!!! @resultado[0]</h3>
+    <br />
+    <br />
+    @if (rodando == true)
+    {
+        foreach (var retornoapi in resultado)
+        {
+            <p>@retornoapi</p>
+        }
+    }
+}
+@code {
+    private string errorMessage;
+    bool rodando = false;
+    string resultado = "";
+
+
+    async Task Rodar()
+    {
+        try
+        {
+    /*
+    var request = new HttpRequestMessage(HttpMethod.Get,
+            "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches");
+            request.Headers.Add("Accept", "application/vnd.github.v3+json");
+            request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
+     *
+     *
+     using var httpResponse = await HttpClient.GetAsync("https://reqres.in/invalid-url");
+
+    if (!httpResponse.IsSuccessStatusCode)
+        {
+        // set error message for display, log to console and return
+        errorMessage = httpResponse.ReasonPhrase;
+        Console.WriteLine($"There was an error! {errorMessage}");
+        return;
+    }
+
+
+    HttpClient cliente = new HttpClient();
+
+
+            var result = await cliente.GetStringAsync("https://localhost:5001/Remedios");
+    string checkResult = result.ToString();
+    cliente.Dispose();
+    return checkResult;
+                */
+
+            HttpClient cliente = new HttpClient();
+            resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios");
+
+            if(resultado == null)
+            {
+                await JsRuntime.InvokeVoidAsync("alert", resultado + " RETORNO NULL");
+                rodando = false;
+                return ;
+            }
+            rodando = true;
+            Console.WriteLine(resultado);
+
+            await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!" + resultado + "funcionou");
+
+        }
+        catch (Exception ex)
+        {
+        
+        }
+    }
+    public async Task CanGetErrorMessage(string url, string expectedError)
+    {
+        try
+        {
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.GetAsync(url);
+        }
+        catch (Exception e)
+        {
+            var innerError = e.Message; // somehow find the inner error
+            //Assert.Equal(innerError, expectedError);
+        }
+    }
+}
