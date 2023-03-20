@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eUyM/C3RZbwtCjq9gtg8OxEJ+0K2fi6yB/H1sq4P7yU=",
+  "Hash": "ie9yxqO2I7CBiaQ1ZCeDK3wtG3LOYGS+x5f5r6c77KE=",
   "Source": "Portal-Remedios",
   "BasePath": "_content/Portal-Remedios",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Portal-Remedios\\wwwroot",
       "Source": "Portal-Remedios",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js",
       "SourceId": "BlazorInputFile",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\",
       "BasePath": "_content/BlazorInputFile",
       "RelativePath": "inputfile.js",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "bootstrap4Theme.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "bootstrap4Theme.js",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.min.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.min.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "bootstrap4Theme.min.css",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.min.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "bootstrap4Theme.min.js",
       "AssetKind": "All",
@@ -99,13 +99,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bootstrap4Theme.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "borderlessTheme.css",
       "AssetKind": "All",
@@ -116,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "borderlessTheme.js",
       "AssetKind": "All",
@@ -133,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.min.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.min.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "borderlessTheme.min.css",
       "AssetKind": "All",
@@ -150,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.min.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "borderlessTheme.min.js",
       "AssetKind": "All",
@@ -167,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\borderlessTheme.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "bulmaTheme.css",
       "AssetKind": "All",
@@ -184,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "bulmaTheme.js",
       "AssetKind": "All",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.min.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.min.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "bulmaTheme.min.css",
       "AssetKind": "All",
@@ -218,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.min.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "bulmaTheme.min.js",
       "AssetKind": "All",
@@ -235,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\bulmaTheme.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "darkTheme.css",
       "AssetKind": "All",
@@ -252,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "darkTheme.js",
       "AssetKind": "All",
@@ -269,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.min.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.min.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "darkTheme.min.css",
       "AssetKind": "All",
@@ -286,13 +286,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.min.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "darkTheme.min.js",
       "AssetKind": "All",
@@ -303,13 +303,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\darkTheme.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "defaultTheme.css",
       "AssetKind": "All",
@@ -320,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "defaultTheme.js",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.min.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.min.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "defaultTheme.min.css",
       "AssetKind": "All",
@@ -354,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.min.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "defaultTheme.min.js",
       "AssetKind": "All",
@@ -371,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\defaultTheme.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "materialUITheme.css",
       "AssetKind": "All",
@@ -388,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "materialUITheme.js",
       "AssetKind": "All",
@@ -405,13 +405,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.min.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.min.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "materialUITheme.min.css",
       "AssetKind": "All",
@@ -422,13 +422,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.min.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "materialUITheme.min.js",
       "AssetKind": "All",
@@ -439,13 +439,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\materialUITheme.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "minimalTheme.css",
       "AssetKind": "All",
@@ -456,13 +456,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "minimalTheme.js",
       "AssetKind": "All",
@@ -473,13 +473,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.min.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.min.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "minimalTheme.min.css",
       "AssetKind": "All",
@@ -490,13 +490,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.min.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "minimalTheme.min.js",
       "AssetKind": "All",
@@ -507,13 +507,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\minimalTheme.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\sweetAlert2.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\sweetAlert2.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "sweetAlert2.js",
       "AssetKind": "All",
@@ -524,13 +524,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\sweetAlert2.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\sweetAlert2.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\sweetAlert2.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\sweetAlert2.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "sweetAlert2.min.js",
       "AssetKind": "All",
@@ -541,13 +541,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\sweetAlert2.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\sweetAlert2.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "wordpressAdminTheme.css",
       "AssetKind": "All",
@@ -558,13 +558,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "wordpressAdminTheme.js",
       "AssetKind": "All",
@@ -575,13 +575,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.min.css",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.min.css",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "wordpressAdminTheme.min.css",
       "AssetKind": "All",
@@ -592,13 +592,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.min.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.min.js",
       "SourceId": "CurrieTechnologies.Razor.SweetAlert2",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\",
       "BasePath": "_content/CurrieTechnologies.Razor.SweetAlert2",
       "RelativePath": "wordpressAdminTheme.min.js",
       "AssetKind": "All",
@@ -609,13 +609,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\staticwebassets\\wordpressAdminTheme.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-interop.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-interop.js",
       "SourceId": "Plotly.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\",
       "BasePath": "_content/Plotly.Blazor",
       "RelativePath": "plotly-interop.js",
       "AssetKind": "All",
@@ -626,13 +626,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-interop.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-interop.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-latest.min.js",
+      "Identity": "C:\\Users\\yann_\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-latest.min.js",
       "SourceId": "Plotly.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Yann S.O\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\yann_\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\",
       "BasePath": "_content/Plotly.Blazor",
       "RelativePath": "plotly-latest.min.js",
       "AssetKind": "All",
@@ -643,13 +643,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-latest.min.js"
+      "OriginalItemSpec": "C:\\Users\\yann_\\.nuget\\packages\\plotly.blazor\\2.18.0\\staticwebassets\\plotly-latest.min.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Portal-Remedios.styles.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Portal-Remedios.styles.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "Portal-Remedios.styles.css",
       "AssetKind": "All",
@@ -660,13 +660,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Portal-Remedios.styles.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Portal-Remedios.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portal-Remedios.bundle.scp.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portal-Remedios.bundle.scp.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "Portal-Remedios.bundle.scp.css",
       "AssetKind": "All",
@@ -677,13 +677,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portal-Remedios.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portal-Remedios.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\Index.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\Index.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/Index.css",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\css\\site.css",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\favicon.png",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\js\\JavaScript.js",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\js\\JavaScript.js",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "js/JavaScript.js",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\js\\JavaScript.js"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\js\\jquery-3.6.3.min.js",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\js\\jquery-3.6.3.min.js",
       "SourceId": "Portal-Remedios",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\",
       "BasePath": "_content/Portal-Remedios",
       "RelativePath": "js/jquery-3.6.3.min.js",
       "AssetKind": "All",
