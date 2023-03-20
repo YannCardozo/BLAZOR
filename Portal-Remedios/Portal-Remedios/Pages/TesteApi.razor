@@ -26,52 +26,82 @@
     <br />
     @if (rodando == true)
     {
-
-        foreach (var retornoapi in resultado)
+        if (remedioteste.Count > 0)
         {
-            <p>@retornoapi</p>
+            <p>Teste Começou agora:</p>
+            foreach (Remedios r in remedioteste)
+            {
+                <p>Id: @r.Id</p>
+                <p>Nome: @r.Nome</p>
+                <p>Código: @r.Codigo</p>
+                <p>Código ANS: @r.Codigo_ANS</p>
+                <p>Data/lote: @r.Data_lote</p>
+                <p>Dt Depósito: @r.Data_deposito</p>
+                <p>Tipo: @r.Tipo_remedio</p>
+                <p>Classificação: @r.Cor</p>
+                //<p>Região: @remedioteste.Nome_Regiao</p>
+                //<p>Unidade: @remedioteste.Nome_Unidade</p>
+                <p>Imagem: @r.Img_Remedio</p>
+                <hr />
+            }
+
+            <p>Teste FINALIZOU</p>   
         }
+  
+
+
+
+
+      //  for (int i = 0 ; remedioteste != null ; i++)
+      //  {
+
+       // }
+
+        //foreach (var retornoapi in resultado)
+        //{
+        //    <p>@retornoapi</p>
+        //}
     }
 }
 @code {
     private string errorMessage;
     bool rodando = false;
     string resultado = "";
-    //public Remedios remedioteste = new();
+    public List<Remedios> remedioteste = new();
 
     async Task Rodar()
     {
         try
         {
-                    /*
-                    var request = new HttpRequestMessage(HttpMethod.Get,
-                    "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches");
-             request.Headers.Add("Accept", "application/vnd.github.v3+json");
-             request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
-                *
-                *
-                using var httpResponse = await HttpClient.GetAsync("https://reqres.in/invalid-url");
+    /*
+    var request = new HttpRequestMessage(HttpMethod.Get,
+            "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches");
+            request.Headers.Add("Accept", "application/vnd.github.v3+json");
+     request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
+     *
+     *
+     using var httpResponse = await HttpClient.GetAsync("https://reqres.in/invalid-url");
 
-                if (!httpResponse.IsSuccessStatusCode)
-                {
-                // set error message for display, log to console and return
-                errorMessage = httpResponse.ReasonPhrase;
-            Console.WriteLine($"There was an error! {errorMessage}");
-        return;
+        if (!httpResponse.IsSuccessStatusCode)
+        {
+        // set error message for display, log to console and return
+        errorMessage = httpResponse.ReasonPhrase;
+        Console.WriteLine($"There was an error! {errorMessage}");
+    return;
                     }
 
 
-                    HttpClient cliente = new HttpClient();
+            HttpClient cliente = new HttpClient();
 
 
-                    var result = await cliente.GetStringAsync("https://localhost:5001/Remedios");
-            string checkResult = result.ToString();
-            cliente.Dispose();
-            return checkResult;
+            var result = await cliente.GetStringAsync("https://localhost:5001/Remedios");
+    string checkResult = result.ToString();
+    cliente.Dispose();
+    return checkResult;
                 */
 
             HttpClient cliente = new HttpClient();
-            resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios");
+            resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios/");
 
             if(resultado == null)
             {
@@ -82,15 +112,16 @@
 
             rodando = true;
             //rever esse remedio teste para fazer o retorno JSON funcionar.
-            //remedioteste = JsonConvert.DeserializeObject<Remedios>(resultado);
+
             //Console.WriteLine(resultado);
 
             await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!" + resultado + "funcionou");
-
+            remedioteste = JsonConvert.DeserializeObject<List<Remedios>>(resultado);
+            await InvokeAsync(StateHasChanged);
         }
         catch (Exception ex)
         {
-        
+            await JsRuntime.InvokeVoidAsync("alert", "ERRO" + ex.Message);
         }
     }
     public async Task CanGetErrorMessage(string url, string expectedError)
