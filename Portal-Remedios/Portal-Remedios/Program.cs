@@ -5,13 +5,18 @@ using Portal_Remedios.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System;
 using System.Net.Http;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddHttpClient();
+builder.Services.AddMudServices();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

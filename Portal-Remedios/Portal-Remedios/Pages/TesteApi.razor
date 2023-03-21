@@ -1,31 +1,45 @@
 ﻿@page "/TesteApi"
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
+@using MudBlazor;
 @using remedios;
 @using Newtonsoft.Json;
 @using Portal_Remedios.Models;
 
 
-    <div class="row mb-3 text-center">
+    <div class="row mb-3 text-center" id="Linha-teste-api-cabecalho">
         <div class="col-12">
             <h3 class="mx-auto">Espaço para testes de api aqui</h3>
         </div>
     </div>
-                <div class="row mb-3">
-                    <div class="col-4 mx-auto">
-                        <button type="button" class="btn btn-outline-secondary" @onclick="Rodar">
-                            Requisitar API
-                        </button>
-                    </div>
-                </div>
-                @if (rodando == true)
-                {
+    <div class="row mb-3" id="Linha-botao-teste-api">
+        <div class="col-4 mx-auto">
+            <button type="button" class="btn btn-outline-secondary" @onclick="Rodar">
+                Requisitar API
+            </button>
+        </div>
+    </div>
 
-    <h3>ESTOU RODANDO !!!!! @resultado[0]</h3>
-    <br />
-    <br />
-    @if (rodando == true)
+    @if (liguei == true)
+    {   <style>
+            #Linha-teste-api-cabecalho{
+                    display: none;
+            }
+            #Linha-botao-teste-api{
+                    display: none;
+            }
+        </style>
+        <div class="row mb-3 text-center mx-auto my-auto">
+            <div class="col-12">
+                <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;align-self:center;align-content:center;" Indeterminate="true" />
+            </div>
+        </div>
+    }
+    @if (rodando == true && liguei == false )
     {
+        <h3>ESTOU RODANDO !!!!! @resultado[0]</h3>
+        <br />
+        <br />
         if (remedioteste.Count > 0)
         {
             <p>Teste Começou agora:</p>
@@ -45,59 +59,48 @@
                 <hr />
             }
 
-            <p>Teste FINALIZOU</p>   
+            <p>Teste FINALIZOU</p>
         }
-  
 
-
-
-
-      //  for (int i = 0 ; remedioteste != null ; i++)
-      //  {
-
-       // }
-
-        //foreach (var retornoapi in resultado)
-        //{
-        //    <p>@retornoapi</p>
-        //}
     }
-}
 @code {
     private string errorMessage;
     bool rodando = false;
     string resultado = "";
     public List<Remedios> remedioteste = new();
+    bool liguei = false;
+
 
     async Task Rodar()
     {
+        liguei = true;
         try
         {
-    /*
-    var request = new HttpRequestMessage(HttpMethod.Get,
-            "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches");
-            request.Headers.Add("Accept", "application/vnd.github.v3+json");
-     request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
-     *
-     *
-     using var httpResponse = await HttpClient.GetAsync("https://reqres.in/invalid-url");
+         /*
+         var request = new HttpRequestMessage(HttpMethod.Get,
+         "https://api.github.com/repos/dotnet/AspNetCore.Docs/branches");
+         request.Headers.Add("Accept", "application/vnd.github.v3+json");
+         request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
+            *
+            *
+            using var httpResponse = await HttpClient.GetAsync("https://reqres.in/invalid-url");
 
-        if (!httpResponse.IsSuccessStatusCode)
-        {
-        // set error message for display, log to console and return
-        errorMessage = httpResponse.ReasonPhrase;
-        Console.WriteLine($"There was an error! {errorMessage}");
-    return;
-                    }
-
-
-            HttpClient cliente = new HttpClient();
+            if (!httpResponse.IsSuccessStatusCode)
+            {
+            // set error message for display, log to console and return
+            errorMessage = httpResponse.ReasonPhrase;
+                        Console.WriteLine($"There was an error! {errorMessage}");
+                return;
+                }
 
 
-            var result = await cliente.GetStringAsync("https://localhost:5001/Remedios");
-    string checkResult = result.ToString();
-    cliente.Dispose();
-    return checkResult;
+                HttpClient cliente = new HttpClient();
+
+
+                var result = await cliente.GetStringAsync("https://localhost:5001/Remedios");
+        string checkResult = result.ToString();
+        cliente.Dispose();
+        return checkResult;
                 */
 
             HttpClient cliente = new HttpClient();
@@ -115,14 +118,21 @@
 
             //Console.WriteLine(resultado);
 
-            await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!" + resultado + "funcionou");
-            remedioteste = JsonConvert.DeserializeObject<List<Remedios>>(resultado);
-            await InvokeAsync(StateHasChanged);
+            // await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!" + resultado + "funcionou");
+            if (rodando == true)
+            {
+                Thread.Sleep(2000);
+                remedioteste = JsonConvert.DeserializeObject<List<Remedios>>(resultado);
+                liguei = false;
+                await InvokeAsync(StateHasChanged);
+            }
         }
         catch (Exception ex)
         {
+            liguei = false;
             await JsRuntime.InvokeVoidAsync("alert", "ERRO" + ex.Message);
         }
+
     }
     public async Task CanGetErrorMessage(string url, string expectedError)
     {
