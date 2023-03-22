@@ -13,7 +13,7 @@
         }
 
         //Quando o campo cep perde o foco.
-        $("#cep").blur(function () {
+        $("#cep").change(function () {
 
             //Nova variável "cep" somente com dígitos.
             var cep = $(this).val().replace(/\D/g, '');
@@ -64,31 +64,6 @@
             }
         });
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     const myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 
@@ -99,25 +74,6 @@
 
 
 });
-
-let progressBar = document.querySelector(".circular-progress");
-let valueContainer = document.querySelector(".value-container");
-
-let progressValue = 0;
-let progressEndValue = 100;
-let speed = 50;
-
-let progress = setInterval(() => {
-    progressValue++;
-    valueContainer.textContent = `${progressValue}%`;
-    progressBar.style.background = `conic-gradient(
-      #4d5bf9 ${progressValue * 3.6}deg,
-      #cadcff ${progressValue * 3.6}deg
-  )`;
-    if (progressValue == progressEndValue) {
-        clearInterval(progress);
-    }
-}, speed);
 
 
 

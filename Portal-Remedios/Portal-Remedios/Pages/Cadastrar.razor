@@ -1,4 +1,5 @@
-﻿@page "/Cadastrar"
+﻿@inherits NoLayout;
+@page "/Cadastrar"
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @using remedios;
@@ -6,99 +7,57 @@
 @using Portal_Remedios.Models;
 @using MudBlazor;
 
-<div class="row mt-3">
-    <div class="col-4">
-    <!---1 card-->
-        <MudCard>
-            <MudCardMedia Image="images/cuidado_func.png" Height="200" />
-            <MudCardContent>
-                <MudText Typo="Typo.h5">Old Paint</MudText>
-                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-            </MudCardActions>
-        </MudCard>
+<style>
+	.lgx-single-speaker
+	{
+		margin-bottom: 20px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #ccc;
+		border-image: initial;
+		border-radius: 5px;
+		padding: 15px;
+		min-height: 250px;
+		box-shadow: 1px 3px 4px 0px #297c8294;
+	}
+</style>
+
+<div class="d-none d-lg-block d-xl-block d-xxl-block">
+    <div class="row" style="margin-top:50px;">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="lgx-single-speaker available-box d-flex aligns-items-center justify-content-center">
+                <font style="place-self: center;">Cadastrar</font>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="lgx-single-speaker available-box d-flex aligns-items-center justify-content-center">
+                <font style="place-self: center;">Retirar</font>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="lgx-single-speaker available-box d-flex aligns-items-center justify-content-center">
+                <font style="place-self: center;">Estoque</font>
+            </div>
+        </div>
     </div>
-    <div class="col-4">
-        <MudCard>
-            <MudCardMedia Image="images/cuidado_func.png" Height="200" />
-            <MudCardContent>
-                <MudText Typo="Typo.h5">Old Paint</MudText>
-                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </div>
-    <div class="col-4">
-        <MudCard>
-            <MudCardMedia Image="images/cuidado_func.png" Height="200" />
-            <MudCardContent>
-                <MudText Typo="Typo.h5">Old Paint</MudText>
-                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-            </MudCardActions>
-        </MudCard>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="lgx-single-speaker available-box d-flex aligns-items-center justify-content-center">
+                <font style="place-self: center;">Relatórios</font>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="lgx-single-speaker available-box d-flex aligns-items-center justify-content-center">
+                <font style="place-self: center;">Consultar</font>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="lgx-single-speaker available-box d-flex aligns-items-center justify-content-center">
+                <font style="place-self: center;">Opções</font>
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="row mt-3">
-    <div class="col-4 ">
-        <!---2 card-->
-        <MudCard>
-            <MudCardMedia Image="images/cuidado_func.png" Height="200" />
-            <MudCardContent>
-                <MudText Typo="Typo.h5">Old Paint</MudText>
-                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </div>
-    <div class="col-4">
-        <MudCard>
-            <MudCardMedia Image="images/cuidado_func.png" Height="200" />
-            <MudCardContent>
-                <MudText Typo="Typo.h5">Old Paint</MudText>
-                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </div>
-    <div class="col-4">
-        <MudCard>
-            <MudCardMedia Image="images/cuidado_func.png" Height="200" />
-            <MudCardContent>
-                <MudText Typo="Typo.h5">Old Paint</MudText>
-                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </div>
-</div>
-
-
 @code {
 
 }

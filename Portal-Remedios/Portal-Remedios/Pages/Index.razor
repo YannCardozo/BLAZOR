@@ -4,7 +4,7 @@
 @using remedios;
 @using Newtonsoft.Json;
 @using Portal_Remedios.Models;
-
+@using MudBlazor;
 
 
 <PageTitle>Portal Remedios</PageTitle>
@@ -18,7 +18,7 @@
                 @foreach (var item in new string[] { "Cadastro de Medicamento", "Cadastro de beneficiário", "Consulta de Medicamento" })
                 {
                     <div class="mb-4 form-check form-check-inline">
-                        <input type="radio" name="OpcaoRadioInput" id="@item" value="@item" @onchange="RadioSelection" checked=@(RadioValue.Equals(item,StringComparison.OrdinalIgnoreCase)) />
+                    <input type="radio" name="OpcaoRadioInput" id="@item" value="@item" @onchange="RadioSelection" checked=@(RadioValue.Equals(item,StringComparison.OrdinalIgnoreCase)) />
                         <label for="@item">@item</label>
                     </div>
                 }
@@ -414,6 +414,21 @@
                         </div>
                     </div>
                     @if(@verifica == true){
+
+
+                        <style>
+                            .lgx-single-speaker {
+                                margin-bottom: 20px;
+                                border-width: 1px;
+                                border-style: solid;
+                                border-color: #ccc;
+                                border-image: initial;
+                                border-radius: 5px;
+                                padding: 15px;
+                                min-height: 250px;
+                                box-shadow: 1px 3px 4px 0px #297c8294;
+                            }
+                        </style>
                         <div class="row d-flex justify-content-center">
                             <div class="col-3">
                                 <div class="mb-3">
