@@ -14,9 +14,10 @@
     </div>
     <div class="row mb-3" id="Linha-botao-teste-api">
         <div class="col-4 mx-auto">
-            <button type="button" class="btn btn-outline-secondary" @onclick="Rodar">
+
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="Rodar">
                 Requisitar API
-            </button>
+            </MudButton>
         </div>
     </div>
 
@@ -39,30 +40,77 @@
     {
         <h3>ESTOU RODANDO !!!!! @resultado[0]</h3>
         <br />
-        <br />
-        if (remedioteste.Count > 0)
-        {
-            <p>Teste Começou agora:</p>
-            foreach (Remedios r in remedioteste)
-            {
-                <p>Id: @r.Id</p>
-                <p>Nome: @r.Nome</p>
-                <p>Código: @r.Codigo</p>
-                <p>Código ANS: @r.Codigo_ANS</p>
-                <p>Data/lote: @r.Data_lote</p>
-                <p>Dt Depósito: @r.Data_deposito</p>
-                <p>Tipo: @r.Tipo_remedio</p>
-                <p>Classificação: @r.Cor</p>
-                //<p>Região: @remedioteste.Nome_Regiao</p>
-                //<p>Unidade: @remedioteste.Nome_Unidade</p>
-                <p>Imagem: @r.Img_Remedio</p>
-                <hr />
-            }
+    <br />
+    if (remedioteste.Count > 0)
+    {
+        var c = 0;
+        
+        <p>Teste Começou agora:</p>
+        <MudSimpleTable Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped" Style="overflow-x: auto;">
+            <thead>
+                <tr>
+                    @foreach (var h in headings)
+                    {
+                        <th>@h</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in rows)
+                {
+                    <tr>
+                        @foreach (var x in c)
+                        {
 
+                            foreach (Remedios r in remedioteste)
+                            {
+                                <td>Id: @r.Id</td>
+                                <td>Nome: @r.Nome</td>
+                                <td>Código: @r.Codigo</td>
+                                <td>Código ANS: @r.Codigo_ANS</td>
+                                <td>Data/lote: @r.Data_lote</td>
+                                <td>Dt Depósito: @r.Data_deposito</td>
+                                <td>Tipo: @r.Tipo_remedio</td>
+                                <td>Classificação: @r.Cor</td>
+                                //<p>Região: @remedioteste.Nome_Regiao</p>
+                                //<p>Unidade: @remedioteste.Nome_Unidade</p>
+                                <td>Imagem: @r.Img_Remedio</td>
+
+                            }
+                            c++;
+                        }
+                    </tr>
+                }
+            </tbody>
+        </MudSimpleTable>
+        <MudToolBar>
+            <MudSwitch @bind-Checked="@hover" Color="Color.Primary">Hover</MudSwitch>
+            <MudSwitch @bind-Checked="@dense" Color="Color.Secondary">Dense</MudSwitch>
+            <MudSwitch @bind-Checked="@striped" Color="Color.Tertiary">Striped</MudSwitch>
+            <MudSwitch @bind-Checked="@bordered" Color="Color.Warning">Bordered</MudSwitch>
+        </MudToolBar>
+        <hr />
             <p>Teste FINALIZOU</p>
         }
 
     }
+@code {
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = false;
+
+    string[] headings = { "ID", "Nome", "Codigo", "Codigo ANS", "Data Lote" , "Data Deposito" , "Tipo Remedio" , "Classificacao" , "Imagem"};
+    string[] rows = {
+        @"1 Krishna kpartner0@usatoday.com Male 28.25.250.202",
+        @"2 Webb wstitle1@ning.com Male 237.168.134.114",
+        @"3 Nathanil nneal2@cyberchimps.com Male 92.6.0.175",
+        @"4 Adara alockwood3@patch.com Female 182.174.217.152",
+        @"5 Cecilius cchaplin4@shinystat.com Male 195.124.144.18",
+        @"6 Cicely cemerine9@soup.io Female 138.94.191.43",
+    };
+
+}
 @code {
     private string errorMessage;
     bool rodando = false;
@@ -133,18 +181,5 @@
             await JsRuntime.InvokeVoidAsync("alert", "ERRO" + ex.Message);
         }
 
-    }
-    public async Task CanGetErrorMessage(string url, string expectedError)
-    {
-        try
-        {
-            var httpClient = new HttpClient();
-            var httpResponseMessage = await httpClient.GetAsync(url);
-        }
-        catch (Exception e)
-        {
-            var innerError = e.Message; // somehow find the inner error
-            //Assert.Equal(innerError, expectedError);
-        }
     }
 }
