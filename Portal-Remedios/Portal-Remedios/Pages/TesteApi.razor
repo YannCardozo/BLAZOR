@@ -6,7 +6,6 @@
 @using Newtonsoft.Json;
 @using Portal_Remedios.Models;
 
-
     <div class="row mb-3 text-center" id="Linha-teste-api-cabecalho">
         <div class="col-12">
             <h3 class="mx-auto">Espaço para testes de api aqui</h3>
@@ -46,6 +45,7 @@
         var c = 0;
         
         <p>Teste Começou agora:</p>
+        <!--
         <MudSimpleTable Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped" Style="overflow-x: auto;">
             <thead>
                 <tr>
@@ -89,6 +89,7 @@
             <MudSwitch @bind-Checked="@striped" Color="Color.Tertiary">Striped</MudSwitch>
             <MudSwitch @bind-Checked="@bordered" Color="Color.Warning">Bordered</MudSwitch>
         </MudToolBar>
+        -->
         <hr />
             <p>Teste FINALIZOU</p>
         }
@@ -117,6 +118,7 @@
     string resultado = "";
     public List<Remedios> remedioteste = new();
     bool liguei = false;
+
 
 
     async Task Rodar()
@@ -182,4 +184,5 @@
         }
 
     }
+
 }

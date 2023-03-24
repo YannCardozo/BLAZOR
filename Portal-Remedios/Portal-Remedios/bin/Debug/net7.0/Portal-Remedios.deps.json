@@ -9,7 +9,6 @@
       "Portal-Remedios/1.0.0": {
         "dependencies": {
           "BlazorInputFile": "0.2.0",
-          "CurrieTechnologies.Razor.SweetAlert2": "5.4.0",
           "MudBlazor": "6.2.0",
           "Newtonsoft.Json": "13.0.3",
           "Plotly.Blazor": "2.18.0"
@@ -25,18 +24,6 @@
         },
         "runtime": {
           "lib/netstandard2.1/BlazorInputFile.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "CurrieTechnologies.Razor.SweetAlert2/5.4.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Components": "7.0.1",
-          "Microsoft.AspNetCore.Components.Web": "7.0.1"
-        },
-        "runtime": {
-          "lib/net7.0/CurrieTechnologies.Razor.SweetAlert2.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -186,13 +173,6 @@
       "sha512": "sha512-wsPTwoA9fkHOxjEh0W0brNeTaVBaMCFwfBLehbRhfW+RzlIrYtlJ5qFpT5f377Ej6ELk+xeoUrkDBx9c8JF7DQ==",
       "path": "blazorinputfile/0.2.0",
       "hashPath": "blazorinputfile.0.2.0.nupkg.sha512"
-    },
-    "CurrieTechnologies.Razor.SweetAlert2/5.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-gDHNb0xG7+KNJ8DBSQXZb6ZF9YCMUK6EoUc6uQSPAduF8+QvJPxbRL0WjaMv/TtGuuj80QWlQPzD3noi9eddzQ==",
-      "path": "currietechnologies.razor.sweetalert2/5.4.0",
-      "hashPath": "currietechnologies.razor.sweetalert2.5.4.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/7.0.1": {
       "type": "package",

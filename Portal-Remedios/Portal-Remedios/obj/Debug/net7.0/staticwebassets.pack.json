@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\images\\icon_head.svg"
     },
     {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
       "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\wwwroot\\js\\JavaScript.js",
       "PackagePath": "staticwebassets\\js\\JavaScript.js"
     },

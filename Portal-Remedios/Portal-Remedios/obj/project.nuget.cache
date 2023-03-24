@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tn6GJ7AlcZrJZuKOcnbKWZiotvtf3TiQPUCRQNCPXS0byaCIMqZAm0L5qZYBq/BB/352vm8ouyYVGPb+HU7OYw==",
+  "dgSpecHash": "hP8G9rZk5hAAcvnNNYkmnbPBHYGqcLgrtgufYTG2aoMwdtBu8p9HSMsiRN8dH+1Cb7T+eEWSv4GBkfxq5e35MA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\Blazor\\Portal-Remedios\\Portal-Remedios\\Portal-Remedios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yann S.O\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
-    "C:\\Users\\Yann S.O\\.nuget\\packages\\currietechnologies.razor.sweetalert2\\5.4.0\\currietechnologies.razor.sweetalert2.5.4.0.nupkg.sha512",
     "C:\\Users\\Yann S.O\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.1\\microsoft.aspnetcore.authorization.7.0.1.nupkg.sha512",
     "C:\\Users\\Yann S.O\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.1\\microsoft.aspnetcore.components.7.0.1.nupkg.sha512",
     "C:\\Users\\Yann S.O\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.1\\microsoft.aspnetcore.components.analyzers.7.0.1.nupkg.sha512",

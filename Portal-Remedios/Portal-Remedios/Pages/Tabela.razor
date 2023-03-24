@@ -1,0 +1,56 @@
+﻿@page "/Tabela"
+
+@using remedios;
+@using System.Net.Http.Json
+@using MudBlazor.Examples.Data.Models
+@inject HttpClient HttpClient
+@inject IJSRuntime JsRuntime
+@using MudBlazor.Examples.Data.Models;
+@using MudBlazor;
+@using Newtonsoft.Json;
+
+
+<PageTitle>Testando Tabela com API</PageTitle>
+<MudText Typo="Typo.h3" GutterBottom="true">Tabela de remedios</MudText>
+
+@if (TesteTabela.Count <= 0)
+{
+    <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+}
+else
+{
+
+    <MudTable Items="TesteTabela" Hover="true"  Breakpoint="Breakpoint.Sm">
+        <HeaderContent>
+            <MudTh>Id</MudTh>
+            <MudTh>Nome</MudTh>
+            <MudTh>Codigo</MudTh>
+            <MudTh>Codigo ANS</MudTh>
+            <MudTh>Classificacao</MudTh>
+            <MudTh>Cadastrar</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Id">@context.Id</MudTd>
+            <MudTd DataLabel="Name">@context.Nome</MudTd>
+            <MudTd DataLabel="Company">@context.Tipo_remedio</MudTd>
+            <MudTd DataLabel="Email">@context.Codigo_ANS</MudTd>
+            <MudTd DataLabel="Teste">@context.Cor</MudTd>
+            <MudTd DataLabel="">
+                <MudFab Href="@($"/supplier/edit/{context.Id}")" Color="Color.Primary" Size="Size.Small" StartIcon="@Icons.Material.Filled.Edit" />
+                <MudFab Href="@($"/supplier/delete/{context.Id}")" Color="Color.Secondary" Size="Size.Small" StartIcon="@Icons.Material.Filled.Delete" />
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+    <br/>
+    <MudPaper Class="d-flex flex-row-reverse flex-grow-1 gap-4" Elevation="0">
+        <MudFab Href="/Tabela/add" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" />
+    </MudPaper>
+    }
+@code {
+    protected List<Remedios> TesteTabela = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        TesteTabela = await HttpClient.GetFromJsonAsync<List<Remedios>>("https://localhost:5001/Remedios/");
+    }
+}

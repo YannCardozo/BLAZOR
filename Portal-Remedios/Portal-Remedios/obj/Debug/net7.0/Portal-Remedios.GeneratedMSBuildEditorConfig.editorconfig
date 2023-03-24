@@ -36,8 +36,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Pages/Tabela.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFiZWxhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Pages/TesteApi.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdGVBcGkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Pages/TesteDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdGVEYXNoYm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Shared/DashLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXERhc2hMYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Yann S.O/Desktop/REPOSITORIO YANN/Blazor/Portal-Remedios/Portal-Remedios/Shared/NoLayout.razor]
