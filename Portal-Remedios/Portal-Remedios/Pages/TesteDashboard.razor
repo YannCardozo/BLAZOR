@@ -1,8 +1,69 @@
 ﻿@layout DashLayout
 @page "/TesteDashboard"
+@using MudBlazor
 
-<h3>TesteDashboard</h3>
-
+<h3 class="text-center">TesteDashboard</h3>
+<MudContainer Class="mt-16 px-8" MaxWidth="MaxWidth.False">
+    <MudGrid>
+        <MudItem class="aligns-items-center justify-content-center" xs="12" sm="6" md="4" lg="3" xl="3" xxl="3">
+            <MudPaper Elevation="2" Class="d-flex aligns-items-center justify-content-center pa-4" Style="height: 100px;place-items: center;">
+                Registrados @numero_de_atendimento atendimentos
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4"lg="3" xl="3" xxl="3">
+            <MudPaper Elevation="2" Class="d-flex aligns-items-center justify-content-center pa-4" Style="height: 100px;place-items: center;">
+                Testando o conteudo
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="12" md="4" lg="3" xl="3" xxl="3">
+            <MudPaper Elevation="2" Class="d-flex aligns-items-center justify-content-center pa-4" Style="height: 100px;place-items: center;">
+                Testando o conteudo
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" lg="3" xl="3" xxl="3">
+            <MudGrid>
+                <MudItem xs="12" lg="3" xl="3" xxl="3">
+                    <MudPaper Elevation="2" Class="d-flex aligns-items-center justify-content-center pa-4" Style="height: 100px;place-items: center;">
+                        Testando o conteudo
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="12" lg="3" xl="3" xxl="3">
+                    <MudPaper Elevation="2" Class="d-flex aligns-items-center justify-content-center pa-4" Style="height: 100px;place-items: center;">
+                        Testando o conteudo
+                    </MudPaper>
+                </MudItem>
+            </MudGrid>
+        </MudItem>
+        <MudItem xs="12" sm="6">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 100px">
+                Testando o conteudo
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;">
+                Testando o conteudo
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;">
+                Testando o conteudo
+            </MudPaper>
+        </MudItem>
+        <MudItem xs="12" sm="12" md="4">
+            <MudPaper Elevation="2" Class="pa-4" Style="height: 200px;">
+                Testando o conteudo
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
 @code {
+
+    Random numero = new Random();
+    int numero_de_atendimento = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        numero_de_atendimento = numero.Next(1,213);
+    }
 
 }

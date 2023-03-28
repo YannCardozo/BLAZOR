@@ -112,3 +112,7 @@ C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedio
 C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.JSInterop.dll
 C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\MudBlazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Nancy.dll

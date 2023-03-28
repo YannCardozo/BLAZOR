@@ -1,11 +1,20 @@
 ﻿@page "/index"
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
+@using System;
+@using System.Net;
+@using System.Net.Http;
+@using System.Net.Http.Headers;
+@using System.Text;
+@using System.Text.Json;
+@using Nancy.Json;
+@using System.Text.RegularExpressions;
 @using remedios;
 @using Newtonsoft.Json;
 @using Portal_Remedios.Models;
 @using MudBlazor;
-
+@using System.Collections.Generic;
+@using System.ComponentModel.DataAnnotations;
 
 <PageTitle>Portal Remedios</PageTitle>
 <br />
@@ -23,6 +32,182 @@
                     </div>
                 }
             </center>
+            <EditForm Model="@modelRemedio" OnValidSubmit="OnValidSubmit">
+                <DataAnnotationsValidator />
+            @if (@RadioValue == "Cadastro de Medicamento")
+            {
+            <style>
+                .LabelEmailPessoa{
+                display: none;
+                }
+                .EmailPessoa{
+                display:none;
+                }
+
+                .LabelCaixaTexto {
+                display: none;
+                }
+
+                .CaixaTexto {
+                display:none;
+                }
+
+                .ArquivoBula {
+                display: none;
+                }
+
+                .EnviaArquivoBula{
+                display:none;
+                }
+                .col-2, .col-4, .col-3, .col-1 {
+                text-align: -webkit-center;
+                }
+                #Inputareceberlocaldeposito{
+                background-color: gainsboro;
+                opacity: 0.7;
+                }
+            </style>
+
+
+
+
+
+                @*<MudGrid>
+                    <MudStack Row="true">
+                        <MudItem xs="12">
+                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
+                        </MudItem>
+                        <MudItem xs="12" sm="6">
+                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
+                        </MudItem>
+                        <MudItem xs="12" sm="6">
+                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />>
+                        </MudItem>
+                        <MudItem xs="6" sm="3">
+                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
+                        </MudItem>
+                        <MudItem xs="6" sm="3">
+                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
+                        </MudItem>
+                        <MudItem xs="6" sm="3">
+                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
+                        </MudItem>
+                        <MudItem xs="6" sm="3">
+                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
+                        </MudItem>
+                    </MudStack>
+                </MudGrid>
+            *@
+
+
+
+
+
+                <MudGrid>
+                    <MudItem>
+                        <MudCard >
+                            <MudCardContent Class="d-flex">
+                                <div class="row">
+                                    <div class="col-6">
+                                    <MudTextField Label="Nome do remédio" @bind-Value="modelRemedio.Nome" />
+                                    </div>
+                                    <div class="col-6">
+                                    <MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Variant="Variant.Text" Min="0" Max="10" />
+                                    </div>
+                                    <div class="col-5">
+                                    <MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Class="mt-3" Variant="Variant.Text" Min="0" Max="10"/>
+                                    </div>
+                                </div>
+                                @*<MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Class="mt-3" Variant="Variant.Text" Min="0" Max="10" />
+                                <MudTextField Label="Código ANS" Class="mt-3" @bind-Value="modelRemedio.Codigo_ANS"/>
+                                <MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Class="mt-3" Variant="Variant.Text" Min="0" Max="10" />
+                                <MudDatePicker Label="Data do lote" HelperText="" Class="mt-3" @bind-Value="modelRemedio.Data_lote" InputType="InputType.DateTimeLocal" />
+                                *@
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModal" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register</MudButton>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem xs="12" sm="5">
+                        <MudPaper Class="pa-4 mud-height-full">
+                            <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
+                            @if (success)
+                            {
+                                <MudText Color="Color.Success">Success</MudText>
+                            }
+                            else
+                            {
+                                <MudText Color="@Color.Error">
+                                    <ValidationSummary />
+                                </MudText>
+                            }
+                        </MudPaper>
+                    </MudItem>
+                    <MudItem xs="12">
+                        <MudText Typo="Typo.body2" Align="Align.Center">
+                            Fill out the form correctly to see the success message.
+                        </MudText>
+                    </MudItem>
+                </MudGrid>
+            }
+
+             @if(confirmamedicamento == true)
+            {
+                <style>
+                    .mud-appbar{
+                        z-index:1;
+                    }
+                </style>
+                <div class="modal" tabindex="-1" style="display:block">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-center">Confirma?</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick=FechaModal></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row mb-3 mx-auto text-center">
+                                    <p>Nome: @modelRemedio.Nome</p>
+                                    <p>Código: @modelRemedio.Codigo</p>
+                                    <p>Código ANS: @modelRemedio.Codigo_ANS</p>
+                                    <p>Data/lote: @modelRemedio.Data_lote</p>
+                                    <p>Dt Depósito: @modelRemedio.Data_deposito</p>
+                                    <p>Tipo: @modelRemedio.Tipo_remedio</p>
+                                    <p>Classificação: @modelRemedio.Cor</p>
+                                    <p>Região: @modelRemedio.Nome_Regiao</p>
+                                    <p>Unidade: @modelRemedio.Nome_Unidade</p>
+                                    <p>Imagem: @modelRemedio.Img_Remedio</p>
+                                        <!-- <div class="col-2">
+                                        <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
+                                        <input class="form-control" type="text" value="@localavagardeposito" placeholder="" readonly>
+                                        <input type="text" id="Inputareceberlocaldeposito" name=""readonly>
+                                        </div>
+                                        </div>
+                                        -->
+                                </div>
+                            </div>
+                            <div class="modal-footer text-center">
+                                <hr>
+                                <button type="button" class="btn btn-success" @onclick=SalvaCadastroRemedio>Confirmar</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick=CancelaCadastroRemedio>Cancelar</button>
+                            </div>
+                            @*if (RemediosInsere.Count <= 0)
+                            {
+                                <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+                            }
+                            *@
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </EditForm>
+
+
+            @*
         <EditForm Model="@modelRemedio">
             @if (@RadioValue == "Cadastro de Medicamento")
             {
@@ -93,8 +278,9 @@
                     </div>
                     <div class="col-2">
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data lote:</label>
-                            <input type="datetime-local" class="form-control" id="CodAns" placeholder="data de fabricação" @bind-value="modelRemedio.Data_lote">
+                            <MudItem>
+                                <MudDatePicker For="@(() => modelRemedio.Data_lote)" Label="Parameter Label" />
+                            </MudItem>
                         </div>
                     </div>
                 </div>
@@ -220,9 +406,14 @@
                             </div>
                             <div class="modal-footer text-center">
                                 <hr>
-                                <button type="button" class="btn btn-success" @onclick=SalvaCadastroRemedio>Confirmar</button>
+                                <button type="button" class="btn btn-success" >Confirmar</button>
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick=CancelaCadastroRemedio>Cancelar</button>
                             </div>
+                            @*if (RemediosInsere.Count <= 0)
+                            {
+                                <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+                            }
+                            
                         </div>
                     </div>
                 </div>
@@ -230,6 +421,7 @@
 
             }
         </EditForm>
+        *@
             @if(@RadioValue == "Cadastro de beneficiário")
             {
             <EditForm Model="@modelBeneficiario">
@@ -472,6 +664,7 @@
     public Beneficiario modelBeneficiario = new();
     public Cep modelCep = new();
     public Remedios modelRemedio = new();
+    public Remedios Modelremediotemp = new();
     public List<Remedios> lstRemedios = new();
     //public Remedios modelRemedio = new();
     //public List<Remedios> lstRemedios = new();
@@ -479,6 +672,7 @@
     public string Nome_medicamento_modal { get; set; } = "afafafa";
     public string Código_medicamento_modal { get; set; } = "";
     public string Código_Ans_medicamento_modal { get; set; } = "";
+    public static Remedios RemediosInsere = new();
     //public string Nome_medicamento_modal { get; set; } = "";
     //public string Nome_medicamento_modal { get; set; } = "";
     //public string Nome_medicamento_modal { get; set; } = "";
@@ -526,6 +720,7 @@
     string opcao_codans { get; set; } = "Código da ANS";
     string opcao_nis_paciente { get; set; } = "NIS do paciente";
     bool verifica { get; set; } = false;
+    HttpClient httpclient;
 
     private async Task ConfirmaModalBeneficiario()
     {
@@ -557,22 +752,86 @@
     }
     private async void CancelaCadastroRemedio()
     {
+        modelRemedio = new();
         //to clear textboxes and model
         // remedios = new Remedios();
         confirmamedicamento = false;
         modal = false;
+
         await JsRuntime.InvokeVoidAsync("alert", "Dados deletados com sucesso");
     }
-    private async void SalvaCadastroRemedio()
+
+    /*
+    HttpClient cliente = new HttpClient();
+    resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios/");
+
+            if(resultado == null)
+            {
+            await JsRuntime.InvokeVoidAsync("alert", resultado + " RETORNO NULL");
+    rodando = false;
+    return ;
+    }
+    */
+
+    //RemediosInsere
+    public async Task PostApi(Remedios remedio)
     {
-        //here we save the changes --add to database
-        //await _Remedios.addNewRemediosAsync(Remedios);
-        //Close the dialog
+
+        HttpClient cliente = new();
+        //HttpResponseMessage response = await cliente.PostAsJsonAsync("https://remedios.requestcatcher.com/", remedio);
+        string json = new JavaScriptSerializer().Serialize(modelRemedio);
+        StringContent data = new StringContent(json, Encoding.UTF8, "application/json");
+        HttpResponseMessage response = await cliente.PostAsync("https://remedios.requestcatcher.com/", data);
+        response.EnsureSuccessStatusCode();
+
+        if (response == null)
+        {
+            await JsRuntime.InvokeVoidAsync("alert", response + " RETORNO NULL");
+            return;
+        }
+        // return URI of the created resource.
+        //return response.Headers.Location;
+    }
+
+
+    public async Task SalvaCadastroRemedio()
+    {
+        //Modelremediotemp = modelRemedio;
+
+        try{
+            HttpClient cliente = new();
+            //HttpResponseMessage response = await cliente.PostAsJsonAsync("https://remedios.requestcatcher.com/", remedio);
+            string json = new JavaScriptSerializer().Serialize(modelRemedio);
+            StringContent data = new StringContent(json, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = await cliente.PostAsync("https://remedios.requestcatcher.com/", data);
+            response.EnsureSuccessStatusCode();
+
+            if (response == null)
+            {
+                confirmamedicamento = false;
+                modal = false;
+                await JsRuntime.InvokeVoidAsync("alert", response + " RETORNO NULL");
+                return ;
+            }
+
+            //clear the model
+        //Remedios = new Remedios();
+       // await JsRuntime.InvokeVoidAsync("alert", "Cadastro do Medicamento" + " efetuado com sucesso!" + "foi gerado: " + json);
+        await JsRuntime.InvokeVoidAsync("alert", "MEU JSON FOI: " + json);
+        await JsRuntime.InvokeVoidAsync("alert", "MEU RESPONSE FOI: " + response);
+        await JsRuntime.InvokeVoidAsync("alert", "MEU DATA FOI: " + data);
+        }
+        catch (Exception ex)
+        {
+            confirmamedicamento = false;
+            modal = false;
+            await JsRuntime.InvokeVoidAsync("alert", "Nao foi possivel efetuar o cadastro");
+            await JsRuntime.InvokeVoidAsync("alert", "ERRO" + ex.Message);
+        }
         confirmamedicamento = false;
         modal = false;
-        //clear the model
-        //Remedios = new Remedios();
-        await JsRuntime.InvokeVoidAsync("alert", "Cadastro do Medicamento" + " efetuado com sucesso!");
+        modelRemedio = new();
+        await JsRuntime.InvokeVoidAsync("alert"," FIM DA FUNCTION SALVACADASTROREMEDIO");
     }
 
 
@@ -816,7 +1075,12 @@
 
     }
 
-
+    bool success;
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
 }
 
 
