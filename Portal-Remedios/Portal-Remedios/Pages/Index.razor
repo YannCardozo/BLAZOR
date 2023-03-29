@@ -37,6 +37,11 @@
             @if (@RadioValue == "Cadastro de Medicamento")
             {
             <style>
+                .div-form-medicamento{
+                background-color: #ecf0f3;
+                border-radius: 15px;
+                box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+                }
                 .LabelEmailPessoa{
                 display: none;
                 }
@@ -97,39 +102,111 @@
                         </MudItem>
                     </MudStack>
                 </MudGrid>
+
+
+
+            public int Codigo { get; set; }
+            public string Codigo_ANS { get; set; }
+            public DateTime Data_lote { get; set; }
+            public string Vaga_lote { get; set; }
+            public DateTime Data_deposito { get; set; }
+            public Tipo Tipo_remedio { get; set; }
+            public Classificacao Cor { get; set; }
+            public DateTime Hora_Cadastro { get; set; }
+            public string? Img_Remedio { get; set; }
+            public string? Link_Bula { get; set; }
+            public Regiao? Nome_Regiao { get; set; }
+            public Unidade? Nome_Unidade { get; set; }
             *@
 
-
-
-
-
-                <MudGrid>
+                <MudGrid Style="display:block;background-color: #ecf0f3;border-radius: 15px;box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;">
                     <MudItem>
                         <MudCard >
-                            <MudCardContent Class="d-flex">
+                            <MudCardContent>
                                 <div class="row">
-                                    <div class="col-6">
-                                    <MudTextField Label="Nome do remédio" @bind-Value="modelRemedio.Nome" />
+                                    <div class="col-3">
+                                        <MudTextField Label="Nome do remédio" Variant="Variant.Text" MaxLength="10" @bind-Value="modelRemedio.Nome" />
                                     </div>
-                                    <div class="col-6">
-                                    <MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Variant="Variant.Text" Min="0" Max="10" />
+                                    <div class="col-3">
+                                        <MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Variant="Variant.Text" MaxLength="10"/>
                                     </div>
-                                    <div class="col-5">
-                                    <MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Class="mt-3" Variant="Variant.Text" Min="0" Max="10"/>
+                                    <div class="col-3">
+                                        <MudTextField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo_ANS" Label="Código ANS" Variant="Variant.Text" MaxLength="10" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudDatePicker Label="Data do lote" @bind-Value="modelRemedio.Data_lote" />
                                     </div>
                                 </div>
-                                @*<MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Class="mt-3" Variant="Variant.Text" Min="0" Max="10" />
-                                <MudTextField Label="Código ANS" Class="mt-3" @bind-Value="modelRemedio.Codigo_ANS"/>
-                                <MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Class="mt-3" Variant="Variant.Text" Min="0" Max="10" />
-                                <MudDatePicker Label="Data do lote" HelperText="" Class="mt-3" @bind-Value="modelRemedio.Data_lote" InputType="InputType.DateTimeLocal" />
-                                *@
                             </MudCardContent>
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudDatePicker Label="Data do depósito" @bind-Value="modelRemedio.Data_deposito" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTimePicker Label="Hora do depósito" @bind-Value="modelRemedio.Data_deposito" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Tipo" @bind-Value="modelRemedio.Tipo_remedio" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            @foreach (var Tipo_remedio in Enum.GetValues(typeof(Tipo)))
+                                            {
+                                                <MudSelectItem Value="@(modelRemedio.Tipo_remedio)">@Tipo_remedio</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Cor" @bind-Value="modelRemedio.Cor" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                            @foreach (var Cor in Enum.GetValues(typeof(Classificacao)))
+                                            {
+                                                <MudSelectItem Value="@(modelRemedio.Cor)">@Cor</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                            <div class="row">
+                                <div class="col-3">
+                                    <MudSelect Placeholder="Cor" @bind-Value="modelRemedio.Nome_Regiao" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                        @foreach (var Nome_Regiao in Enum.GetValues(typeof(Regiao)))
+                                        {
+                                            <MudSelectItem Value="@(modelRemedio.Nome_Regiao)">@Nome_Regiao</MudSelectItem>
+                                        }
+                                    </MudSelect>
+                                </div>
+                                <div class="col-3">
+                                    <MudSelect Placeholder="Cor" @bind-Value="modelRemedio.Nome_Unidade" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                        @foreach (var Nome_Unidade in Enum.GetValues(typeof(Unidade)))
+                                        {
+                                            <MudSelectItem Value="@(modelRemedio.Nome_Unidade)">@Nome_Unidade</MudSelectItem>
+                                        }
+                                    </MudSelect>
+                                </div>
+                                <div class="col-6 text-center" style="align-self: self-end;">
+                                    <InputFile multiple class="form-control" type="file" id="formFile" OnChange="@CarregaImagem" />
+                                </div>
+                            </div>
+                            </MudCardContent>
+                            @if (files != null)
+                            {
+                                <MudCardContent>
+                                    <div class="row">
+                                        <div class="col-10 mx-auto text-center">
+                                            @foreach (var fonteimagem in Imagens)
+                                            {
+                                                <img src="@Imagens" />
+                                                <!--  style="width:100px;height:100px;" -->
+                                            }
+                                        </div>
+                                    </div>
+                                </MudCardContent>
+                            }
                             <MudCardActions>
                                 <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModal" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register</MudButton>
                             </MudCardActions>
                         </MudCard>
                     </MudItem>
-                    <MudItem xs="12" sm="5">
+                    <MudItem xs="12" sm="5" Style="    max-width: inherit;">
                         <MudPaper Class="pa-4 mud-height-full">
                             <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
                             @if (success)
@@ -146,7 +223,7 @@
                     </MudItem>
                     <MudItem xs="12">
                         <MudText Typo="Typo.body2" Align="Align.Center">
-                            Fill out the form correctly to see the success message.
+                            Portal-Remedios All-Rights reserved
                         </MudText>
                     </MudItem>
                 </MudGrid>
@@ -1080,6 +1157,19 @@
     {
         success = true;
         StateHasChanged();
+    }
+
+    IList<IBrowserFile> files = new List<IBrowserFile>();
+    private void UploadFiles(IBrowserFile file)
+    {
+        files.Add(file);
+        //TODO upload the files to the server
+    }
+
+    private void UploadFiles(InputFileChangeEventArgs args)
+    {
+        files.Add(args.File);
+        //TODO upload the files to the server
     }
 }
 
