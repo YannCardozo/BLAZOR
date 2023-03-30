@@ -1,6 +1,7 @@
 ﻿@page "/index"
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
+@inject ISnackbar Snackbar
 @using System;
 @using System.Net;
 @using System.Net.Http;
@@ -47,7 +48,7 @@
                 }
                 .EmailPessoa{
                 display:none;
-                }
+                } 
 
                 .LabelCaixaTexto {
                 display: none;
@@ -148,17 +149,19 @@
                                     </div>
                                     <div class="col-3">
                                         <MudSelect Placeholder="Tipo" @bind-Value="modelRemedio.Tipo_remedio" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
-                                            @foreach (var Tipo_remedio in Enum.GetValues(typeof(Tipo)))
+                                        <MudSelectItem Value="@modelRemedio.Tipo_remedio" Disabled="true" >Selecione</MudSelectItem>
+                                            @foreach(Tipo Tipo_remedio in Enum.GetValues(typeof(Tipo)))
                                             {
-                                                <MudSelectItem Value="@(modelRemedio.Tipo_remedio)">@Tipo_remedio</MudSelectItem>
+                                                <MudSelectItem Value="@Tipo_remedio">@Tipo_remedio</MudSelectItem>
                                             }
                                         </MudSelect>
                                     </div>
                                     <div class="col-3">
-                                        <MudSelect Placeholder="Cor" @bind-Value="modelRemedio.Cor" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
-                                            @foreach (var Cor in Enum.GetValues(typeof(Classificacao)))
+                                        <MudSelect Placeholder="Cor remédio" @bind-Value="@modelRemedio.Cor" Label="Tarja do medicamento" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelRemedio.Cor" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (Classificacao Cor in Enum.GetValues(typeof(Classificacao)))
                                             {
-                                                <MudSelectItem Value="@(modelRemedio.Cor)">@Cor</MudSelectItem>
+                                                <MudSelectItem Value="@Cor">@Cor</MudSelectItem>
                                             }
                                         </MudSelect>
                                     </div>
@@ -167,46 +170,57 @@
                             <MudCardContent>
                             <div class="row">
                                 <div class="col-3">
-                                    <MudSelect Placeholder="Cor" @bind-Value="modelRemedio.Nome_Regiao" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
-                                        @foreach (var Nome_Regiao in Enum.GetValues(typeof(Regiao)))
+                                    <MudSelect Placeholder="Região" @bind-Value="modelRemedio.Nome_Regiao" Label="Região" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                        <MudSelectItem Value="@modelRemedio.Nome_Regiao" Disabled="true" >Selecione</MudSelectItem>
+                                        @foreach (Regiao Nome_Regiao in Enum.GetValues(typeof(Regiao)))
                                         {
-                                            <MudSelectItem Value="@(modelRemedio.Nome_Regiao)">@Nome_Regiao</MudSelectItem>
+                                                <MudSelectItem Value="@Nome_Regiao">@Nome_Regiao</MudSelectItem>
                                         }
                                     </MudSelect>
                                 </div>
                                 <div class="col-3">
-                                    <MudSelect Placeholder="Cor" @bind-Value="modelRemedio.Nome_Unidade" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
-                                        @foreach (var Nome_Unidade in Enum.GetValues(typeof(Unidade)))
+                                    <MudSelect Placeholder="Unidade" @bind-Value="modelRemedio.Nome_Unidade" Label="Unidade" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                        <MudSelectItem Value="@modelRemedio.Nome_Unidade" Disabled="true" >Selecione</MudSelectItem>
+                                        @foreach (Unidade Nome_Unidade in Enum.GetValues(typeof(Unidade)))
                                         {
-                                            <MudSelectItem Value="@(modelRemedio.Nome_Unidade)">@Nome_Unidade</MudSelectItem>
+                                                <MudSelectItem Value="@Nome_Unidade">@Nome_Unidade</MudSelectItem>
                                         }
                                     </MudSelect>
                                 </div>
-                                <div class="col-6 text-center" style="align-self: self-end;">
-                                    <InputFile multiple class="form-control" type="file" id="formFile" OnChange="@CarregaImagem" />
+                                <div class="col-6 text-center" >
+                                        <div class="custom-file" style="    margin-top: auto;" id="customFile">
+                                    <Input type="file" OnChange="OnInputFileChange" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp" multiple/>
+                                    <label class="custom-file-label" for="exampleInputFile">
+                                        @InputFileMessage 
+                                    </label>
                                 </div>
-                            </div>
-                            </MudCardContent>
-                            @if (files != null)
-                            {
-                                <MudCardContent>
-                                    <div class="row">
-                                        <div class="col-10 mx-auto text-center">
-                                            @foreach (var fonteimagem in Imagens)
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-6 text-center" >
+
+
+                                    @if (files != null)
+                                    {
+                                        <MudText Typo="@Typo.h6">@files.Count() File@(files.Count() == 1 ? "" : "s"):</MudText>
+                                        <MudList>
+                                            @foreach (var file in files)
                                             {
-                                                <img src="@Imagens" />
-                                                <!--  style="width:100px;height:100px;" -->
+                                                <MudListItem Icon="@Icons.Material.Filled.AttachFile" @key="@file">
+                                                    @file.Name <code>@file.Size bytes</code>
+                                                </MudListItem>
                                             }
-                                        </div>
-                                    </div>
-                                </MudCardContent>
-                            }
+                                            </MudList>
+                                    }
+                                </div>
+                                </div>
+                            </MudCardContent>
                             <MudCardActions>
                                 <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModal" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register</MudButton>
                             </MudCardActions>
                         </MudCard>
                     </MudItem>
-                    <MudItem xs="12" sm="5" Style="    max-width: inherit;">
+                    @*<MudItem xs="12" sm="5" Style="    max-width: inherit;">
                         <MudPaper Class="pa-4 mud-height-full">
                             <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
                             @if (success)
@@ -221,7 +235,7 @@
                             }
                         </MudPaper>
                     </MudItem>
-                    <MudItem xs="12">
+                *@<MudItem xs="12">
                         <MudText Typo="Typo.body2" Align="Align.Center">
                             Portal-Remedios All-Rights reserved
                         </MudText>
@@ -1158,19 +1172,20 @@
         success = true;
         StateHasChanged();
     }
-
     IList<IBrowserFile> files = new List<IBrowserFile>();
     private void UploadFiles(IBrowserFile file)
     {
         files.Add(file);
         //TODO upload the files to the server
     }
-
-    private void UploadFiles(InputFileChangeEventArgs args)
+    IBrowserFile File;
+    public string InputFileMessage = "";
+    public void OnInputFileChange(InputFileChangeEventArgs e)
     {
-        files.Add(args.File);
-        //TODO upload the files to the server
+        File = e.File;
+        InputFileMessage = e.File.Name;
     }
+
 }
 
 
