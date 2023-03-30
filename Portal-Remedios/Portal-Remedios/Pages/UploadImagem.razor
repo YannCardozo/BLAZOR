@@ -1,0 +1,50 @@
+﻿@page "/UploadImagem"
+@using System.IO
+@inject IWebHostEnvironment env
+@using BlazorInputFile;
+@using AspNetCore;
+@using Microsoft.AspNetCore;
+
+<h3>UploadImagem</h3>
+<input multiple="" type="file" @onchange="OnInputFileChange" _bl_2="" />
+
+@if(file != null)
+{
+    <p>Nome:@file.Name</p>
+    <p>Tamanha do arquivo:@file.Size</p>
+    <p>tipo do arquivo:@file.Type</p>
+
+}
+
+@code {
+    IFileListEntry file;
+    int filesize;
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        await using FileStream fs = new(path, FileMode.Create);
+        await browserFile.OpenReadStream().CopyToAsync(fs);
+
+        foreach(var File in e.GetMultipleFiles(e.FileCount))
+        {
+            if(File.ContentType == "image/png")
+            {
+                var imagefile =  await File.RequestImageFileAsync("image/png", 400, 400);
+            }
+
+            var file = File.OpenReadStream(File.Size);
+            filesize = (int)file.Length;
+
+        }
+    }
+
+
+    //async Task HandleFileSelected(IFileListEntry[] files)
+    //{
+    //    file = files.FirstOrDefault();
+    //    if(file != null)
+    //    {
+            
+    //    }
+    //}
+
+}

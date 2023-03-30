@@ -65,6 +65,10 @@
             "Plotly.Blazor": {
               "target": "Package",
               "version": "[2.18.0, )"
+            },
+            "Smart.Blazor": {
+              "target": "Package",
+              "version": "[15.0.63, )"
             }
           },
           "imports": [
