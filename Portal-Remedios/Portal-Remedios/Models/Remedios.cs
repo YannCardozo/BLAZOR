@@ -53,6 +53,8 @@ namespace remedios
         public DateTime Hora_Cadastro { get; set; }
         public string? Img_Remedio { get; set; }
         public string? Link_Bula { get; set; }
+        public string? ImagePath { get; set; }
+
         public Regiao Nome_Regiao { get; set; }
         public Unidade Nome_Unidade { get; set; }
 

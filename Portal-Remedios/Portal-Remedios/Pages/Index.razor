@@ -2,7 +2,7 @@
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @inject ISnackbar Snackbar
-@using System;
+@inject IConfiguration config
 @using System.Net;
 @using System.Net.Http;
 @using System.Net.Http.Headers;
@@ -17,6 +17,7 @@
 @using System.Collections.Generic;
 @using System.ComponentModel.DataAnnotations;
 @using Pages;
+@using Microsoft.AspNetCore.Components.Forms;
 
 
 <PageTitle>Portal Remedios</PageTitle>
@@ -75,53 +76,6 @@
                 opacity: 0.7;
                 }
             </style>
-
-
-
-
-
-                @*<MudGrid>
-                    <MudStack Row="true">
-                        <MudItem xs="12">
-                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
-                        </MudItem>
-                        <MudItem xs="12" sm="6">
-                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
-                        </MudItem>
-                        <MudItem xs="12" sm="6">
-                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />>
-                        </MudItem>
-                        <MudItem xs="6" sm="3">
-                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
-                        </MudItem>
-                        <MudItem xs="6" sm="3">
-                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
-                        </MudItem>
-                        <MudItem xs="6" sm="3">
-                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
-                        </MudItem>
-                        <MudItem xs="6" sm="3">
-                                <MudTextField Label="First name" HelperText="Nome do remédio" @bind-Value="modelRemedio.Nome" />
-                        </MudItem>
-                    </MudStack>
-                </MudGrid>
-
-
-
-            public int Codigo { get; set; }
-            public string Codigo_ANS { get; set; }
-            public DateTime Data_lote { get; set; }
-            public string Vaga_lote { get; set; }
-            public DateTime Data_deposito { get; set; }
-            public Tipo Tipo_remedio { get; set; }
-            public Classificacao Cor { get; set; }
-            public DateTime Hora_Cadastro { get; set; }
-            public string? Img_Remedio { get; set; }
-            public string? Link_Bula { get; set; }
-            public Regiao? Nome_Regiao { get; set; }
-            public Unidade? Nome_Unidade { get; set; }
-            *@
-
                 <MudGrid Style="display:block;background-color: #ecf0f3;border-radius: 15px;box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;">
                     <MudItem>
                         <MudCard >
@@ -190,16 +144,27 @@
                                     </MudSelect>
                                 </div>
                                 <div class="col-6 text-center" >
-                                        <template id="file-template">
-                                            <div style="color:red">{{filename}}</div>
-                                        </template>
-                                        <FileUpload Multiple ItemTemplate="@fileTemplate"></FileUpload>
+                                        <InputFile OnChange="@LoadFiles" class="form-control" accept=".png,.jpg,.jpeg" @bind-Value="modelRemedio.Img_Remedio" />
                                 </div>
-                                </div>
+                            </div>
+                            @if(PreviewImageUrl != null)
+                            {
                                 <div class="row">
-                                <div class="col-6 text-center" >
+                                    <div style="text-align: center;margin-top: 50px;">
+                                        <img src="@PreviewImageUrl" id="previewImage" />
+                                    </div>
                                 </div>
-                                </div>
+                            }
+                            @if (errors.Count > 0)
+                {
+                            <h2>Errors</h2>
+                            <ul class="text-danger">
+                                @foreach (var error in errors)
+                    {
+                                <li>@error</li>
+                    }
+                            </ul>
+                }
                             </MudCardContent>
                             <MudCardActions>
                                 <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModal" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register</MudButton>
@@ -254,7 +219,19 @@
                                     <p>Classificação: @modelRemedio.Cor</p>
                                     <p>Região: @modelRemedio.Nome_Regiao</p>
                                     <p>Unidade: @modelRemedio.Nome_Unidade</p>
-                                    <p>Imagem: @modelRemedio.Img_Remedio</p>
+                                    @if(PreviewImageUrl != null)
+                                    {
+                                        <div class="row">
+                                            <p>Imagem:</p>
+                                            <div style="text-align: center;margin-top: 50px;">
+                                                <img src="@PreviewImageUrl" id="previewImage" />
+                                            </div>
+                                        </div>
+                                    }else
+                                    {
+                                        <p>Imagem: Não carregada</p>
+                                    }
+
                                         <!-- <div class="col-2">
                                         <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
@@ -734,7 +711,6 @@
 
 
 @code{
-
     //2MB
     private const int TamanhoImgMaximo = 2 * 1024 * 1024;
     private List<string> Imagens = new List<string>();
@@ -798,6 +774,9 @@
     string opcao_nis_paciente { get; set; } = "NIS do paciente";
     bool verifica { get; set; } = false;
     HttpClient httpclient;
+    //public IFileListEntry ImageFile;
+    //public IFileListEntry ImageFile;
+    public string ImageDataUrl;
 
     private async Task ConfirmaModalBeneficiario()
     {
@@ -820,12 +799,29 @@
         confirmamedicamento = true;
         //titulo_opcao = args.Value.ToString();
         await InvokeAsync(StateHasChanged);
+        try
+        {
+            string relativePath = await CaptureFile();
+            newCustomer.ImagePath = relativePath;
+        }
+        catch (Exception ex)
+        {
+            confirmamedicamento = false;
+            FechaModal();
 
+            await InvokeAsync(StateHasChanged);
+            errors.Add($"Error: {ex.Message}");
+
+        }
 
     }
-    private void FechaModal()
+    private async void FechaModal()
     {
+
+        PreviewImageUrl = null;
         confirmamedicamento = false;
+        modelRemedio = new();
+        await InvokeAsync(StateHasChanged);
     }
     private async void CancelaCadastroRemedio()
     {
@@ -834,8 +830,9 @@
         // remedios = new Remedios();
         confirmamedicamento = false;
         modal = false;
-
+        PreviewImageUrl = null;
         await JsRuntime.InvokeVoidAsync("alert", "Dados deletados com sucesso");
+        await InvokeAsync(StateHasChanged);
     }
 
     /*
@@ -866,6 +863,9 @@
             await JsRuntime.InvokeVoidAsync("alert", response + " RETORNO NULL");
             return;
         }
+
+
+
         // return URI of the created resource.
         //return response.Headers.Location;
     }
@@ -873,8 +873,8 @@
 
     public async Task SalvaCadastroRemedio()
     {
-        //Modelremediotemp = modelRemedio;
 
+        //Modelremediotemp = modelRemedio;
         try{
             HttpClient cliente = new();
             //HttpResponseMessage response = await cliente.PostAsJsonAsync("https://remedios.requestcatcher.com/", remedio);
@@ -892,11 +892,11 @@
             }
 
             //clear the model
-        //Remedios = new Remedios();
-       // await JsRuntime.InvokeVoidAsync("alert", "Cadastro do Medicamento" + " efetuado com sucesso!" + "foi gerado: " + json);
-        await JsRuntime.InvokeVoidAsync("alert", "MEU JSON FOI: " + json);
-        await JsRuntime.InvokeVoidAsync("alert", "MEU RESPONSE FOI: " + response);
-        await JsRuntime.InvokeVoidAsync("alert", "MEU DATA FOI: " + data);
+            //Remedios = new Remedios();
+            // await JsRuntime.InvokeVoidAsync("alert", "Cadastro do Medicamento" + " efetuado com sucesso!" + "foi gerado: " + json);
+            await JsRuntime.InvokeVoidAsync("alert", "MEU JSON FOI: " + json);
+            await JsRuntime.InvokeVoidAsync("alert", "MEU RESPONSE FOI: " + response);
+            await JsRuntime.InvokeVoidAsync("alert", "MEU DATA FOI: " + data);
         }
         catch (Exception ex)
         {
@@ -909,6 +909,8 @@
         modal = false;
         modelRemedio = new();
         await JsRuntime.InvokeVoidAsync("alert"," FIM DA FUNCTION SALVACADASTROREMEDIO");
+                PreviewImageUrl = null;
+        StateHasChanged();
     }
 
 
@@ -935,6 +937,7 @@
         Cep.cep = "";
         Cep.uf = "";
         await JsRuntime.InvokeVoidAsync("alert", "Cadastro do beneficiario cancelado" + "Dados deletados com sucesso");
+        PreviewImageUrl = null;
         await InvokeAsync(StateHasChanged);
     }
     private async void SalvaCadastroBeneficiario()
@@ -1103,50 +1106,6 @@
             }
 
         }
-
-
-
-
-
-
-
-
-        //await InvokeAsync(StateHasChanged);
-
-
-/*
-            async Task CheckUsername(ChangeEventArgs e)
-            {
-
-        public string cep { get; set; }
-        public string logradouro { get; set; }
-        public string complemento { get; set; }
-        public string bairro { get; set; }
-        public string localidade { get; set; }
-        public string uf { get; set; }
-        public string ibge { get; set; }
-        public string ddd { get; set; }
-
-        public bool Vericacao = false; 
-
-
-                message = string.Empty;
-                if (e.Value is not null)
-                {
-                    username = e.Value.ToString();
-                    var valid = await http.GetFromJsonAsync<bool>($"/checkusername?username={username}");
-                    if (!valid)
-                    {
-                        message = "You must choose another user name";
-                    }
-                }
-            }
-            */
-
-
-
-            //await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!" + CepInteiro + "funcionou");
-            
         
 
 
@@ -1155,18 +1114,94 @@
     bool success;
     private async void OnValidSubmit(EditContext context)
     {
+        try
+        {
+            string relativePath = await CaptureFile();
+            newCustomer.ImagePath = relativePath;
+        }
+        catch (Exception ex)
+        {
+            errors.Add($"Error: {ex.Message}");
+        }
         success = true;
 
         StateHasChanged();
-    }
-    string containerId = "container";
-    string fileTemplate = "file-template";
-    string messages = "";
 
-    private void OnFileSelected(Event ev)
+    }
+
+
+    public string? PreviewImageUrl = null;
+    private long maxFileSize = 1024 * 1024 * 5; // represents 3MB
+    private int maxAllowedFiles = 3;
+    private List<string> errors = new();
+    private Remedios newCustomer = new();
+    private IBrowserFile? file;
+
+    private async Task SubmitForm()
     {
-        FileUploadFileSelectedEventDetail detail = ev["Detail"];
-        messages = $"{detail.Filename} is a {detail.Type}. The size is {detail.Size / 1000} KB";
+        try
+        {
+            string relativePath = await CaptureFile();
+            newCustomer.ImagePath = relativePath;
+        }
+        catch (Exception ex)
+        {
+            errors.Add($"Error: {ex.Message}");
+        }
+    }
+
+    public async void LoadFiles(InputFileChangeEventArgs e)
+    {
+
+        file = e.File;
+        if (file != null)
+        {
+            var imageFile = await file.RequestImageFileAsync("image/jpeg", 300, 300);
+
+            var buffer = new byte[imageFile.Size];
+            await imageFile.OpenReadStream().ReadAsync(buffer);
+
+            var dataUrl = $"data:image/jpeg;base64,{Convert.ToBase64String(buffer)}";
+            PreviewImageUrl = dataUrl;
+            StateHasChanged();
+        }
+    }
+
+    private async Task<string> CaptureFile()
+    {
+        if (file is null)
+        {
+            await JsRuntime.InvokeVoidAsync("alert", "Arquivo não anexado");
+            return "";
+        }
+
+        try
+        {
+            string newFileName = Path.ChangeExtension(
+                Path.GetRandomFileName(),
+                Path.GetExtension(file.Name));
+
+            string path = Path.Combine(
+                config.GetValue<string>("FileStorage")!,
+                "imagem",
+                newFileName);
+
+            string relativePath = Path.Combine("imagem", newFileName);
+
+            Directory.CreateDirectory(Path.Combine(
+                config.GetValue<string>("FileStorage")!,
+                "imagem"));
+
+            await using FileStream fs = new(path, FileMode.Create);
+            await file.OpenReadStream(maxFileSize).CopyToAsync(fs);
+
+            return relativePath;
+        }
+        catch (Exception ex)
+        {
+            errors.Add($"File: {file.Name} Error: {ex.Message}");
+            throw;
+        }
     }
 }
 

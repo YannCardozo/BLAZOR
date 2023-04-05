@@ -116,4 +116,3 @@ C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedio
 C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.Extensions.PlatformAbstractions.dll
 C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Nancy.dll
-C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Smart.Blazor.dll
