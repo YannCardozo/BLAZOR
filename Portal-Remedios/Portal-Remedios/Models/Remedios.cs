@@ -45,7 +45,7 @@ namespace remedios
         public string Nome { get; set; }
         public int Codigo { get; set; }
         public string Codigo_ANS { get; set; }
-        public DateTime Data_lote { get; set; }
+        public DateOnly Data_lote { get; set; }
         public string Vaga_lote { get; set; }
         public DateTime Data_deposito { get; set; }
         public Tipo Tipo_remedio { get; set; }

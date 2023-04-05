@@ -1,4 +1,4 @@
-﻿@page "/index"
+﻿@page "/Index"
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @inject ISnackbar Snackbar
@@ -143,8 +143,8 @@
                                         }
                                     </MudSelect>
                                 </div>
-                                <div class="col-6 text-center" >
-                                        <InputFile OnChange="@LoadFiles" class="form-control" accept=".png,.jpg,.jpeg" @bind-Value="modelRemedio.Img_Remedio" />
+                                    <div class="col-6 text-center" style="align-self: self-end;">
+                                    <InputFile OnChange="@LoadFiles"  class="form-control" accept=".png,.jpg,.jpeg" @bind-Value="modelRemedio.Img_Remedio" />
                                 </div>
                             </div>
                             @if(PreviewImageUrl != null)
@@ -155,19 +155,21 @@
                                     </div>
                                 </div>
                             }
-                            @if (errors.Count > 0)
-                {
-                            <h2>Errors</h2>
-                            <ul class="text-danger">
-                                @foreach (var error in errors)
-                    {
-                                <li>@error</li>
-                    }
-                            </ul>
-                }
+
+                            @*@if (errors.Count > 0)
+                            {
+                                <h2>Errors</h2>
+                                <ul class="text-danger">
+                                    @foreach (var error in errors)
+                                    {
+                                        <li>@error</li>
+                                    }
+                                </ul>
+                            }
+                            *@
                             </MudCardContent>
                             <MudCardActions>
-                                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModal" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register</MudButton>
+                                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModal" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</MudButton>
                             </MudCardActions>
                         </MudCard>
                     </MudItem>
@@ -260,226 +262,16 @@
             }
         </EditForm>
 
-
-            @*
-        <EditForm Model="@modelRemedio">
-            @if (@RadioValue == "Cadastro de Medicamento")
-            {
-                <style>
-                    .LabelEmailPessoa{
-                    display: none;
-                    }
-                    .EmailPessoa{
-                    display:none;
-                    }
-
-                    .LabelCaixaTexto {
-                    display: none;
-                    }
-
-                    .CaixaTexto {
-                    display:none;
-                    }
-
-                    .ArquivoBula {
-                    display: none;
-                    }
-
-                    .EnviaArquivoBula{
-                    display:none;
-                    }
-                    .col-2, .col-4, .col-3, .col-1 {
-                    text-align: -webkit-center;
-                    }
-                    #Inputareceberlocaldeposito{
-                    background-color: gainsboro;
-                    opacity: 0.7;
-                    }
-                </style>
-                <!--
-                <MudGrid>
-                    <MudItem xs="12" sm="6" md="4">
-                        <MudField Label="Outlined" Variant="Variant.Outlined">Some Content <MudIcon Icon="@Icons.Material.Filled.Favorite" Color="@Color.Warning" /> follows here</MudField>
-                    </MudItem>
-                    <MudItem xs="12" sm="6" md="4">
-                        <MudField Label="Outlined" Variant="Variant.Outlined"></MudField>
-                    </MudItem>
-                    <MudItem xs="12" sm="6" md="4">
-                        <MudField Label="Outlined" Variant="Variant.Outlined" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Warning" AdornmentColor="Color.Warning"></MudField>
-                    </MudItem>
-                </MudGrid>
-                -->
-
-                
-                <div class="row mb-3">
-                    <div class="col-4">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Nome</label>
-                            <InputText class="form-control Nomemedicamento" placeholder="Nome do medicamento" @bind-Value="modelRemedio.Nome"></InputText>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código</label>
-                            <InputNumber class="form-control Codmedicamento" placeholder="Código medicamento" @bind-Value="modelRemedio.Codigo"></InputNumber>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Código ANS</label>
-                            <InputText class="form-control" id="CodAns" placeholder="Código ANS" @bind-Value="modelRemedio.Codigo_ANS"></InputText>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <MudItem>
-                                <MudDatePicker For="@(() => modelRemedio.Data_lote)" Label="Parameter Label" />
-                            </MudItem>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Data de depósito</label>
-                            <input type="date" class="form-control" id="CodAns" placeholder="data de chegada" @bind-value="modelRemedio.Hora_Cadastro">
-                        </div>
-                    </div>
-
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Tipo do remédio:</label>
-                        <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Tipo_remedio">
-                            <option disabled selected value>Selecione</option>
-                            @foreach (var Tipo_remedio in Enum.GetValues(typeof(Tipo)))
-                            {
-                                <option value="@Tipo_remedio">@Tipo_remedio</option>
-                            }
-                        </InputSelect>
-                    </div>
-                </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Classificação:</label>
-                            <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Cor">
-                                <option disabled selected value>Selecione</option>
-                                @foreach (var Cor in Enum.GetValues(typeof(Classificacao)))
-                                {
-                                    <option value="@Cor">@Cor</option>
-                                }
-                            </InputSelect>
-                        </div>
-                    </div>
-
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Região:</label>
-                            <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @onchange="LiberaUnidade"  @bind-Value="modelRemedio.Nome_Regiao">
-                                <option disabled selected value>Selecione</option>
-                                @foreach (var Nome_Regiao in Enum.GetValues(typeof(Regiao)))
-                                {
-                                    <option value="@Nome_Regiao">@Nome_Regiao</option>
-                                }
-                            </InputSelect>
-                        </div>
-                    </div>
-                        <div class="col-2">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Unidade:</label>
-                                <InputSelect class="form-select Escolaridadeselect" aria-label="Tipo:" @bind-Value="modelRemedio.Nome_Unidade">
-                                    <option disabled selected value>Selecione</option>
-                                    @foreach (var Nome_Unidade in Enum.GetValues(typeof(Unidade)))
-                                    {
-                                        <option value="@Nome_Unidade">@Nome_Unidade</option>
-                                    }
-                                </InputSelect>
-                            </div>
-                        </div>
-
-                </div>
-
-
-                <div class="row mb-3 Area-do-arquivo ">
-                    <div class="col-10 mx-auto text-center">
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Anexar Imagem do medicamento:</label>
-                            <InputFile multiple class="form-control" type="file" id="formFile" OnChange="@CarregaImagem" />
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-10 mx-auto text-center">
-                        <div class="mb-3 Imagem-carregada">
-                            @foreach(var fonteimagem in Imagens)
-                            {
-                                <img src="@Imagens" style="width:100px;height:100px;" />
-                            }
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-4 mx-auto">
-                        <button class="btn btn-outline-secondary" type="button" id="CadastraMedicamento" @onclick="ConfirmaModal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</button>
-                    </div>
-                </div>
-
-            }
-
-             @if(confirmamedicamento == true)
-            {
-                <div class="modal" tabindex="-1" style="display:block">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title text-center">Confirma?</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick=FechaModal></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row mb-3 mx-auto text-center">
-                                    <p>Nome: @modelRemedio.Nome</p>
-                                    <p>Código: @modelRemedio.Codigo</p>
-                                    <p>Código ANS: @modelRemedio.Codigo_ANS</p>
-                                    <p>Data/lote: @modelRemedio.Data_lote</p>
-                                    <p>Dt Depósito: @modelRemedio.Data_deposito</p>
-                                    <p>Tipo: @modelRemedio.Tipo_remedio</p>
-                                    <p>Classificação: @modelRemedio.Cor</p>
-                                    <p>Região: @modelRemedio.Nome_Regiao</p>
-                                    <p>Unidade: @modelRemedio.Nome_Unidade</p>
-                                    <p>Imagem: @modelRemedio.Img_Remedio</p>
-                                        <!-- <div class="col-2">
-                                        <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
-                                        <input class="form-control" type="text" value="@localavagardeposito" placeholder="" readonly>
-                                        <input type="text" id="Inputareceberlocaldeposito" name=""readonly>
-                                        </div>
-                                        </div>
-                                        -->
-                                </div>
-                            </div>
-                            <div class="modal-footer text-center">
-                                <hr>
-                                <button type="button" class="btn btn-success" >Confirmar</button>
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick=CancelaCadastroRemedio>Cancelar</button>
-                            </div>
-                            @*if (RemediosInsere.Count <= 0)
-                            {
-                                <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
-                            }
-                            
-                        </div>
-                    </div>
-                </div>
-
-
-            }
-        </EditForm>
-        *@
             @if(@RadioValue == "Cadastro de beneficiário")
             {
             <EditForm Model="@modelBeneficiario">
+                <DataAnnotationsValidator />
                 <style>
+                    .div-form-medicamento {
+                        background-color: #ecf0f3;
+                        border-radius: 15px;
+                        box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+                    }
                     .EmailPessoa{
                     display: initial;
                     }
@@ -489,114 +281,148 @@
                     }
                 </style>
 
-                <div class="row">
-                    <div class="col-4 mb-3">
-                        <label for="exampleFormControlInput1" class="form-label Nomepessoa">Nome</label>
-                        <InputText class="form-control Emailpessoa" placeholder="Nome completo" @bind-Value=modelBeneficiario.Nome />
-                    </div>
-                    <div class="col-2 mb-3">
-                        <label for="exampleFormControlInput1" class="form-label Cpfpessoa">Cpf</label>
-                        <InputText class="form-control Cpfpessoa" placeholder="Cpf" @bind-Value=modelBeneficiario.CPF />
-                    </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label Labeldatadenascimentopessoa">Data nascimento</label>
-                            <input type="datetime" class="form-control Datadenascimentopessoa" placeholder="Data de nascimento" @bind-value=modelBeneficiario.data_nasc />
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label Labelsexopessoa">Sexo</label>
-                            <InputSelect class="form-select Escolaridadeselect" aria-label="Sexo" @bind-Value="modelBeneficiario.sexo">
-                                <option disabled selected value>Selecione</option>
-                                @foreach (var sexo in new string[] { "Masculino", "Feminino", "Gênero Neutro", "Transgênero", "Não-binário", "Outros" })
-                                {
-                                    <option value="@sexo">@sexo</option>
-                                }
-                            </InputSelect>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="mb-3">      
-                            <label for="exampleFormControlInput1" class="form-label Labelceppessoa">Cep</label>
-                            <InputText @bind-Value="@cep" class="form-control Ceppessoa" placeholder="Cep"  @onblur="@(() => ConsultarCep(cep))"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label Labelenderecopessoa">Rua</label>
-                            <input type="text" @bind-value="@Cep.logradouro" id="rua" class="form-control Enderecopessoa" placeholder="Endereço" />
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <label for="exampleFormControlInput1" class="form-label Labelnumeropessoa">Nº</label>
-                        <input type="text" @bind-value="@numero_residencia" class="form-control numeropessoa" placeholder="Nº">
-                    </div>
-                    <div class="col-3">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label Labelbairropessoa">Bairro</label>
-                            <input type="text" @bind-value="@Cep.bairro" id="bairro" class="form-control Bairropessoa" placeholder="Bairro"/>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <label for="exampleFormControlInput1" class="form-label Labelcidadepessoa">Cidade</label>
-                        <input type="text" id="cidade" @bind-value="@Cep.localidade" class="form-control cidadepessoa" placeholder="Cidade">
-                    </div>
-                    <div class="col-2">
-                        <label for="exampleFormControlInput1" class="form-label Labelocupacaopessoa">uf</label>
-                        <input type="text" @bind-value="@Cep.uf" class="form-control Labelocupacaopessoa" placeholder="uf">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-2">
-                        <label for="exampleFormControlInput1" class="form-label Labelocupacaopessoa">Ocupação</label>
-                        <input type="text" @bind-value="@modelBeneficiario.ocupacao" class="form-control Labelocupacaopessoa" placeholder="Ocupação">
-                    </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label Labeldatadenascimentopessoa">Nº NIS</label>
-                            <input type="text" @bind-value="@modelBeneficiario.NIS" class="form-control Datadenascimentopessoa" placeholder="NIS">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <label for="exampleFormControlInput1" class="form-label Labelescolaridadepessoa">Escolaridade</label>
-                        <InputSelect @bind-Value="@modelBeneficiario.escolaridade" class="form-select Escolaridadeselect" aria-label="Escolaridade">
-                            <option disabled selected value>Selecione</option>
-                            @foreach (var grau in new string[] { "Ensino fundamental completo", "Ensino fundamental incompleto", "Ensino médio completo", "Ensino médio incompleto", "Ensino superior completo", "Ensino superior incompleto" })
-                            {
-                                <option value="@grau">@grau</option>
-                            }
-                        </InputSelect>
-                    </div>
-                    <div class="col-3 mb-3">
-                        <label for="exampleFormControlInput1" class="form-label Labelmotivodocadastropessoa">Motivo do cadastro</label>
-                        <InputSelect @bind-Value="@modelBeneficiario.motivo_cadastro" class="form-select Escolaridadeselect" aria-label="Escolaridade">
-                            <option disabled selected value>Selecione</option>
-                            @foreach (var renda in new string[] { "Baixa renda", "Auxílio saúde" ,"Outro benefício social" })
-                            {
-                                <option value="@renda">@renda</option>
-                            }
-                        </InputSelect>
-                    </div>
-                    <div class="col-3 mb-3">
-                        <label for="exampleFormControlInput1" class="form-label Labelmotivodocadastropessoa">Renda Familiar Mensal</label>
-                        <InputSelect @bind-Value="@modelBeneficiario.renda_familiar" class="form-select Escolaridadeselect" aria-label="Escolaridade">
-                            <option disabled selected value>Selecione</option>
-                            @foreach (var motivo in new string[] { "Abaixo de R$2500,00", "Acima de R$2500,00", "Renda de R$2500,00", "Outros" })
-                            {
-                                <option value="@motivo">@motivo</option>
-                            }
-                        </InputSelect>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-4 mx-auto mt-3">
-                        <button class="btn btn-outline-secondary" type="button" @onclick="ConfirmaModalBeneficiario" id="EnviaMedicamento">Cadastrar</button>
-                    </div>
-                </div>
 
+                <MudGrid Style="display:block;background-color: #ecf0f3;border-radius: 15px;box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;">
+                    <MudItem>
+                        <MudCard >
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudTextField Label="Nome" Variant="Variant.Text" MaxLength="10" @bind-Value="modelBeneficiario.Nome" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudNumericField HideSpinButtons="true" @bind-Value="modelBeneficiario.CPF" Label="CPF" Variant="Variant.Text" MaxLength="10" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudDatePicker Label="Data de nascimento"  @bind-Value="modelBeneficiario.data_nasc"/>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Tipo" @bind-Value="modelBeneficiario.sexo" Label="Sexo" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelBeneficiario.sexo" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (var sexo in new string[] { "Masculino", "Feminino", "Gênero Neutro", "Transgênero", "Não-binário", "Outros" })
+                                            {
+                                                <MudSelectItem Value="@sexo">@sexo</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudTextField @bind-Value="@cep" Label="Cep" MaxLength="8" @onblur="@(() => ConsultarCep(cep))" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Endereço" ReadOnly="true" Variant="Variant.Filled" @bind-Value="@Cep.logradouro" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Número" @bind-Value="@numero_residencia" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Bairro" ReadOnly="true" Variant="Variant.Filled" @bind-Value="@Cep.bairro" />
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudTextField Label="Cidade" ReadOnly="true" Variant="Variant.Filled"  @bind-Value="@Cep.localidade" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Estado" ReadOnly="true" Variant="Variant.Filled"  @bind-Value="@Cep.uf" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Ocupação" @bind-Value="@modelBeneficiario.ocupacao" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="NIS" @bind-Value="@modelBeneficiario.NIS" />
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Escolaridade" @bind-Value="@modelBeneficiario.escolaridade" Label="Escolaridade" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelBeneficiario.escolaridade" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (var grau in new string[] { "Ensino fundamental completo", "Ensino fundamental incompleto", "Ensino médio completo", "Ensino médio incompleto", "Ensino superior completo", "Ensino superior incompleto" })
+                                            {
+                                                <MudSelectItem Value="@grau">@grau</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Renda" @bind-Value="@modelBeneficiario.renda_familiar" Label="Renda" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelBeneficiario.renda_familiar" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (var renda in new string[] { "Abaixo de R$2500,00", "Acima de R$2500,00", "Renda de R$2500,00", "Outros" })
+                                            {
+                                                <MudSelectItem Value="@renda">@renda</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Motivo" @bind-Value="@modelBeneficiario.motivo_cadastro" Label="Motivo" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelBeneficiario.motivo_cadastro" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (var motivo in new string[] { "Baixa renda", "Auxílio saúde", "Outro benefício social" })
+                                            {
+                                                <MudSelectItem Value="@motivo">@motivo</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                    <div class="col-3 text-center" style="align-self: self-end;">
+                                        <InputFile OnChange="@LoadFiles" class="form-control" accept=".png,.jpg,.jpeg" @bind-Value="modelRemedio.Img_Remedio" />
+                                    </div>
+                                </div>
+                            </MudCardContent>
+
+                            @if (PreviewImageUrl != null)
+                            {
+                                <div class="row">
+                                    <div style="text-align: center;margin-top: 50px;">
+                                        <img src="@PreviewImageUrl" id="previewImage" />
+                                    </div>
+                                </div>
+                            }
+                            @*@if (errors.Count > 0)
+                            {
+                            <div class="row">
+                                <h2>Erros:</h2>
+                                <ul class="text-danger">
+                                    @foreach (var error in errors)
+                                    {
+                                    <li>@error</li>
+                                    }
+                                </ul>
+                            </div>
+                            }
+                            *@
+                            <MudCardActions>
+                                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModalBeneficiario" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</MudButton>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                    @*<MudItem xs="12" sm="5" Style="    max-width: inherit;">
+                        <MudPaper Class="pa-4 mud-height-full">
+                            <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
+                            @if (success)
+                            {
+                                <MudText Color="Color.Success">Success</MudText>
+                            }
+                            else
+                            {
+                                <MudText Color="@Color.Error">
+                                    <ValidationSummary />
+                                </MudText>
+                            }
+                        </MudPaper>
+                    </MudItem>
+                *@
+                <MudItem xs="12">
+                        <MudText Typo="Typo.body2" Align="Align.Center">
+                            Portal-Remedios All-Rights reserved
+                        </MudText>
+                </MudItem>
+            </MudGrid>
+            
                 @if (confirmabeneficiario == true && modal == true)
                 {
                     <div class="modal" tabindex="-1" style="display:block">
@@ -793,34 +619,38 @@
 
     private async Task ConfirmaModal()
     {
-
-
-        //remedios = new Remedios();
-        confirmamedicamento = true;
-        //titulo_opcao = args.Value.ToString();
-        await InvokeAsync(StateHasChanged);
-        try
+        if (file != null)
         {
-            string relativePath = await CaptureFile();
-            newCustomer.ImagePath = relativePath;
-        }
-        catch (Exception ex)
-        {
-            confirmamedicamento = false;
-            FechaModal();
 
+
+
+
+            //remedios = new Remedios();
+            confirmamedicamento = true;
+            //titulo_opcao = args.Value.ToString();
             await InvokeAsync(StateHasChanged);
-            errors.Add($"Error: {ex.Message}");
+            try
+            {
+                string relativePath = await CaptureFile();
+                newCustomer.ImagePath = relativePath;
+            }
+            catch (Exception ex)
+            {
+                confirmamedicamento = false;
+                FechaModal();
 
+                await InvokeAsync(StateHasChanged);
+                errors.Add($"Error: {ex.Message}");
+
+            }
         }
-
     }
     private async void FechaModal()
     {
-
+        modelRemedio = new();
         PreviewImageUrl = null;
         confirmamedicamento = false;
-        modelRemedio = new();
+        
         await InvokeAsync(StateHasChanged);
     }
     private async void CancelaCadastroRemedio()
@@ -925,7 +755,7 @@
         modelBeneficiario.renda_familiar = "";
         modelBeneficiario.Nome = "";
         modelBeneficiario.CPF = "";
-        modelBeneficiario.data_nasc = DateTime.MinValue;
+        modelBeneficiario.data_nasc = DateOnly.MinValue;
         modelBeneficiario.motivo_cadastro = "";
         modelBeneficiario.NIS = "";
         modelBeneficiario.sexo = "";
@@ -1106,7 +936,7 @@
             }
 
         }
-        
+
 
 
     }
