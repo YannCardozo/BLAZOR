@@ -1,0 +1,104 @@
+*[b-ondmucd9uc] {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.divzona[b-ondmucd9uc] {
+    
+}
+
+body[b-ondmucd9uc] {
+    font-family: 'Open Sans',serif;
+}
+
+body[b-ondmucd9uc] {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.div-gradiente[b-ondmucd9uc] {
+    border-radius: 10px;
+}
+
+.divesquerda[b-ondmucd9uc] {
+    width: 60%;
+    border-radius: 16px;
+    border: 2px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 0rem;
+}
+
+.divdireita[b-ondmucd9uc] {
+    width: 42%;
+    background-color: #ecf3f9;
+    border-radius: 16px;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.tela_login[b-ondmucd9uc] {
+    align-self: center;
+    text-align: -webkit-center;
+    width: 950px;
+    height: 520px;
+    border: 2px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputs[b-ondmucd9uc] {
+    margin-top: 30px;
+}
+
+label[b-ondmucd9uc], input[b-ondmucd9uc], button[b-ondmucd9uc] {
+    display: block;
+    width: 80%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+label[b-ondmucd9uc] {
+    margin-bottom: 4px;
+}
+
+    label:nth-of-type(2)[b-ondmucd9uc] {
+        margin-top: 12px;
+    }
+
+input[b-ondmucd9uc]::placeholder {
+    color: gray;
+}
+
+input[b-ondmucd9uc] {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+button[b-ondmucd9uc] {
+    color: white;
+    margin-top: 20px;
+    background: #1DA1F2;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+
+    button:hover[b-ondmucd9uc] {
+        box-shadow: none;
+    }

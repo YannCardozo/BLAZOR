@@ -1,4 +1,4 @@
-﻿@page "/Index"
+﻿@page "/index"
 @inject HttpClient Http
 @inject IJSRuntime JsRuntime
 @inject ISnackbar Snackbar
@@ -313,23 +313,23 @@
                                         <MudTextField @bind-Value="@cep" Label="Cep" MaxLength="8" @onblur="@(() => ConsultarCep(cep))" />
                                     </div>
                                     <div class="col-3">
-                                        <MudTextField Label="Endereço" ReadOnly="true" Variant="Variant.Filled" @bind-Value="@Cep.logradouro" />
+                                        <MudTextField Label="Endereço" ReadOnly="true" Variant="Variant.Text" @bind-Value="@Cep.logradouro" />
                                     </div>
                                     <div class="col-3">
                                         <MudTextField Label="Número" @bind-Value="@numero_residencia" />
                                     </div>
                                     <div class="col-3">
-                                        <MudTextField Label="Bairro" ReadOnly="true" Variant="Variant.Filled" @bind-Value="@Cep.bairro" />
+                                        <MudTextField Label="Bairro" ReadOnly="true" Variant="Variant.Text" @bind-Value="@Cep.bairro" />
                                     </div>
                                 </div>
                             </MudCardContent>
                             <MudCardContent>
                                 <div class="row">
                                     <div class="col-3">
-                                        <MudTextField Label="Cidade" ReadOnly="true" Variant="Variant.Filled"  @bind-Value="@Cep.localidade" />
+                                        <MudTextField Label="Cidade" ReadOnly="true" Variant="Variant.Text"  @bind-Value="@Cep.localidade" />
                                     </div>
                                     <div class="col-3">
-                                        <MudTextField Label="Estado" ReadOnly="true" Variant="Variant.Filled"  @bind-Value="@Cep.uf" />
+                                        <MudTextField Label="Estado" ReadOnly="true" Variant="Variant.Text" @bind-Value="@Cep.uf" />
                                     </div>
                                     <div class="col-3">
                                         <MudTextField Label="Ocupação" @bind-Value="@modelBeneficiario.ocupacao" />
