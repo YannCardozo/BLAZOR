@@ -1,0 +1,1062 @@
+﻿@page "/Cadastro"
+@inject HttpClient Http
+@inject IJSRuntime JsRuntime
+@inject ISnackbar Snackbar
+@inject IConfiguration config
+@using System.Net;
+@using System.Net.Http;
+@using System.Net.Http.Headers;
+@using System.Text;
+@using System.Text.Json;
+@using Nancy.Json;
+@using System.Text.RegularExpressions;
+@using remedios;
+@using Newtonsoft.Json;
+@using Portal_Remedios.Models;
+@using MudBlazor;
+@using System.Collections.Generic;
+@using System.ComponentModel.DataAnnotations;
+@using Pages;
+@using Microsoft.AspNetCore.Components.Forms;
+
+
+<PageTitle>Portal Remedios</PageTitle>
+<br />
+<div class="container">
+    <div class="div-form-medicamento">
+        <center>
+            <h1 class="mb-3 class_cabecalho_medicamento" id="Cabecalho">@cabecalho</h1>
+        </center>
+            <center>
+                @foreach (var item in new string[] { "Cadastro de Medicamento", "Cadastro de beneficiário", "Consulta de Medicamento" })
+                {
+                    <div class="mb-4 form-check form-check-inline">
+                    <input type="radio" name="OpcaoRadioInput" id="@item" value="@item" @onchange="RadioSelection" checked=@(RadioValue.Equals(item,StringComparison.OrdinalIgnoreCase)) />
+                        <label for="@item">@item</label>
+                    </div>
+
+                }
+            </center>
+            <EditForm Model="@modelRemedio" OnValidSubmit="OnValidSubmit">
+                <DataAnnotationsValidator />
+            @if (@RadioValue == "Cadastro de Medicamento")
+            {
+                <style>
+                    .div-form-medicamento{
+                    background-color: #ecf0f3;
+                    border-radius: 15px;
+                    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+                    }
+                    .LabelEmailPessoa{
+                    display: none;
+                    }
+                    .EmailPessoa{
+                    display:none;
+                    } 
+
+                    .LabelCaixaTexto {
+                    display: none;
+                    }
+
+                    .CaixaTexto {
+                    display:none;
+                    }
+
+                    .ArquivoBula {
+                    display: none;
+                    }
+
+                    .EnviaArquivoBula{
+                    display:none;
+                    }
+                    .col-2, .col-4, .col-3, .col-1 {
+                    text-align: -webkit-center;
+                    }
+                    #Inputareceberlocaldeposito{
+                    background-color: gainsboro;
+                    opacity: 0.7;
+                    }
+                </style>
+                <MudGrid Style="display:block;background-color: #ecf0f3;border-radius: 15px;box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;">
+                    <MudItem>
+                        <MudCard >
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudTextField Label="Nome do remédio" Variant="Variant.Text" MaxLength="10" @bind-Value="modelRemedio.Nome" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudNumericField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo" Label="Código remédio" Variant="Variant.Text" MaxLength="10"/>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField HideSpinButtons="true" @bind-Value="modelRemedio.Codigo_ANS" Label="Código ANS" Variant="Variant.Text" MaxLength="10" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudDatePicker Label="Data do lote" @bind-Value="modelRemedio.Data_lote" />
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudDatePicker Label="Data do depósito" @bind-Value="modelRemedio.Data_deposito" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTimePicker Label="Hora do depósito" @bind-Value="modelRemedio.Data_deposito" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Tipo" @bind-Value="modelRemedio.Tipo_remedio" Label="Tipo de medicamento" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                        <MudSelectItem Value="@modelRemedio.Tipo_remedio" Disabled="true" >Selecione</MudSelectItem>
+                                            @foreach(Tipo Tipo_remedio in Enum.GetValues(typeof(Tipo)))
+                                            {
+                                                <MudSelectItem Value="@Tipo_remedio">@Tipo_remedio</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Cor remédio" @bind-Value="@modelRemedio.Cor" Label="Tarja do medicamento" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelRemedio.Cor" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (Classificacao Cor in Enum.GetValues(typeof(Classificacao)))
+                                            {
+                                                <MudSelectItem Value="@Cor">@Cor</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                            <div class="row">
+                                <div class="col-3">
+                                    <MudSelect Placeholder="Região" @bind-Value="modelRemedio.Nome_Regiao" Label="Região" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                        <MudSelectItem Value="@modelRemedio.Nome_Regiao" Disabled="true" >Selecione</MudSelectItem>
+                                        @foreach (Regiao Nome_Regiao in Enum.GetValues(typeof(Regiao)))
+                                        {
+                                                <MudSelectItem Value="@Nome_Regiao">@Nome_Regiao</MudSelectItem>
+                                        }
+                                    </MudSelect>
+                                </div>
+                                <div class="col-3">
+                                    <MudSelect Placeholder="Unidade" @bind-Value="modelRemedio.Nome_Unidade" Label="Unidade" CloseIcon="@Icons.Material.Filled.Colorize" AdornmentColor="Color.Tertiary">
+                                        <MudSelectItem Value="@modelRemedio.Nome_Unidade" Disabled="true" >Selecione</MudSelectItem>
+                                        @foreach (Unidade Nome_Unidade in Enum.GetValues(typeof(Unidade)))
+                                        {
+                                                <MudSelectItem Value="@Nome_Unidade">@Nome_Unidade</MudSelectItem>
+                                        }
+                                    </MudSelect>
+                                </div>
+                                    <div class="col-6 text-center" style="align-self: self-end;">
+                                    <InputFile OnChange="@LoadFiles"  class="form-control" accept=".png,.jpg,.jpeg" @bind-Value="modelRemedio.Img_Remedio" />
+                                </div>
+                            </div>
+                            @if(PreviewImageUrl != null)
+                            {
+                                <div class="row">
+                                    <div style="text-align: center;margin-top: 50px;">
+                                        <img src="@PreviewImageUrl" id="previewImage" />
+                                    </div>
+                                </div>
+                            }
+
+                            @*@if (errors.Count > 0)
+                            {
+                                <h2>Errors</h2>
+                                <ul class="text-danger">
+                                    @foreach (var error in errors)
+                                    {
+                                        <li>@error</li>
+                                    }
+                                </ul>
+                            }
+                            *@
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModal" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</MudButton>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                    @*<MudItem xs="12" sm="5" Style="    max-width: inherit;">
+                        <MudPaper Class="pa-4 mud-height-full">
+                            <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
+                            @if (success)
+                            {
+                                <MudText Color="Color.Success">Success</MudText>
+                            }
+                            else
+                            {
+                                <MudText Color="@Color.Error">
+                                    <ValidationSummary />
+                                </MudText>
+                            }
+                        </MudPaper>
+                    </MudItem>
+                *@<MudItem xs="12">
+                        <MudText Typo="Typo.body2" Align="Align.Center">
+                            Portal-Remedios All-Rights reserved
+                        </MudText>
+                    </MudItem>
+                </MudGrid>
+            }
+
+             @if(confirmamedicamento == true)
+            {
+                <style>
+                    .mud-appbar{
+                        z-index:1;
+                    }
+                </style>
+                <div class="modal" tabindex="-1" style="display:block">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-center">Confirma?</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick=FechaModal></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row mb-3 mx-auto text-center">
+                                    <p>Nome: @modelRemedio.Nome</p>
+                                    <p>Código: @modelRemedio.Codigo</p>
+                                    <p>Código ANS: @modelRemedio.Codigo_ANS</p>
+                                    <p>Data/lote: @modelRemedio.Data_lote</p>
+                                    <p>Dt Depósito: @modelRemedio.Data_deposito</p>
+                                    <p>Tipo: @modelRemedio.Tipo_remedio</p>
+                                    <p>Classificação: @modelRemedio.Cor</p>
+                                    <p>Região: @modelRemedio.Nome_Regiao</p>
+                                    <p>Unidade: @modelRemedio.Nome_Unidade</p>
+                                    @if(PreviewImageUrl != null)
+                                    {
+                                        <div class="row">
+                                            <p>Imagem:</p>
+                                            <div style="text-align: center;margin-top: 50px;">
+                                                <img src="@PreviewImageUrl" id="previewImage" />
+                                            </div>
+                                        </div>
+                                    }else
+                                    {
+                                        <p>Imagem: Não carregada</p>
+                                    }
+
+                                        <!-- <div class="col-2">
+                                        <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
+                                        <input class="form-control" type="text" value="@localavagardeposito" placeholder="" readonly>
+                                        <input type="text" id="Inputareceberlocaldeposito" name=""readonly>
+                                        </div>
+                                        </div>
+                                        -->
+                                </div>
+                            </div>
+                            <div class="modal-footer text-center">
+                                <hr>
+                                <button type="button" class="btn btn-success" @onclick=SalvaCadastroRemedio>Confirmar</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick=CancelaCadastroRemedio>Cancelar</button>
+                            </div>
+                            @*if (RemediosInsere.Count <= 0)
+                            {
+                                <MudProgressCircular Color="Color.Primary" Style="height:70px;width:70px;" Indeterminate="true" />
+                            }
+                            *@
+                        </div>
+                    </div>
+                </div>
+                PreviewImageUrl = null;
+            }
+        </EditForm>
+
+            @if(@RadioValue == "Cadastro de beneficiário")
+            {
+            <EditForm Model="@modelBeneficiario">
+                <DataAnnotationsValidator />
+                <style>
+                    .div-form-medicamento {
+                        background-color: #ecf0f3;
+                        border-radius: 15px;
+                        box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+                    }
+                    .EmailPessoa{
+                    display: initial;
+                    }
+
+                    .col-2, .col-4, .col-3, .col-1 {
+                        text-align: -webkit-center;
+                    }
+                </style>
+
+
+                <MudGrid Style="display:block;background-color: #ecf0f3;border-radius: 15px;box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;">
+                    <MudItem>
+                        <MudCard >
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudTextField Label="Nome" Variant="Variant.Text" MaxLength="10" @bind-Value="modelBeneficiario.Nome" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudNumericField HideSpinButtons="true" @bind-Value="modelBeneficiario.CPF" Label="CPF" Variant="Variant.Text" MaxLength="10" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudDatePicker Label="Data de nascimento"  @bind-Value="modelBeneficiario.data_nasc"/>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Tipo" @bind-Value="modelBeneficiario.sexo" Label="Sexo" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelBeneficiario.sexo" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (var sexo in new string[] { "Masculino", "Feminino", "Gênero Neutro", "Transgênero", "Não-binário", "Outros" })
+                                            {
+                                                <MudSelectItem Value="@sexo">@sexo</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudTextField @bind-Value="@cep" Label="Cep" MaxLength="9" @onblur="@(() => ConsultarCep(cep))" Mask="@(new PatternMask("00000-000"))" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Endereço" ReadOnly="true" Variant="Variant.Text" @bind-Value="@Cep.logradouro" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Número" @bind-Value="@numero_residencia" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Bairro" ReadOnly="true" Variant="Variant.Text" @bind-Value="@Cep.bairro" />
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudTextField Label="Cidade" ReadOnly="true" Variant="Variant.Text"  @bind-Value="@Cep.localidade" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Estado" ReadOnly="true" Variant="Variant.Text" @bind-Value="@Cep.uf"  />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="Ocupação" @bind-Value="@modelBeneficiario.ocupacao" />
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField Label="NIS" @bind-Value="@modelBeneficiario.NIS" />
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Escolaridade" @bind-Value="@modelBeneficiario.escolaridade" Label="Escolaridade" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelBeneficiario.escolaridade" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (var grau in new string[] { "Ensino fundamental completo", "Ensino fundamental incompleto", "Ensino médio completo", "Ensino médio incompleto", "Ensino superior completo", "Ensino superior incompleto" })
+                                            {
+                                                <MudSelectItem Value="@grau">@grau</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Renda" @bind-Value="@modelBeneficiario.renda_familiar" Label="Renda" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelBeneficiario.renda_familiar" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (var renda in new string[] { "Abaixo de R$2500,00", "Acima de R$2500,00", "Renda de R$2500,00", "Outros" })
+                                            {
+                                                <MudSelectItem Value="@renda">@renda</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudSelect Placeholder="Motivo" @bind-Value="@modelBeneficiario.motivo_cadastro" Label="Motivo" CloseIcon="@Icons.Material.Filled.Flag" AdornmentColor="Color.Tertiary">
+                                            <MudSelectItem Value="@modelBeneficiario.motivo_cadastro" Disabled="true">Selecione</MudSelectItem>
+                                            @foreach (var motivo in new string[] { "Baixa renda", "Auxílio saúde", "Outro benefício social" })
+                                            {
+                                                <MudSelectItem Value="@motivo">@motivo</MudSelectItem>
+                                            }
+                                        </MudSelect>
+                                    </div>
+                                    <div class="col-3">
+                                        <MudTextField @bind-Value="@modelBeneficiario.telefone" class="form-control" Mask="@MascaraTelefone" Label="Telefone" MaxLength="11" Placeholder="Telefone"/>
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            <MudCardContent>
+                                <div class="row text-center">
+                                    <div class="col-6 text-center" style="align-self: self-end;">
+                                        <InputFile OnChange="@LoadFiles" class="form-control" accept=".png,.jpg,.jpeg" @bind-Value="modelRemedio.Img_Remedio" />
+                                    </div>
+                                </div>
+                            </MudCardContent>
+                            @if (PreviewImageUrl != null)
+                            {
+                                <div class="row">
+                                    <div style="text-align: center;margin-top: 50px;">
+                                        <img src="@PreviewImageUrl" id="previewImage" />
+                                    </div>
+                                </div>
+                            }
+                            @*@if (errors.Count > 0)
+                            {
+                            <div class="row">
+                                <h2>Erros:</h2>
+                                <ul class="text-danger">
+                                    @foreach (var error in errors)
+                                    {
+                                    <li>@error</li>
+                                    }
+                                </ul>
+                            </div>
+                            }
+                            *@
+                            <MudCardActions>
+                                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" id="CadastraMedicamento" @onclick="ConfirmaModalBeneficiario" Color="Color.Primary" Class="ml-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastrar</MudButton>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                    @*<MudItem xs="12" sm="5" Style="    max-width: inherit;">
+                        <MudPaper Class="pa-4 mud-height-full">
+                            <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
+                            @if (success)
+                            {
+                                <MudText Color="Color.Success">Success</MudText>
+                            }
+                            else
+                            {
+                                <MudText Color="@Color.Error">
+                                    <ValidationSummary />
+                                </MudText>
+                            }
+                        </MudPaper>
+                    </MudItem>
+                *@
+                <MudItem xs="12">
+                        <MudText Typo="Typo.body2" Align="Align.Center">
+                            Portal-Remedios All-Rights reserved
+                        </MudText>
+                </MudItem>
+            </MudGrid>
+            
+                @if (confirmabeneficiario == true && modal == true)
+                {
+                    <div class="modal" tabindex="-1" style="display:block">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center">Confirma?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @onclick=FechaModalBeneficiario></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row mb-3 mx-auto text-center">
+                                        <p>Nome: @modelBeneficiario.Nome</p>
+                                        <p>Cpf: @modelBeneficiario.CPF</p>
+                                        <p>Data de nascimento: @modelBeneficiario.data_nasc</p>
+                                        <p>Sexo: @modelBeneficiario.sexo</p>
+                                        <p>Cep: @cep</p>
+                                        <p>Rua: @rua</p>
+                                        <p>Nº: @numero_residencia</p>
+                                        <p>Bairro: @bairro</p>
+                                        <p>Cidade: @cidade</p>
+                                        <p>Uf: @uf</p>
+                                        <p>Ocupação: @modelBeneficiario.ocupacao</p>
+                                        <p>NIS: @modelBeneficiario.NIS</p>
+                                        <p>Escolaridade: @modelBeneficiario.escolaridade</p>
+                                        <p>Motivo: @modelBeneficiario.motivo_cadastro</p>
+                                        <p>Renda familiar mensal: @modelBeneficiario.renda_familiar</p>
+                                        <!-- <div class="col-2">
+                                        <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label" id="Labelcadastrodemedicamento">Vaga depósito:</label>
+                                        <input class="form-control" type="text" value="@localavagardeposito" placeholder="" readonly>
+                                        <input type="text" id="Inputareceberlocaldeposito" name=""readonly>
+                                        </div>
+                                        </div>
+                                        -->
+                                    </div> 
+                                </div>
+                                <div class="modal-footer text-center">
+                                    <hr>
+                                    <button type="button" class="btn btn-success" @onclick=SalvaCadastroBeneficiario>Confirmar</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick=CancelaCadastroBeneficiario>Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+            </EditForm>
+            }
+
+            @if(@RadioValue == "Consulta de Medicamento")
+            {
+            <EditForm Model="@modelRemedio">
+                <style>
+                    .EmailPessoa{
+                    display: none;
+                    }
+                </style>
+
+
+                <center>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Selecione:</label>
+                                <select class="form-select text-center Motivopacienteselect" id="consulta_opcao" aria-label="Motivo do cadastro" value="@verifica" @onchange="TrocaOpcao">
+                                    <option value="Código do medicamento">@opcao_codmed</option>
+                                    <option value="Código da ANS">@opcao_codans</option>
+                                    <option value="NIS do paciente">@opcao_nis_paciente</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    @if(@verifica == true){
+
+
+                        <style>
+                            .lgx-single-speaker {
+                                margin-bottom: 20px;
+                                border-width: 1px;
+                                border-style: solid;
+                                border-color: #ccc;
+                                border-image: initial;
+                                border-radius: 5px;
+                                padding: 15px;
+                                min-height: 250px;
+                                box-shadow: 1px 3px 4px 0px #297c8294;
+                            }
+                        </style>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control text-center Datadenascimentopessoa" placeholder="@titulo_opcao">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-3">
+                                <button class="btn btn-primary" type="submit">Consultar</button>
+                            </div>
+                        </div>
+                        }
+                </center>
+
+            </EditForm>
+            }
+
+    </div>
+<SurveyPrompt Title="Tem algum erro no site ou uma sugestão a fazer?" />
+</div>
+
+
+
+@code{
+    //2MB
+    private const int TamanhoImgMaximo = 2 * 1024 * 1024;
+    private List<string> Imagens = new List<string>();
+    public Beneficiario modelBeneficiario = new();
+    public Cep modelCep = new();
+    public Remedios modelRemedio = new();
+    public Remedios Modelremediotemp = new();
+    public List<Remedios> lstRemedios = new();
+    //public Remedios modelRemedio = new();
+    //public List<Remedios> lstRemedios = new();
+    //modal cadastro remedio aqui:
+    public string Nome_medicamento_modal { get; set; } = "afafafa";
+    public string Código_medicamento_modal { get; set; } = "";
+    public string Código_Ans_medicamento_modal { get; set; } = "";
+    public static Remedios RemediosInsere = new();
+    //public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    // public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    // public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+    // public string Nome_medicamento_modal { get; set; } = "";
+    //public string Nome_medicamento_modal { get; set; } = "";
+
+
+
+
+    /*
+    public string Text { get; set; }
+    private void UpdateText(ChangeEventArgs e)
+        {
+        Text = e.Value.ToString();
+    }
+    */
+    private async void Rodar()
+    {
+        try
+        {
+            HttpClient cliente = new HttpClient();
+
+            string resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios");
+            Console.WriteLine(resultado);
+            await JsRuntime.InvokeVoidAsync("alert", "Cadastro do " + " efetuado com sucesso!" + resultado + "funcionou");
+        }
+        catch
+        {
+            throw;
+        }
+    }
+
+    private bool confirmabeneficiario { get; set; } = false;
+    private bool confirmamedicamento { get; set; } = false;
+    private bool modal { get; set; } = false;
+    bool ValueRegiao { get; set; } = false;
+    string localavagardeposito { get; set; } = "";
+    string titulo_opcao { get; set; }
+    string opcao_codmed { get; set; } = "Código do medicamento";
+    string opcao_codans { get; set; } = "Código da ANS";
+    string opcao_nis_paciente { get; set; } = "NIS do paciente";
+    bool verifica { get; set; } = false;
+    HttpClient httpclient;
+    //public IFileListEntry ImageFile;
+    //public IFileListEntry ImageFile;
+    public string ImageDataUrl;
+
+    private async Task ConfirmaModalBeneficiario()
+    {
+        //remedios = new Remedios();
+        confirmabeneficiario = true;  
+        modal = true;
+        //titulo_opcao = args.Value.ToString();
+        await InvokeAsync(StateHasChanged);
+    }
+    private void FechaModalBeneficiario()
+    {
+        modal = false;
+    }
+
+    private async Task ConfirmaModal()
+    {
+        if (file != null)
+        {
+
+
+
+
+            //remedios = new Remedios();
+            confirmamedicamento = true;
+            //titulo_opcao = args.Value.ToString();
+            await InvokeAsync(StateHasChanged);
+            try
+            {
+                string relativePath = await CaptureFile();
+                newCustomer.ImagePath = relativePath;
+            }
+            catch (Exception ex)
+            {
+                confirmamedicamento = false;
+                FechaModal();
+
+                await InvokeAsync(StateHasChanged);
+                errors.Add($"Error: {ex.Message}");
+
+            }
+        }
+    }
+    private async void FechaModal()
+    {
+        modelRemedio = new();
+        PreviewImageUrl = null;
+        confirmamedicamento = false;
+        
+        await InvokeAsync(StateHasChanged);
+    }
+    private async void CancelaCadastroRemedio()
+    {
+        modelRemedio = new();
+        //to clear textboxes and model
+        // remedios = new Remedios();
+        confirmamedicamento = false;
+        modal = false;
+        PreviewImageUrl = null;
+        await JsRuntime.InvokeVoidAsync("alert", "Dados deletados com sucesso");
+        await InvokeAsync(StateHasChanged);
+    }
+
+    /*
+    HttpClient cliente = new HttpClient();
+    resultado = await cliente.GetStringAsync("https://localhost:5001/Remedios/");
+
+            if(resultado == null)
+            {
+            await JsRuntime.InvokeVoidAsync("alert", resultado + " RETORNO NULL");
+    rodando = false;
+    return ;
+    }
+    */
+
+    //RemediosInsere
+    public async Task PostApi(Remedios remedio)
+    {
+
+        HttpClient cliente = new();
+        //HttpResponseMessage response = await cliente.PostAsJsonAsync("https://remedios.requestcatcher.com/", remedio);
+        string json = new JavaScriptSerializer().Serialize(modelRemedio);
+        StringContent data = new StringContent(json, Encoding.UTF8, "application/json");
+        HttpResponseMessage response = await cliente.PostAsync("https://remedios.requestcatcher.com/", data);
+        response.EnsureSuccessStatusCode();
+
+        if (response == null)
+        {
+            await JsRuntime.InvokeVoidAsync("alert", response + " RETORNO NULL");
+            return;
+        }
+
+
+
+        // return URI of the created resource.
+        //return response.Headers.Location;
+    }
+
+
+    public async Task SalvaCadastroRemedio()
+    {
+
+        //Modelremediotemp = modelRemedio;
+        try{
+            HttpClient cliente = new();
+            //HttpResponseMessage response = await cliente.PostAsJsonAsync("https://remedios.requestcatcher.com/", remedio);
+            string json = new JavaScriptSerializer().Serialize(modelRemedio);
+            StringContent data = new StringContent(json, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = await cliente.PostAsync("https://remedios.requestcatcher.com/", data);
+            response.EnsureSuccessStatusCode();
+
+            if (response == null)
+            {
+                confirmamedicamento = false;
+                modal = false;
+                await JsRuntime.InvokeVoidAsync("alert", response + " RETORNO NULL");
+                return ;
+            }
+
+            //clear the model
+            //Remedios = new Remedios();
+            // await JsRuntime.InvokeVoidAsync("alert", "Cadastro do Medicamento" + " efetuado com sucesso!" + "foi gerado: " + json);
+            await JsRuntime.InvokeVoidAsync("alert", "MEU JSON FOI: " + json);
+            await JsRuntime.InvokeVoidAsync("alert", "MEU RESPONSE FOI: " + response);
+            await JsRuntime.InvokeVoidAsync("alert", "MEU DATA FOI: " + data);
+        }
+        catch (Exception ex)
+        {
+            confirmamedicamento = false;
+            modal = false;
+            await JsRuntime.InvokeVoidAsync("alert", "Nao foi possivel efetuar o cadastro");
+            await JsRuntime.InvokeVoidAsync("alert", "ERRO" + ex.Message);
+        }
+        confirmamedicamento = false;
+        modal = false;
+        modelRemedio = new();
+        await JsRuntime.InvokeVoidAsync("alert"," FIM DA FUNCTION SALVACADASTROREMEDIO");
+                PreviewImageUrl = null;
+        StateHasChanged();
+    }
+
+
+    private async void CancelaCadastroBeneficiario()
+    {
+        //to clear textboxes and model
+        // remedios = new Remedios();
+        confirmabeneficiario = false;
+        modelBeneficiario.escolaridade = "";
+        modelBeneficiario.ocupacao = "";
+        modelBeneficiario.motivo_cadastro = "";
+        modelBeneficiario.renda_familiar = "";
+        modelBeneficiario.Nome = "";
+        modelBeneficiario.CPF = "";
+        modelBeneficiario.data_nasc = DateOnly.MinValue;
+        modelBeneficiario.motivo_cadastro = "";
+        modelBeneficiario.NIS = "";
+        modelBeneficiario.sexo = "";
+        cep = "";
+        Cep.bairro = "";
+        Cep.localidade = "";
+        Cep.logradouro = "";
+        Cep.complemento = "";
+        Cep.cep = "";
+        Cep.uf = "";
+        await JsRuntime.InvokeVoidAsync("alert", "Cadastro do beneficiario cancelado" + "Dados deletados com sucesso");
+        PreviewImageUrl = null;
+        await InvokeAsync(StateHasChanged);
+    }
+    private async void SalvaCadastroBeneficiario()
+    {
+        confirmabeneficiario = false;
+        await JsRuntime.InvokeVoidAsync("alert", "Cadastro do beneficiario" + " efetuado com sucesso!");
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+    async void CadastraRemedioClica()
+    {
+
+        Console.WriteLine("From C#");
+        await JsRuntime.InvokeVoidAsync("console.log", "estou funcionando");
+    }
+
+    async void LiberaUnidade(ChangeEventArgs args)
+    {
+        ValueRegiao = true;
+
+        await InvokeAsync(StateHasChanged);
+    }
+
+    async void ZeraBool(ChangeEventArgs args)
+    {
+        verifica = false;
+        await InvokeAsync(StateHasChanged);
+    }
+    async void TrocaOpcao(ChangeEventArgs args)
+    {
+        verifica = true;
+        titulo_opcao = args.Value.ToString();
+        await InvokeAsync(StateHasChanged);
+    }
+    async void SalvaFormularioMedicamento(ChangeEventArgs args)
+    {
+        verifica = true;
+        titulo_opcao = args.Value.ToString();
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+    async Task CarregaImagem(InputFileChangeEventArgs e)
+    {
+        foreach(var arquivo in e.GetMultipleFiles())
+        {
+            using var stream = arquivo.OpenReadStream(TamanhoImgMaximo);
+            using var ms = new MemoryStream();
+            await stream.CopyToAsync(ms);
+            Imagens.Add($"data:{arquivo.ContentType};base64,{Convert.ToBase64String(ms.ToArray())}");
+        }
+    }
+
+
+
+}
+@functions
+{
+    public string message { get; set; }
+    public Cep Cep = new();
+    public Cep valordocep { get; set; }
+    string cep = "";
+    string bairro = "";
+    string cidade = "";
+    string numero_residencia = "";
+    string uf = "";
+    string rua = "";
+    string Regiao;
+    string Unidade;
+    string seleciona;
+    string RadioValue = "aspnetcore";
+    string cabecalho;
+    string class_cabecalho_default = "";
+    string class_cabecalho_medicamento = "";
+    string class_cabecalho_pessoa = "";
+    string class_cabecalho_bula = "";
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        titulo_opcao = "Selecione";
+        cabecalho = "Pegamed";
+        //await JsRuntime.InvokeVoidAsync("console.log", "valor do remedio: " + remedios[].Nome);
+
+        await InvokeAsync(StateHasChanged);
+        await base.OnInitializedAsync();
+    }
+
+
+
+    async void RadioSelection(ChangeEventArgs args)
+    {
+        RadioValue = args.Value.ToString();
+
+        if (RadioValue == "Cadastro de Medicamento")
+        {
+            cabecalho = "Cadastro de Medicamento";
+        }
+        else if (RadioValue == "Cadastro de beneficiário")
+        {
+            cabecalho = "Cadastro de beneficiário";
+        }
+        else if (RadioValue == "Consulta de Medicamento")
+        {
+            verifica = false;
+            cabecalho = "Consulta de Medicamento";
+        }
+        //cabecalho = RadioValue;
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+    public async Task ConsultarCep(string cep)
+    {
+
+        await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + cep + Cep.bairro + Cep.logradouro + Cep.complemento + Cep.cep + Cep.uf);
+
+        if(cep is not null)
+        {
+
+            await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + " entrei aqui no cep is not null");
+            HttpClient httpClient = new HttpClient();
+            var response = await httpClient.GetAsync($"https://viacep.com.br/ws/{cep}/json/");
+            var jsonString = await response.Content.ReadAsStringAsync();
+
+            Cep jsonObject = JsonConvert.DeserializeObject<Cep>(jsonString);
+
+            if (jsonObject != null)
+            {
+
+                Cep.bairro = jsonObject.bairro;
+                Cep.localidade = jsonObject.localidade;
+                Cep.logradouro = jsonObject.logradouro;
+                Cep.complemento = jsonObject.complemento;
+                Cep.cep = jsonObject.cep;
+                Cep.uf = jsonObject.uf;
+
+                bairro = Cep.bairro;
+                rua = Cep.logradouro;
+                cidade = Cep.localidade;
+                uf = Cep.uf;
+
+                await JsRuntime.InvokeVoidAsync("console.log", "Meu jsonobject nao e nulo");
+                await JsRuntime.InvokeVoidAsync("console.log", "meu valor é: " + Cep.bairro + Cep.logradouro + Cep.complemento + Cep.cep + Cep.uf);
+                await InvokeAsync(StateHasChanged);
+                cep = null;
+                jsonObject = null;
+
+            }
+            else
+            {
+                cep = null;
+                jsonObject = null;
+                await JsRuntime.InvokeVoidAsync("console.log", "Cep digitado é inválido");
+                Cep.bairro = "";
+                Cep.localidade = "";
+                Cep.logradouro = "";
+                Cep.complemento = "";
+                Cep.cep = "";
+                Cep.uf = "";
+
+                await InvokeAsync(StateHasChanged);
+
+            }
+
+        }
+
+
+
+    }
+
+    bool success;
+    private async void OnValidSubmit(EditContext context)
+    {
+        try
+        {
+            string relativePath = await CaptureFile();
+            newCustomer.ImagePath = relativePath;
+        }
+        catch (Exception ex)
+        {
+            errors.Add($"Error: {ex.Message}");
+        }
+        success = true;
+
+        StateHasChanged();
+
+    }
+
+
+    public string? PreviewImageUrl = null;
+    private long maxFileSize = 1024 * 1024 * 5; // represents 3MB
+    private int maxAllowedFiles = 3;
+    private List<string> errors = new();
+    private Remedios newCustomer = new();
+    private IBrowserFile? file;
+
+    private async Task SubmitForm()
+    {
+        try
+        {
+            string relativePath = await CaptureFile();
+            newCustomer.ImagePath = relativePath;
+        }
+        catch (Exception ex)
+        {
+            errors.Add($"Error: {ex.Message}");
+        }
+    }
+
+    public async void LoadFiles(InputFileChangeEventArgs e)
+    {
+
+        file = e.File;
+        if (file != null)
+        {
+            var imageFile = await file.RequestImageFileAsync("image/jpeg", 300, 300);
+
+            var buffer = new byte[imageFile.Size];
+            await imageFile.OpenReadStream().ReadAsync(buffer);
+
+            var dataUrl = $"data:image/jpeg;base64,{Convert.ToBase64String(buffer)}";
+            PreviewImageUrl = dataUrl;
+            StateHasChanged();
+        }
+    }
+
+    private async Task<string> CaptureFile()
+    {
+        if (file is null)
+        {
+            await JsRuntime.InvokeVoidAsync("alert", "Arquivo não anexado");
+            return "";
+        }
+
+        try
+        {
+            string newFileName = Path.ChangeExtension(
+                Path.GetRandomFileName(),
+                Path.GetExtension(file.Name));
+
+            string path = Path.Combine(
+                config.GetValue<string>("FileStorage")!,
+                "imagem",
+                newFileName);
+
+            string relativePath = Path.Combine("imagem", newFileName);
+
+            Directory.CreateDirectory(Path.Combine(
+                config.GetValue<string>("FileStorage")!,
+                "imagem"));
+
+            await using FileStream fs = new(path, FileMode.Create);
+            await file.OpenReadStream(maxFileSize).CopyToAsync(fs);
+
+            return relativePath;
+        }
+        catch (Exception ex)
+        {
+            errors.Add($"File: {file.Name} Error: {ex.Message}");
+            throw;
+        }
+    }
+
+
+    public IMask MascaraTelefone = new RegexMask(@"^\d+$");
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

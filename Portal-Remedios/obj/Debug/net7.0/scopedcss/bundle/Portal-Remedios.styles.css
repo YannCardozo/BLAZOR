@@ -1,0 +1,245 @@
+/* _content/Portal-Remedios/Pages/LoginSistema.razor.rz.scp.css */
+*[b-ondmucd9uc] {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.divzona[b-ondmucd9uc] {
+    
+}
+
+body[b-ondmucd9uc] {
+    font-family: 'Open Sans',serif;
+}
+
+body[b-ondmucd9uc] {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.div-gradiente[b-ondmucd9uc] {
+    border-radius: 10px;
+}
+
+.divesquerda[b-ondmucd9uc] {
+    width: 60%;
+    border-radius: 16px;
+    border: 2px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 0rem;
+}
+
+.divdireita[b-ondmucd9uc] {
+    width: 42%;
+    background-color: #ecf3f9;
+    border-radius: 16px;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.tela_login[b-ondmucd9uc] {
+    align-self: center;
+    text-align: -webkit-center;
+    width: 950px;
+    height: 520px;
+    border: 2px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputs[b-ondmucd9uc] {
+    margin-top: 30px;
+}
+
+label[b-ondmucd9uc], input[b-ondmucd9uc], button[b-ondmucd9uc] {
+    display: block;
+    width: 80%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+label[b-ondmucd9uc] {
+    margin-bottom: 4px;
+}
+
+    label:nth-of-type(2)[b-ondmucd9uc] {
+        margin-top: 12px;
+    }
+
+input[b-ondmucd9uc]::placeholder {
+    color: gray;
+}
+
+input[b-ondmucd9uc] {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+button[b-ondmucd9uc] {
+    color: white;
+    margin-top: 20px;
+    background: #1DA1F2;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+
+    button:hover[b-ondmucd9uc] {
+        box-shadow: none;
+    }
+/* _content/Portal-Remedios/Shared/MainLayout.razor.rz.scp.css */
+.page[b-yrbrs8nyr8] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-yrbrs8nyr8] {
+    flex: 1;
+}
+
+.sidebar[b-yrbrs8nyr8] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-yrbrs8nyr8] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-yrbrs8nyr8]  a, .top-row .btn-link[b-yrbrs8nyr8] {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+    }
+
+    .top-row a:first-child[b-yrbrs8nyr8] {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-yrbrs8nyr8] {
+        display: none;
+    }
+
+    .top-row.auth[b-yrbrs8nyr8] {
+        justify-content: space-between;
+    }
+
+    .top-row a[b-yrbrs8nyr8], .top-row .btn-link[b-yrbrs8nyr8] {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-yrbrs8nyr8] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-yrbrs8nyr8] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-yrbrs8nyr8] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row[b-yrbrs8nyr8], article[b-yrbrs8nyr8] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* _content/Portal-Remedios/Shared/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-j3dhnuleos] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-j3dhnuleos] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-j3dhnuleos] {
+    font-size: 1.1rem;
+}
+
+.oi[b-j3dhnuleos] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-j3dhnuleos] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-j3dhnuleos] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-j3dhnuleos] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-j3dhnuleos]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-j3dhnuleos]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-j3dhnuleos]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-j3dhnuleos] {
+        display: none;
+    }
+
+    .collapse[b-j3dhnuleos] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+    
+    .nav-scrollable[b-j3dhnuleos] {
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}

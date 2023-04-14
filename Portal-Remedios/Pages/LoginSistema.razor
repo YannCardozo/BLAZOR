@@ -1,0 +1,69 @@
+﻿@page "/alfa"
+@layout NoLayout;
+
+
+
+
+
+
+<div class="divzona">
+    <div class="container-fluid" style="height:100vh;    background-color: gainsboro;">
+        <div class="row border d-flex aligns-items-center justify-content-center" style="height:100vh;">
+            <h3 class="text-center">Login do Sistema em andamento:</h3>
+            <div class="tela_login" style="align-self: center;text-align: -webkit-center;width:950px;height:520px;border:2px;border-radius:16px;display:flex;flex-direction:row;">
+                <div class="divesquerda" style="height:100%;background-color:white;">
+                    
+                </div>
+                <hr width="2" size="522">
+                <div class="divdireita" style="background-color:white;">
+                    <br />
+                    <div class="row justify-content-center">
+                        <EditForm model="Usuarios" action="/Index">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <font size="6">Área de Acesso</font>
+                            <div class="inputs">
+                                <label>
+                                    EMAIL
+                                </label>
+                                <input type="email" placeholder="colaborador@sempreodonto.com.br" required value="yann_cardozo@hotmail.com" />
+                                <label>
+                                    Senha
+                                </label>
+                                <input type="password" placeholder="Min 5 caracteres alfanuméricos" maxlength="10" required value="1234567"/>
+                                <br />
+                                <button type="submit">
+                                    <span>
+                                        Entrar
+                                    </span>
+                                </button>
+                            </div>
+                        </EditForm>
+                    </div>
+                </div>
+            </div>
+            <div class="row aligns-items-center justify-content-center">
+                <div style="border:none;border-style:none;text-align:center;">
+                    PegaMed 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+@code {
+    public Usuarios usuarios = new Usuarios();
+}
