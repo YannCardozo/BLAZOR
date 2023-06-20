@@ -1,9 +1,50 @@
-﻿<br />
-<br/>
-@page "/Estoque"
+﻿@page "/Estoque"
+@inject HttpClient httpClient
 <PageTitle>Estoque Remedios</PageTitle>
+<br />
+<br />
 <h3 class="mx-auto">Aqui será o nosso estoque</h3>
 
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID do produto</th>
+                <th>Nome do produto</th>
+                <th>Tipo do produto</th>
+                <th>data de validade</th>
+                <th>data do lote</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Dipirona</td>
+                <td>Remédio</td>
+                <td>10/02/2024</td>
+                <td>20/06/2023</td>
+            </tr>
+ @*           @foreach (var item in listaEstoque)
+            {
+                <tr>
+                    <td>@item.Codigo</td>
+                    <td>@item.Nome</td>
+                    <td>@item.Email</td>
+                </tr>
+            }
+*@
+        </tbody>
+    </table>
+</div>
+
 @code {
+    //public List<Estoque> listaestoque = new();
+    List<Estoque> listaEstoque;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulando uma chamada assíncrona para carregar os dados do estoque
+        listaEstoque = await httpClient.GetFromJsonAsync<List<Estoque>>("/api/estoque");
+    }
 
 }
