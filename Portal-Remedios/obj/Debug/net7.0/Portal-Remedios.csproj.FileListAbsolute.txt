@@ -1,0 +1,167 @@
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\appsettings.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.staticwebassets.runtime.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.exe
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.deps.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.runtimeconfig.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.pdb
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.AssemblyReference.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.AssemblyInfoInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.AssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.CoreCompileInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.RazorAssemblyInfo.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.RazorAssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.Portal-Remedios.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.build.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\bundle\Portal-Remedios.styles.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\projectbundle\Portal-Remedios.bundle.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\refint\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.pdb
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.genruntimeconfig.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\ref\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Plotly.Blazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Portal-Remedios\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.CopyComplete
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\appsettings.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.staticwebassets.runtime.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.exe
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.deps.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.runtimeconfig.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.pdb
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Plotly.Blazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.AssemblyReference.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.AssemblyInfoInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.AssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.CoreCompileInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.RazorAssemblyInfo.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.RazorAssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.Portal-Remedios.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.build.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\bundle\Portal-Remedios.styles.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\projectbundle\Portal-Remedios.bundle.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.CopyComplete
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\refint\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.pdb
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.genruntimeconfig.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\ref\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\BlazorInputFile.dll
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\appsettings.json
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.staticwebassets.runtime.json
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.exe
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.deps.json
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.runtimeconfig.json
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.dll
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.pdb
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\BlazorInputFile.dll
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\CurrieTechnologies.Razor.SweetAlert2.dll
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Plotly.Blazor.dll
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.AssemblyReference.cache
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.AssemblyInfoInputs.cache
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.AssemblyInfo.cs
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.CoreCompileInputs.cache
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.RazorAssemblyInfo.cache
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.RazorAssemblyInfo.cs
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.Portal-Remedios.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.build.Portal-Remedios.props
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Portal-Remedios.props
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Portal-Remedios.props
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\bundle\Portal-Remedios.styles.css
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\projectbundle\Portal-Remedios.bundle.scp.css
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.CopyComplete
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.dll
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\refint\Portal-Remedios.dll
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.pdb
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.genruntimeconfig.cache
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\ref\Portal-Remedios.dll
+C:\Users\yann_\REPO\Projetos\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\MudBlazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Nancy.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor\Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Pages\LoginSistema.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\appsettings.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.staticwebassets.runtime.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.exe
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.deps.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.runtimeconfig.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Portal-Remedios.pdb
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\BlazorInputFile.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\MudBlazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Nancy.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\bin\Debug\net7.0\Plotly.Blazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.AssemblyReference.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.AssemblyInfoInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.AssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.CoreCompileInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.RazorAssemblyInfo.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.RazorAssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.Portal-Remedios.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.build.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Portal-Remedios.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Pages\LoginSistema.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\bundle\Portal-Remedios.styles.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\scopedcss\projectbundle\Portal-Remedios.bundle.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.csproj.CopyComplete
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\refint\Portal-Remedios.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.pdb
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\Portal-Remedios.genruntimeconfig.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\Blazor-Portal-Remedios\Portal-Remedios\obj\Debug\net7.0\ref\Portal-Remedios.dll
