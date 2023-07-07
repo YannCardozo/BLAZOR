@@ -1,0 +1,83 @@
+﻿@page "/Calculadora"
+@using System.Data
+
+<h1 class="text-center">Calculadora em Blazor</h1>
+
+
+<div class=" justify-content-center" style="text-align: -webkit-center;">
+    <div class="calculator card">
+        <input type="text" class="calculator-screen z-depth-1" value="@input" disabled />
+
+        <div class="calculator-keys">
+            <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('+'))">+</button>
+            <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('-'))">-</button>
+            <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('*'))">&times;</button>
+            <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('/'))">&divide;</button>
+
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(7))">7</button>
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(8))">8</button>
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(9))">9</button>
+
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(4))">4</button>
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(5))">5</button>
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(6))">6</button>
+
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(1))">1</button>
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(2))">2</button>
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(3))">3</button>
+
+            <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(0))">0</button>
+            <button type="button" class="decimal function btn btn-secondary" @onclick="(() => AppendDecimal())">.</button>
+            <button type="button" class="all-clear function btn btn-danger btn-sm" @onclick="(() => Clear())">AC</button>
+
+            <button type="button" class="equal-sign operator btn btn-default" @onclick="(() => Calculate())">=</button>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+@code {
+    private string input = "";
+    private string result = "";
+    private int cont = 0;
+
+    private void AppendNumber(int number)
+    {
+        if(cont > 0 )
+        {
+            result = "";
+        }
+        input += number.ToString();
+    }
+
+    private void AppendOperator(char op)
+    {
+        input += op;
+    }
+
+    private void AppendDecimal()
+    {
+        if (!input.Contains("."))
+            input += ".";
+    }
+
+    private void Clear()
+    {
+        input = "";
+        result = "";
+    }
+
+    private void Calculate()
+    {
+        try
+        {
+            result = new DataTable().Compute(input, null).ToString();
+            input = result;
+            cont = 1;
+        }
+        catch (Exception)
+        {
+            result = "Error"; // Handle invalid input or calculation error
+        }
+    }
+}
