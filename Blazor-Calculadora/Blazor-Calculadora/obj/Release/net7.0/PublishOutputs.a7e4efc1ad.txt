@@ -1,0 +1,7 @@
+C:\Users\yann_\REPO\Projetos\BLAZOR\Blazor-Calculadora\Blazor-Calculadora\obj\Release\net7.0\PubTmp\Out\Blazor-Calculadora.exe
+C:\Users\yann_\REPO\Projetos\BLAZOR\Blazor-Calculadora\Blazor-Calculadora\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+C:\Users\yann_\REPO\Projetos\BLAZOR\Blazor-Calculadora\Blazor-Calculadora\obj\Release\net7.0\PubTmp\Out\appsettings.json
+C:\Users\yann_\REPO\Projetos\BLAZOR\Blazor-Calculadora\Blazor-Calculadora\obj\Release\net7.0\PubTmp\Out\Blazor-Calculadora.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Blazor-Calculadora\Blazor-Calculadora\obj\Release\net7.0\PubTmp\Out\Blazor-Calculadora.deps.json
+C:\Users\yann_\REPO\Projetos\BLAZOR\Blazor-Calculadora\Blazor-Calculadora\obj\Release\net7.0\PubTmp\Out\Blazor-Calculadora.runtimeconfig.json
+C:\Users\yann_\REPO\Projetos\BLAZOR\Blazor-Calculadora\Blazor-Calculadora\obj\Release\net7.0\PubTmp\Out\Blazor-Calculadora.pdb

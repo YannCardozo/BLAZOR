@@ -1,115 +1,127 @@
 ﻿@page "/Calculadora"
+@page "/"
 @using System.Data
+@using Microsoft.AspNetCore.Components;
+@using Microsoft.JSInterop;
+@inherits CalculadoraBack;
 
 <h1 class="text-center">Calculadora em Blazor</h1>
 
-@*style="text-align: -webkit-center;"*@
 
-<div id="calculadora-e-lista" style="display: inline-flex;gap: 20px;">
-    @if ((mostralista == false))
-    {
+<div class="Responsividade-desktop"    style="text-align: -webkit-center;">
+    <div id="calculadora-e-lista" style="display: inline-flex;gap: 20px;">
+        @if ((mostralista == false))
+        {
         
-    }
-    else{
-    <div id="lista">
-            <button type="button" class="btn btn-primary" style="margin-bottom: 20px;" @onclick="(() => DeletaLista())">Limpar</button>
-        <h3>Últimas Contas</h3>
-        <ul>
-            @foreach (var conta in historicoContas)
-            {
-                <li>@conta</li>
-            }
-        </ul>
-    </div>
-    }
-    <div id="calculadora-a-direita" style="margin-left: 120px;">
-        <div class="calculator card">
-            <input type="text" class="calculator-screen z-depth-1" value="@input" disabled />
+        }
+        else{
+        <div id="lista">
+                <button type="button" class="btn btn-primary" style="margin-bottom: 20px;" @onclick="(() => DeletaLista())">Limpar</button>
+            <h3>Últimas Contas</h3>
+            <ul>
+                @foreach (var conta in historicoContas)
+                {
+                    <li>@conta</li>
+                }
+            </ul>
+        </div>
+        }
+        <div id="calculadora-a-direita">
+            <div class="calculator card">
+                <input type="text" class="calculator-screen z-depth-1" value="@input" disabled />
 
-            <div class="calculator-keys">
-                <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('+'))">+</button>
-                <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('-'))">-</button>
-                <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('*'))">&times;</button>
-                <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('/'))">&divide;</button>
+                <div class="calculator-keys">
+                    <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('+'))">+</button>
+                    <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('-'))">-</button>
+                    <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('*'))">&times;</button>
+                    <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('/'))">&divide;</button>
 
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(7))">7</button>
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(8))">8</button>
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(9))">9</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(7))">7</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(8))">8</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(9))">9</button>
 
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(4))">4</button>
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(5))">5</button>
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(6))">6</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(4))">4</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(5))">5</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(6))">6</button>
 
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(1))">1</button>
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(2))">2</button>
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(3))">3</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(1))">1</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(2))">2</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(3))">3</button>
 
-                <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(0))">0</button>
-                <button type="button" class="decimal function btn btn-secondary" @onclick="(() => AppendDecimal())">.</button>
-                <button type="button" class="all-clear function btn btn-danger btn-sm" @onclick="(() => Clear())">AC</button>
-                <button type="button" class="equal-sign operator btn btn-default" @onclick="(() => Calculate())" style="background-color: #fff3cd;border-color: #ffeeba;">
-                    =
-                </button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(0))">0</button>
+                    <button type="button" class="decimal function btn btn-secondary" @onclick="(() => AppendDecimal())">.</button>
+                    <button type="button" class="all-clear function btn btn-danger btn-sm" @onclick="(() => Clear())">AC</button>
+                    <button type="button" class="equal-sign operator btn btn-default" @onclick="(() => Calculate())" style="background-color: #fff3cd;border-color: #ffeeba;">
+                        =
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<div class="Responsividade-mobile">
+
+        <div >
+            <div class="calculator card">
+                <input type="text" class="calculator-screen z-depth-1" value="@input" disabled />
+
+                <div class="calculator-keys">
+                    <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('+'))">+</button>
+                    <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('-'))">-</button>
+                    <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('*'))">&times;</button>
+                    <button type="button" class="operator btn btn-info" @onclick="(() => AppendOperator('/'))">&divide;</button>
+
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(7))">7</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(8))">8</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(9))">9</button>
+
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(4))">4</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(5))">5</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(6))">6</button>
+
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(1))">1</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(2))">2</button>
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(3))">3</button>
+
+                    <button type="button" class="btn btn-light waves-effect" @onclick="(() => AppendNumber(0))">0</button>
+                    <button type="button" class="decimal function btn btn-secondary" @onclick="(() => AppendDecimal())">.</button>
+                    <button type="button" class="all-clear function btn btn-danger btn-sm" @onclick="(() => Clear())">AC</button>
+                    <button type="button" class="equal-sign operator btn btn-default" @onclick="(() => Calculate())" style="background-color: #fff3cd;border-color: #ffeeba;">
+                        =
+                    </button>
+                </div>
+            </div>
+        </div>
+    <div id="calculadora-e-lista" style="display: inline-flex;gap: 20px;">
+        @if ((mostralista == false))
+        {
+
+        }
+        else
+        {
+            <div id="lista">
+                <button type="button" class="btn btn-primary" style="margin-bottom: 20px;" @onclick="(() => DeletaLista())">Limpar</button>
+                <h3>Últimas Contas</h3>
+                <ul>
+                    @foreach (var conta in historicoContas)
+                    {
+                        <li>@conta</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 <br />
 <br />
-@code {
-    private string input = "";
-    private string result = null;
-    private bool mostralista = false;
-    private List<string> historicoContas = new List<string>();
-
-
-    private void AppendNumber(int number)
-    {
-
-        input += number.ToString();
-    }
-
-    private void AppendOperator(char op)
-    {
-        input += " " + op + " ";
-    }
-
-    private void AppendDecimal()
-    {
-        if (!input.Contains("."))
-            input += ".";
-    }
-
-    private void Clear()
-    {
-        input = "";
-        result = "";
-        mostralista = true;
-    }
-
-    private void Calculate()
-    {
-        try
-        {
-            result = new DataTable().Compute(input, null).ToString();
-            string resultado = new DataTable().Compute(input, null).ToString();
-            historicoContas.Insert(0, $"{input} = {resultado}");
-            if (historicoContas.Count > 10)
-            {
-                historicoContas.RemoveAt(historicoContas.Count - 1);
-            }
-            input = result;
-            mostralista = true;
-        }
-        catch (Exception)
-        {
-            result = "Error"; // Handle invalid input or calculation error
-        }
-    }
-    private void DeletaLista()
-    {
-        result = "";
-        historicoContas.Clear();
-        mostralista = false;
-    }
-}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c3AuXpe2/reVINkAnsxqgigCs9Ow8qDhGBQhlXNsRZM=",
+  "Hash": "9FxO8PwWfH1kjFGmipGvbdxsgwwhvAT+Tb7gXyoUmhY=",
   "Source": "Blazor-Calculadora",
   "BasePath": "_content/Blazor-Calculadora",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Blazor-Calculadora\\wwwroot",
       "Source": "Blazor-Calculadora",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Blazor-Calculadora.styles.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Blazor-Calculadora.styles.css",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "Blazor-Calculadora.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Blazor-Calculadora.styles.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Blazor-Calculadora.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Blazor-Calculadora.bundle.scp.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Blazor-Calculadora.bundle.scp.css",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "Blazor-Calculadora.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Blazor-Calculadora.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Blazor-Calculadora.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\css\\site.css",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\favicon.png",
       "SourceId": "Blazor-Calculadora",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Blazor-Calculadora\\Blazor-Calculadora\\wwwroot\\",
       "BasePath": "_content/Blazor-Calculadora",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
