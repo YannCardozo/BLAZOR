@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lista de Tarefas Blazor", "Lista de Tarefas Blazor\Lista de Tarefas Blazor.csproj", "{F36F4B95-BC8C-4850-B4D6-EC8F204573C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F36F4B95-BC8C-4850-B4D6-EC8F204573C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36F4B95-BC8C-4850-B4D6-EC8F204573C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36F4B95-BC8C-4850-B4D6-EC8F204573C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36F4B95-BC8C-4850-B4D6-EC8F204573C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4EFED41-4B38-4182-B37D-8BAECEC3AC3C}
+	EndGlobalSection
+EndGlobal

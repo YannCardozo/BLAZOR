@@ -1,0 +1,6 @@
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Hero Crud\BlazorApp1\obj\Debug\net6.0\Hero Crud.csproj.AssemblyReference.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Hero Crud\BlazorApp1\obj\Debug\net6.0\Hero Crud.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Hero Crud\BlazorApp1\obj\Debug\net6.0\Hero Crud.AssemblyInfoInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Hero Crud\BlazorApp1\obj\Debug\net6.0\Hero Crud.AssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Hero Crud\BlazorApp1\obj\Debug\net6.0\Hero Crud.csproj.CoreCompileInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Hero Crud\BlazorApp1\obj\Debug\net6.0\Hero Crud.MvcApplicationPartsAssemblyInfo.cache
