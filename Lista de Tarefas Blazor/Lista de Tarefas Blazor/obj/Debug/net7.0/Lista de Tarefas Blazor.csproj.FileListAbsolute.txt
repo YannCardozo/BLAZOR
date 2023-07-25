@@ -1,0 +1,32 @@
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\bin\Debug\net7.0\appsettings.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\bin\Debug\net7.0\Lista de Tarefas Blazor.staticwebassets.runtime.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\bin\Debug\net7.0\Lista de Tarefas Blazor.exe
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\bin\Debug\net7.0\Lista de Tarefas Blazor.deps.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\bin\Debug\net7.0\Lista de Tarefas Blazor.runtimeconfig.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\bin\Debug\net7.0\Lista de Tarefas Blazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\bin\Debug\net7.0\Lista de Tarefas Blazor.pdb
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.csproj.AssemblyReference.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.AssemblyInfoInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.AssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.csproj.CoreCompileInputs.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.RazorAssemblyInfo.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.RazorAssemblyInfo.cs
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\staticwebassets\msbuild.Lista de Tarefas Blazor.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\staticwebassets\msbuild.build.Lista de Tarefas Blazor.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Lista de Tarefas Blazor.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Lista de Tarefas Blazor.props
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\scopedcss\bundle\Lista de Tarefas Blazor.styles.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\scopedcss\projectbundle\Lista de Tarefas Blazor.bundle.scp.css
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\refint\Lista de Tarefas Blazor.dll
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.pdb
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\Lista de Tarefas Blazor.genruntimeconfig.cache
+C:\Users\Yann S.O\Desktop\REPOSITORIO YANN\BLAZOR\Lista de Tarefas Blazor\Lista de Tarefas Blazor\obj\Debug\net7.0\ref\Lista de Tarefas Blazor.dll

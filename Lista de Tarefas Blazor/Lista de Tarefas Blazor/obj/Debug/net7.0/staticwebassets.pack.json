@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Lista de Tarefas Blazor.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Lista de Tarefas Blazor.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\js\\Model3D.js",
+      "PackagePath": "staticwebassets\\js\\Model3D.js"
+    },
+    {
+      "Id": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\wwwroot\\js\\three.min.js",
+      "PackagePath": "staticwebassets\\js\\three.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Lista de Tarefas Blazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Lista de Tarefas Blazor.props",
+      "PackagePath": "build\\Lista de Tarefas Blazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Lista de Tarefas Blazor.props",
+      "PackagePath": "buildMultiTargeting\\Lista de Tarefas Blazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Lista de Tarefas Blazor.props",
+      "PackagePath": "buildTransitive\\Lista de Tarefas Blazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

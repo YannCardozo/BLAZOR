@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de tarefas Blazor\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor.csproj",
+      "projectUniqueName": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor.csproj",
       "projectName": "Lista de Tarefas Blazor",
-      "projectPath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de tarefas Blazor\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor.csproj",
+      "projectPath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor.csproj",
       "packagesPath": "C:\\Users\\Yann S.O\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de tarefas Blazor\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\obj\\",
+      "outputPath": "C:\\Users\\Yann S.O\\Desktop\\REPOSITORIO YANN\\BLAZOR\\Lista de Tarefas Blazor\\Lista de Tarefas Blazor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

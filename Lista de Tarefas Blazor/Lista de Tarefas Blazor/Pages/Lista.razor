@@ -1,8 +1,23 @@
 ﻿@page "/Lista"
-@inherits ListaBase
 
 <h3>Lista</h3>
 
-@code {
+<h3>Exemplo de modelo 3D usando Blazor e Three.js</h3>
 
+<div id="canvas-container"></div>
+
+@code {
+    public bool firstRender = true;
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (this.firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("loadModel", "/Assets/Mouth.obj", "canvas-container");
+            this.firstRender = false;
+        }
+    }
 }
