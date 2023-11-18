@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JusProcessos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed3511328d8511ede3040edde9b8b86aac474e76")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1102ac8ce0e1ad79666539f228f915a8820cac1")]
 [assembly: System.Reflection.AssemblyProductAttribute("JusProcessos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JusProcessos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

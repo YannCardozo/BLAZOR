@@ -13,6 +13,5 @@ namespace JusProcessos.Data
 
 
         }
-        public DbSet<Thor> Teste { get; set; }
     }
 }
