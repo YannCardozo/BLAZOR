@@ -11,12 +11,14 @@ namespace Justo.Models
         //destinado a codigo do processo de acordo com a numeração do TJ
         //possivelmente pelo cod_processo faremos a distinção se em cada processo ( numeração dele ) , ele não muda.
         public string Cod_processo_TJ { get; set; }
+        public string Nome_cliente { get; set; }
         public string? Nome_autor { get; set; }
         public string? Nome_reu { get; set; }
-        //areas de atuação do processo
-        public List<Tipo_Processo> Tipo_processo { get; set; }
+        //areas de direito do processo
+        public string Tipo_processo { get; set; }
         public string Situacao { get; set; }
         public string Comarca_inicial { get; set; }
+        public string Conteudo_inicial { get; set; }
         //destinado a observações para incluir no processo
         public string? Obs_processo { get; set; }
         public DateTime Data_abertura { get; set; }
@@ -32,7 +34,14 @@ namespace Justo.Models
         //Lisconsorcio clientes será a parte interessada do advogado
         public List<Clientes>? Lisconsorcio_autor { get; set; }
 
-        public List<Advogados> Advogado { get; set; }
+        public List<Advogado> Advogados { get; set; }
+
+
+        //chaves estrangeiras
+
+        public int ClienteId { get; set; }
+        public int AdvogadoId { get; set; }
+        public int ProcessosDetalhesId { get; set; }
 
     }
 }
