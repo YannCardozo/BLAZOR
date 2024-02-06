@@ -7,15 +7,15 @@ namespace Justo.Models
     //entidade destinada a movimentação processual, inserida no banco após novas atualizações.
     public class Processos_Detalhes : EntidadeBase
     {
-        public string Movimentacao_processual { get; set; }
-        public string Julgamento_status { get; set; }
-        public string Data_vencimento_processual { get; set; }
-        public string Conteudo { get; set; }
+        public string Movimentacao_processual_detalhes { get; set; }
+        public string Julgamento_status_detalhes { get; set; }
+        public DateTime Data_vencimento_processual_detalhes { get; set; }
+        public string Conteudo_detalhes { get; set; }
 
         //o que é marcação de data?
-        public string Marcação_de_data { get; set; }
+        public DateTime Marcação_de_data_detalhes { get; set; }
         //Andamento, julgamento, marcação de data, data de vencimento protestual
-        public string Comarca_atual { get; set; }
+        public string Comarca_atual_detalhes { get; set; }
 
 
 

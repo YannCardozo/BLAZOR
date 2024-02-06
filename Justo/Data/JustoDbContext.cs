@@ -17,7 +17,8 @@ namespace Justo.Data
 
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
-
+        public DbSet<Advogado> Advogados { get; set; }
+        public DbSet<Advogado_especialidade> Advogados_Especialidades { get; set; }
         //protected override void OnConfiguring(DbContextOptionsBuilder options)
         //    => options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Justo;Trusted_Connection=True;TrustServerCertificate=true;");
 
