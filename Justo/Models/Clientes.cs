@@ -17,14 +17,14 @@ namespace Justo.Models
 
 
         //pessoais
-        public string? Genero { get; set; }
+        public string Genero { get; set; }
         public DateTime Data_nascimento { get; set; }
         public string? Ocupacao { get; set; }
         public string Nacionalidade { get; set; }
         public string Estado_civil { get; set; }
         public string? Banco { get; set; }
         public string? Agencia_bancaria { get; set; }
-        public string? Telefone_cliente { get; set; }
+        public string Telefone_cliente { get; set; }
         public string? Contato_de_confianca_cliente { get; set; }
         public string Email_cliente { get; set; }
 

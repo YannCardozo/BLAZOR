@@ -7,26 +7,31 @@ namespace Justo.Data
     public class JustoDbContext : DbContext
     {
 
-
-        public JustoDbContext(DbContextOptions<JustoDbContext> options) : base(options)
-        {
-
-
-
-        }
-
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Advogado> Advogados { get; set; }
         public DbSet<Advogado_especialidade> Advogados_Especialidades { get; set; }
-        //protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //    => options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Justo;Trusted_Connection=True;TrustServerCertificate=true;");
 
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //public JustoDbContext(DbContextOptions<JustoDbContext> options) : base(options)
+        //{
+
+
+
+        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Justo;Trusted_Connection=True;TrustServerCertificate=true;");
+            }
+        }
 
-            modelBuilder.ApplyConfiguration(new ClientesMap());
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.HasDefaultSchema("Justo-ADV");
+            builder.ApplyConfiguration(new ClientesMap());
 
             //modelBuilder.Entity<Clientes>()
             //    .HasOne(c => c.Endereco_cliente)
