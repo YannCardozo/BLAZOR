@@ -1,10 +1,11 @@
 ﻿using Justo.Data.Mapping;
 using Justo.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Justo.Data
 {
-    public class JustoDbContext : DbContext
+    public class JustoDbContext : IdentityDbContext
     {
 
         public DbSet<Clientes> Clientes { get; set; }
@@ -32,26 +33,22 @@ namespace Justo.Data
         {
             builder.HasDefaultSchema("Justo-ADV");
             builder.ApplyConfiguration(new ClientesMap());
-
-            //modelBuilder.Entity<Clientes>()
-            //    .HasOne(c => c.Endereco_cliente)
-            //    .WithOne(e => e.Cliente)
-            //    .HasForeignKey<Endereco>(e => e.ClienteId);
+            builder.ApplyConfiguration(new AdvogadoMap());
+            builder.ApplyConfiguration(new SiteContatoMap());
 
 
 
+            //definindo relacionamentos: 
 
-            //    modelBuilder.Entity<Clientes>()
-            //        .HasMany(c => c.Enderecos)
-            //        .WithOne()
-            //        .HasForeignKey(e => e.ClienteId);
+            //um para um
+            builder.Entity<Advogado>()
+                .HasOne(a => a.Advogado_Especialidades)
 
-            //    // Se você quiser uma relação bidirecional, pode adicionar o seguinte:
-            //    modelBuilder.Entity<Endereco>()
-            //        .HasOne(e => e.Cliente)
-            //        .WithMany(c => c.Enderecos)
-            //        .HasForeignKey(e => e.ClienteId);
-            //
+            //muitos para muitos
+
+
+
+
         }
     }
 }

@@ -17,6 +17,8 @@ namespace Justo.Models
         //Andamento, julgamento, marcação de data, data de vencimento protestual
         public string Comarca_atual_detalhes { get; set; }
 
+        public bool Status_Processo_Detalhes { get; set; }
+
 
 
         //chave estrangeira

@@ -17,19 +17,25 @@ namespace Justo.Models
 
 
         //pessoais
-        public string Genero { get; set; }
-        public DateTime Data_nascimento { get; set; }
-        public string? Ocupacao { get; set; }
-        public string Nacionalidade { get; set; }
-        public string Estado_civil { get; set; }
-        public string? Banco { get; set; }
-        public string? Agencia_bancaria { get; set; }
+        public string Genero_cliente { get; set; }
+        public DateTime Data_nascimento_cliente { get; set; }
+        public string? Ocupacao_cliente { get; set; }
+        public string Nacionalidade_cliente { get; set; }
+        public string Estado_civil_cliente { get; set; }
+        public string? Banco_cliente { get; set; }
+        public string? Agencia_bancaria_cliente { get; set; }
         public string Telefone_cliente { get; set; }
         public string? Contato_de_confianca_cliente { get; set; }
         public string Email_cliente { get; set; }
 
+        
+
         //PF ou PJ
         public string Tipo_cliente { get; set; }
+
+
+        //a ideia seria ter  uma tabela Endereco na qual fosse cadastrado todos os enderecos de cada cliente de acordo
+        //com o id da tabela clientes
         public Endereco Endereco_cliente { get; set; }
 
 

@@ -20,9 +20,11 @@ namespace Justo.Data.Mapping
             //entidadebase
 
             builder
+                //precisa do identity? para associar o cliente a  tabela de usuarios login
                 .Property(o => o.Id)
                 .ValueGeneratedOnAdd()
                 .HasColumnName("ID")
+                //.UseIdentityColumn()
                 .HasColumnType("int");
 
             builder
@@ -83,45 +85,45 @@ namespace Justo.Data.Mapping
                 .IsRequired(false);
 
             builder
-                .Property(o => o.Genero)
-                .HasColumnName("Genero")
+                .Property(o => o.Genero_cliente)
+                .HasColumnName("Genero_cliente")
                 .HasColumnType("varchar")
                 .HasMaxLength(13);
 
             builder
-                .Property(o => o.Data_nascimento)
-                .HasColumnName("Data_nascimento")
+                .Property(o => o.Data_nascimento_cliente)
+                .HasColumnName("Data_nascimento_cliente")
                 .HasColumnType("datetime2");
 
             builder
-                .Property(o => o.Ocupacao)
-                .HasColumnName("Ocupacao")
+                .Property(o => o.Ocupacao_cliente)
+                .HasColumnName("Ocupacao_cliente")
                 .HasColumnType("varchar")
                 .HasMaxLength(35)
                 .IsRequired(false);
 
             builder
-                .Property(o => o.Nacionalidade)
-                .HasColumnName("Nacionalidade")
+                .Property(o => o.Nacionalidade_cliente)
+                .HasColumnName("Nacionalidade_cliente")
                 .HasColumnType("varchar")
                 .HasMaxLength(35);
 
             builder
-                .Property(o => o.Estado_civil)
-                .HasColumnName("Estado_civil")
+                .Property(o => o.Estado_civil_cliente)
+                .HasColumnName("Estado_civil_cliente")
                 .HasColumnType("varchar")
                 .HasMaxLength(35);
 
             builder
-                .Property(o => o.Banco)
-                .HasColumnName("Banco")
+                .Property(o => o.Banco_cliente)
+                .HasColumnName("Banco_cliente")
                 .HasColumnType("varchar")
                 .HasMaxLength(35)
                 .IsRequired(false);
 
             builder
-                .Property(o => o.Agencia_bancaria)
-                .HasColumnName("Agencia_bancaria")
+                .Property(o => o.Agencia_bancaria_cliente)
+                .HasColumnName("Agencia_bancaria_cliente")
                 .HasColumnType("varchar")
                 .HasMaxLength(35)
                 .IsRequired(false);
@@ -158,51 +160,12 @@ namespace Justo.Data.Mapping
                 .WithOne()                        // O relacionamento é de um para um (um cliente tem um endereço)
                 .HasForeignKey<Endereco>(e => e.ClienteId);  // Define a chave estrangeira na entidade Endereco
 
-            
-            //chave estrangeira
-            //builder
-            //    .HasOne(o => o.Endereco_cliente)
-            //    .WithOne()
-            //    .HasForeignKey<Endereco>(e => e.ClienteId)
-            //    .IsRequired(false); // Indica que a relação é opcional, ou seja, EnderecoId pode ser nulo
-
-            //builder
-            //    .HasOne(o => o.Processo)
-            //    .WithMany()
-            //    .HasForeignKey(o => o.ProcessoId)
-            //    .IsRequired(false); // Indica que a relação é opcional, ou seja, ProcessoId pode ser nulo
-
-
 
 
 
             //chaves estrangeiras
             //public int EnderecoId { get; set; }
             //public int ProcessoId { get; set; }
-
-
-
-
-
-            // .IsRequired(false);
-
-            //// Propriedades
-            //builder.Property(x => x.)
-            //    .IsRequired()
-            //    .HasColumnName("Name")
-            //    .HasColumnType("NVARCHAR")
-            //    .HasMaxLength(80);
-
-            //builder.Property(x => x.Slug)
-            //    .IsRequired()
-            //    .HasColumnName("Slug")
-            //    .HasColumnType("VARCHAR")
-            //    .HasMaxLength(80);
-
-            //// Índices
-            //builder
-            //    .HasIndex(x => x.Slug, "IX_Category_Slug")
-            //    .IsUnique();
 
 
             //entidadebase
@@ -212,20 +175,20 @@ namespace Justo.Data.Mapping
                 .HasColumnName("data_cadastro")
                 .HasColumnType("datetime2");
 
-        builder
-            .Property(o => o.dataatualizacao)
-                .HasColumnName("data_atualizacao")
-                .HasColumnType("datetime2");
+            builder
+                .Property(o => o.dataatualizacao)
+                    .HasColumnName("data_atualizacao")
+                    .HasColumnType("datetime2");
 
-        builder
-            .Property(o => o.cadastradopor)
-                .HasColumnName("cadastradopor")
-                .HasColumnType("int");
+            builder
+                .Property(o => o.cadastradopor)
+                    .HasColumnName("cadastradopor")
+                    .HasColumnType("int");
 
-        builder
-            .Property(o => o.atualizadopor)
-                .HasColumnName("atualizadopor")
-                .HasColumnType("int");
+            builder
+                .Property(o => o.atualizadopor)
+                    .HasColumnName("atualizadopor")
+                    .HasColumnType("int");
             
         }
     }
