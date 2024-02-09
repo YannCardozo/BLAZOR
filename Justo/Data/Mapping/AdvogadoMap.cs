@@ -68,41 +68,9 @@ namespace Justo.Data.Mapping
                     .HasColumnName("ProcessosId")
                     .HasColumnType("int");
                 builder
-                    .Property(o => o.Advogado_especialidade_Id)
-                    .HasColumnName("Advogado_especialidade_Id")
+                    .Property(o => o.Advogado_especialidade_Completo_Id)
+                    .HasColumnName("Advogado_especialidade_Completo_Id")
                     .HasColumnType("int");
-
-
-
-                //relacionamentos
-
-
-                //// Relacionamento um-para-muitos com Advogado_especialidade
-                builder.HasMany(a => a.Advogado_Especialidades)
-                       .WithOne(e => e.Advogado)
-                       .HasForeignKey(e => e.Advogado_Id)
-                       .IsRequired()
-                       .OnDelete(DeleteBehavior.Cascade);
-
-
-                builder.HasMany(a => a.Advogado_Especialidades)
-                       .WithMany()
-                       .UsingEntity<Advogado_especialidade_completo>(
-                           j => j.ToTable("Advogado_especialidade_completo")
-                                 .HasOne(e => e.Advogado_Especialidades)
-                                 .WithMany()
-                                 .HasForeignKey(e => e.Advogado_especialidade_Id),
-                           j => j.HasOne(e => e.Advogados)
-                                 .WithMany()
-                                 .HasForeignKey(e => e.AdvogadoId)
-                       );
-
-
-
-
-
-
-
 
 
             //entidadebase
@@ -126,6 +94,7 @@ namespace Justo.Data.Mapping
                     .Property(o => o.atualizadopor)
                         .HasColumnName("atualizadopor")
                         .HasColumnType("int");
+
             }
     }
 }

@@ -4,14 +4,15 @@ namespace Justo.Models
 {
     public class Advogado_especialidade
     {
-        public int Advogado_especialidade_Id { get; set; }
+        public int Id { get; set; }
         public string Nome_area_direito { get; set; }
 
 
         //chave estrangeira
-        public int Advogado_Id { get; set; }
+        public int Advogado_especialidade_completo_Id { get; set; }
 
-        public Advogado Advogado { get; set; }
+
+        public ICollection<Advogado_especialidade_completo> Advogados_Especialidades_Completos_ESPEC { get; set; }
 
     }
 }

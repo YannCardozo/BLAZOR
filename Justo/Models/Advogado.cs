@@ -17,11 +17,11 @@ namespace Justo.Models
 
 
         //todo advogado vai ter uma especialidade, 1 advogado pode ter varias especialidades
-        public ICollection<Advogado_especialidade> Advogado_Especialidades { get; set; }
+        public ICollection<Advogado_especialidade_completo> Advogados_Especialidades_Completos_ADV { get; set; }
 
 
         //chave estrangeira
-        public int Advogado_especialidade_Id { get; set; }
+        public int Advogado_especialidade_Completo_Id { get; set; }
         public int ProcessosId { get; set; }
 
         //Advogado vai ter que estar associado com processos também
