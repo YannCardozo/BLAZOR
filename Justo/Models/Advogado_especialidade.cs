@@ -1,18 +1,18 @@
-﻿using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+﻿using Justo.Models.Comuns;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Justo.Models
 {
-    public class Advogado_especialidade
+    public class Advogado_especialidade : EntidadeBase
     {
-        public int Id { get; set; }
         public string Nome_area_direito { get; set; }
 
-
         //chave estrangeira
-        public int Advogado_especialidade_completo_Id { get; set; }
+        public int AdvogadoId { get; set; }
 
+        // Relacionamento com Advogado
+        public Advogado Advogados_FK { get; set; }
 
-        public ICollection<Advogado_especialidade_completo> Advogados_Especialidades_Completos_ESPEC { get; set; }
 
     }
 }

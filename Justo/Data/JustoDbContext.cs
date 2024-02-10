@@ -21,7 +21,6 @@ namespace Justo.Data
         //public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Advogado> Advogados { get; set; }
         public DbSet<Advogado_especialidade> Advogados_Especialidades { get; set; }
-        public DbSet<Advogado_especialidade_completo> Advogados_Especialidades_Completo { get; set; }
         public DbSet<Site_contato> Site_Contatos { get; set; }
         //public DbSet<Arquivos_cliente_upload> Arquivos_Clientes_Uploads { get; set; }
         //public DbSet<Processos> Processos { get; set; }
@@ -50,7 +49,6 @@ namespace Justo.Data
             builder.ApplyConfiguration(new ClientesMap());
             builder.ApplyConfiguration(new AdvogadoMap());
             builder.ApplyConfiguration(new Advogado_especialidadeMap());
-            builder.ApplyConfiguration(new Advogado_especialidade_completoMap());
             builder.ApplyConfiguration(new Site_ContatoMap());
 
 
@@ -58,33 +56,28 @@ namespace Justo.Data
 
             //falta implementar cascade delete nas tabelas em seus relacionamentos
 
-            //um advogado tem muitas especialidades.
+            // Mapeamento da entidade Advogado
             builder.Entity<Advogado>()
-                .HasMany<Advogado_especialidade_completo>(a => a.Advogados_Especialidades_Completos_ADV)
-                .WithOne()
-                .HasForeignKey(ae => ae.AdvogadoId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasMany(a => a.Advogados_Especialidades_FK) // Um advogado pode ter muitas especialidades
+                .WithOne(ae => ae.Advogados_FK) // A especialidade pertence a um único advogado
+                .HasForeignKey(ae => ae.AdvogadoId) // Chave estrangeira para AdvogadoId em Advogado_Especialidade
+                .OnDelete(DeleteBehavior.Cascade); // Opção de exclusão em cascata, se um advogado for excluído, suas especialidades serão excluídas também
 
 
-            //uma especialidade_completo vai ter muitas especialidades.
+            builder.Entity<Advogado>()
+                .HasIndex(ae => ae.Oab)
+                .IsUnique();
+
+            builder.Entity<Advogado>()
+                .HasIndex(ae => ae.cpf)
+                .IsUnique();
+
             builder.Entity<Advogado_especialidade>()
-                .HasMany<Advogado_especialidade_completo>(a => a.Advogados_Especialidades_Completos_ESPEC)
-                .WithOne()
-                .HasForeignKey(ae => ae.Advogado_especialidade_Id)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasOne(ae => ae.Advogados_FK) // Uma especialidade pertence a um único advogado
+                .WithMany(a => a.Advogados_Especialidades_FK) // Um advogado pode ter muitas especialidades
+                .HasForeignKey(ae => ae.AdvogadoId) // Chave estrangeira para AdvogadoId em Advogado_Especialidade
+                .OnDelete(DeleteBehavior.Cascade); // Restringir a exclusão, ou seja, não permitir a exclusão em cascata
 
-            //uma especialidade_completo vai ter muitos advogados
-            builder.Entity<Advogado_especialidade_completo>()
-                .HasMany(ae => ae.Advogados)
-                .WithOne()
-                .HasForeignKey(a => a.Advogado_especialidade_Completo_Id)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            builder.Entity<Advogado_especialidade_completo>()
-                .HasOne<Advogado_especialidade>(ae => ae.Advogado_Especialidades)
-                .WithMany(ae => ae.Advogados_Especialidades_Completos_ESPEC)
-                .HasForeignKey(ae => ae.Advogado_especialidade_Id)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

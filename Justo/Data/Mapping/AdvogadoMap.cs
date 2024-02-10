@@ -67,10 +67,7 @@ namespace Justo.Data.Mapping
                     .Property(o => o.ProcessosId)
                     .HasColumnName("ProcessosId")
                     .HasColumnType("int");
-                builder
-                    .Property(o => o.Advogado_especialidade_Completo_Id)
-                    .HasColumnName("Advogado_especialidade_Completo_Id")
-                    .HasColumnType("int");
+
 
 
             //entidadebase
