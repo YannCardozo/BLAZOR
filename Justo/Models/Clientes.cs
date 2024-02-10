@@ -46,5 +46,6 @@ namespace Justo.Models
         public int EnderecoId { get; set; }
         public int ProcessoId { get; set; }
 
+
     }
 }

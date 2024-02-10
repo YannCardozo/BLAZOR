@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Justo.Data.Mapping
 {
-    public class SiteContatoMap : IEntityTypeConfiguration<Site_contato>
+    public class Site_ContatoMap : IEntityTypeConfiguration<Site_contato>
     {
 
         public void Configure(EntityTypeBuilder<Site_contato> builder)
@@ -68,6 +68,11 @@ namespace Justo.Data.Mapping
                     .HasColumnName("Analisado_contato")
                     .HasColumnType("bit");
 
+            //booleana de decisão para virar cliente ou não
+            builder
+                .Property(o => o.Virar_cliente_contato)
+                    .HasColumnName("Virar_cliente_contato")
+                    .HasColumnType("bit");
 
 
             //entidadebase
