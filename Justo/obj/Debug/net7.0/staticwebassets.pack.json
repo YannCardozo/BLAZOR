@@ -57,6 +57,14 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\images\\Portugal_road_sign_B2.svg.png",
+      "PackagePath": "staticwebassets\\images\\Portugal_road_sign_B2.svg.png"
+    },
+    {
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\images\\icon.svg",
+      "PackagePath": "staticwebassets\\images\\icon.svg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Justo.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

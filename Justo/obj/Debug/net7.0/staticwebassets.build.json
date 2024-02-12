@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PwGTzdbp52yeJl3Tg52/L1kQGq/SJKemaF1cDJrr5uI=",
+  "Hash": "LeBZNxjq4PCP92aHXy2EZqTPDL8xBkHBMELzkt70tCw=",
   "Source": "Justo",
   "BasePath": "_content/Justo",
   "Mode": "Default",
@@ -1440,6 +1440,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\images\\icon.svg",
+      "SourceId": "Justo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\",
+      "BasePath": "_content/Justo",
+      "RelativePath": "images/icon.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icon.svg"
+    },
+    {
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\images\\Portugal_road_sign_B2.svg.png",
+      "SourceId": "Justo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\",
+      "BasePath": "_content/Justo",
+      "RelativePath": "images/Portugal_road_sign_B2.svg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Portugal_road_sign_B2.svg.png"
     }
   ]
 }
