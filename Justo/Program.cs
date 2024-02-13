@@ -30,7 +30,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddScoped<IUserService, UserService>();
-
+builder.Services.AddScoped<IRoleService, RoleService>();
 
 var app = builder.Build();
 

@@ -1,4 +1,4 @@
-﻿using Justo.Models;
+﻿using Justo.Models.Users;
 
 namespace Justo.Data.Services
 {

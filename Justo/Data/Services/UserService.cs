@@ -1,4 +1,4 @@
-﻿using Justo.Models;
+﻿using Justo.Models.Users;
 using System.Data;
 using System.Data.SqlClient;
 

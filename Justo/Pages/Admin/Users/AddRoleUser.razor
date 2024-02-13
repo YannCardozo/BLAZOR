@@ -1,0 +1,141 @@
+﻿@page "/AddRoleUser/{id:guid}"
+@using Justo.Models.Users
+@attribute [Authorize]
+@inject NavigationManager NavigationManager
+@inject IRoleService roleService
+@inject IUserService userService
+@inject IWebHostEnvironment Env
+
+
+
+<h3>Atribui perfil ao usuário</h3>
+<br />
+
+
+<Alerta Exibir="Exibir">
+    <h3>@Mensagem</h3>
+</Alerta>
+
+<form>
+    <div class="row">
+        <div class="col-8">
+            <div class="form-group">
+                <label class="control-label">Id</label>
+                <input class="form-control" @bind="@user.Id" disabled/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Nome</label>
+                <input class="form-control" @bind="@user.UserName" disabled />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input class="form-control" @bind="@user.Email" disabled />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Roles: </label>
+                <select @onchange="RoleSelectionChanged" class="form-control">
+                    @if(roles != null)
+                    {
+                        @foreach(var role in roles)
+                        {
+                            <option value="@role.Id">
+                                @role.Name
+                            </option>
+                        }
+                    }
+                </select>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@updateRole" value="Atribui" />
+            <input type="button" class="btn" @onclick="@Cancel" value="Cancelar" />
+        </div>
+    </div>
+</form>
+
+
+@code {
+    List<Role> roles;
+    User user = new User();
+
+
+    public bool Exibir = false;
+
+
+    [Parameter]
+    public string Mensagem { get; set; }
+
+    [Parameter]
+    public Guid id { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            user = await userService.GetUser(id);
+            await LoadRoles();
+        }
+        catch(Exception ex)
+        {
+            Exibir = true;
+            if(Env.IsDevelopment())
+            {
+                Mensagem = "Erro ao acessar os dados " + ex.StackTrace.ToString() + "\n\n " + ex.Message;
+            }
+            else
+            {
+                Mensagem = "Não foi possível acessar os dados do perfil do usuário";
+            }
+            throw;
+        }
+    }
+
+    private async Task LoadRoles()
+    {
+        roles = await roleService.GetRoles();
+        user.RoleId = roles[0].Id;
+    }
+
+
+    void RoleSelectionChanged(ChangeEventArgs e)
+    {
+        if(Guid.TryParse(e.Value.ToString(), out Guid id))
+        {
+            user.RoleId = id;
+        }
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("users");
+    }
+
+    public async Task updateRole()
+    {
+        try
+        {
+            await userService.UpdateUserRole(id, user);
+            Exibir = true;
+            Mensagem = $"O perfil foi atribuído ao usuário : {user.UserName} com sucesso";
+            //NavigationManager.NavigateTo("users");
+        }
+        catch(Exception ex)
+        {
+            Exibir = true;
+            if (Env.IsDevelopment())
+            {
+                Mensagem = "Erro ao atribuir perfil ao usuário ..." + ex.StackTrace.ToString() + "\n\n " + ex.Message;
+            }
+            else
+            {
+                Mensagem = "Não foi possível atribuir novo perfil ao usuário... Verifique se o perfil já existe.";
+            }
+            throw;
+        }
+    }
+
+}

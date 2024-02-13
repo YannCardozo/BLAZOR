@@ -1,6 +1,7 @@
 ﻿@page "/users"
 @using Justo.Data.Services
-@using Justo.Models
+@using Justo.Models;
+@using Justo.Models.Users
 @attribute [Authorize]
 @inject IUserService userService
 @inject IWebHostEnvironment Env
@@ -45,10 +46,10 @@ else
                     <td>@user.Email</td>
 
                     <td>
-                        <a href="">
+                        <a href="/AddRoleUser/@user.Id">
                             <button class="btn btn-primary">Novo Perfil</button>
                         </a>
-                        <a href="">
+                        <a href="/DeleteUser/@user.Id">
                             <button class="btn btn-primary">Deletar</button>
                         </a>
                     </td>
@@ -84,7 +85,8 @@ else
             }
             else
             {
-                
+                Mensagem = "Não foi possível excluir o usuário";
+
             }
             Console.WriteLine("Erro em Users " + ex.Message);
         }
