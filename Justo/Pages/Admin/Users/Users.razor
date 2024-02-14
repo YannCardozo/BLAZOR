@@ -2,13 +2,17 @@
 @using Justo.Data.Services
 @using Justo.Models;
 @using Justo.Models.Users
+@attribute [Authorize]
 @inject IUserService userService
 @inject IWebHostEnvironment Env
 
 
 
 <h2>Usuários</h2>
-
+<br />
+<a href="/listuserroles">
+    <button class="btn btn-primary">Exibir perfis dos Usuários</button>
+</a>
 
 
 <Alerta Exibir="Exibir">

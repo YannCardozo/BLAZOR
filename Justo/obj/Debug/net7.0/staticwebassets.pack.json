@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\css\\toogleswitch.css",
+      "PackagePath": "staticwebassets\\css\\toogleswitch.css"
+    },
+    {
       "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
@@ -69,20 +73,20 @@
       "PackagePath": "staticwebassets\\images\\roleuser.jpg"
     },
     {
-      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap\\bootstrap.min.js.map"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Justo.Microsoft.AspNetCore.StaticWebAssets.props",

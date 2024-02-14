@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e9U3ykLGc5j8FJicDaQuHhtgb6zG8jvXMXgOz8wHn30=",
+  "Hash": "L97mjA/3XZe9YxVhmlrz+XsRvHNJgal12lvUYTRmYPA=",
   "Source": "Justo",
   "BasePath": "_content/Justo",
   "Mode": "Default",
@@ -1423,6 +1423,25 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\css\\toogleswitch.css",
+      "SourceId": "Justo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\",
+      "BasePath": "_content/Justo",
+      "RelativePath": "css/toogleswitch.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\toogleswitch.css"
+    },
+    {
       "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\favicon.png",
       "SourceId": "Justo",
       "SourceType": "Discovered",
@@ -1499,12 +1518,12 @@
       "OriginalItemSpec": "wwwroot\\images\\roleuser.jpg"
     },
     {
-      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js",
       "SourceId": "Justo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\",
       "BasePath": "_content/Justo",
-      "RelativePath": "js/bootstrap.bundle.min.js",
+      "RelativePath": "js/bootstrap/bootstrap.bundle.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1515,15 +1534,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js"
+      "OriginalItemSpec": "wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js.map",
       "SourceId": "Justo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\",
       "BasePath": "_content/Justo",
-      "RelativePath": "js/bootstrap.bundle.min.js.map",
+      "RelativePath": "js/bootstrap/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1534,15 +1553,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js.map"
+      "OriginalItemSpec": "wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.min.js",
       "SourceId": "Justo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\",
       "BasePath": "_content/Justo",
-      "RelativePath": "js/bootstrap.min.js",
+      "RelativePath": "js/bootstrap/bootstrap.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1553,15 +1572,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js"
+      "OriginalItemSpec": "wwwroot\\js\\bootstrap\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.min.js.map",
       "SourceId": "Justo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\",
       "BasePath": "_content/Justo",
-      "RelativePath": "js/bootstrap.min.js.map",
+      "RelativePath": "js/bootstrap/bootstrap.min.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1572,7 +1591,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\bootstrap.min.js.map"
+      "OriginalItemSpec": "wwwroot\\js\\bootstrap\\bootstrap.min.js.map"
     }
   ]
 }

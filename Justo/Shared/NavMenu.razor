@@ -9,43 +9,41 @@
 
 <div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
     <nav class="flex-column">
-        <div class="nav-item px-3">
+
+@*         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <i class="icones-menu bi bi-house-door-fill"></i>
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
-        </div>
+        </div> *@
         <!--<AuthorizeView Roles="Admin">
             <NavLink class="nav-link" href="AddRoleUser">
                 <span class="oi oi-list" aria-hidden="true"></span> Permissões
             </NavLink>
         </AuthorizeView>
         -->
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/PainelUsuario">
-                <span class="oi oi-list" aria-hidden="true"></span>
-                Painel Usuário
-            </NavLink>
+        <div class="dropdown nav-item px-3">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="icones-menu bi bi-person"></i>
+                <span class="texto-opcoes-menu fonte-mulish-bold">Painel de Usuários</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="/users">
+                        <i class="icones-menu bi bi-arrow-return-right" style="color: black;"></i>
+                        <span class="texto-opcoes-menu text-nowrap" style="color: black;">Usuários</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="/roles">
+                        <i class="icones-menu bi bi-arrow-return-right" style="color: black;"></i>
+                        <span class="texto-opcoes-menu text-nowrap" style="color: black;">Perfis de usuários</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/addroleuser">
-                <span class="oi oi-list" aria-hidden="true"></span> Permissões
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="listuserroles">
-                <span class="oi oi-person" aria-hidden="true"></span> Teste
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="users">
-                <span class="oi oi-person" aria-hidden="true"></span> Painel Usuário
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="roles">
-                <span class="oi oi-document" aria-hidden="true"></span> Perfis
-            </NavLink>
-        </div>
+
+
     </nav>
 </div>
 

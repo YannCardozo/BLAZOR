@@ -7,7 +7,15 @@
 
 
 <h3>Perfis atribuídos ao usuário</h3>
-
+<br />
+<div class="row">
+    <div class="col-6">
+        <a href="/users">
+            <button class="btn btn-primary">retornar a usuários</button>
+        </a>
+    </div>
+</div>
+<br />
 <div class="form-group">
     <select @onchange="UserSelectionChanged" class="form-control">
         @if (users != null)
