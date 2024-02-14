@@ -1,13 +1,18 @@
-﻿using Justo.Models.Users;
+﻿using Justo.Models;
+using Justo.Data.Services;
+using Justo.Data;
+using Justo.Models.Users;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
-namespace Justo.Data.Services
+namespace Justo.Services
 {
     public class UserService : IUserService
     {
         private readonly SqlConnectionConfiguration _configuration;
-
         public UserService(SqlConnectionConfiguration configuration)
         {
             _configuration = configuration;
@@ -18,85 +23,111 @@ namespace Justo.Data.Services
             try
             {
                 List<User> users = new List<User>();
-                using(SqlConnection con = new SqlConnection(_configuration.ConnectionString))
+                using (SqlConnection con = new
+                    SqlConnection(_configuration.ConnectionString))
                 {
-
                     const string query = "select * from dbo.AspNetUsers";
                     SqlCommand cmd = new SqlCommand(query, con)
                     {
                         CommandType = CommandType.Text
                     };
+
                     con.Open();
-                    SqlDataReader reader = await cmd.ExecuteReaderAsync();
-                    while(reader.Read())
+                    SqlDataReader rdr = await cmd.ExecuteReaderAsync();
+                    while (rdr.Read())
                     {
-                        User Usuario = new User
+                        User user = new User
                         {
-                            Id = Guid.Parse(reader["Id"].ToString()),
-                            UserName = reader["Username"].ToString(),
-                            Email = reader["Email"].ToString(),
+                            Id = Guid.Parse(rdr["Id"].ToString()),
+                            UserName = rdr["UserName"].ToString(),
+                            Email = rdr["Email"].ToString(),
                             RoleId = new Guid()
                         };
-
-                        users.Add(Usuario);
+                        users.Add(user);
                     }
                     cmd.Dispose();
                 }
                 return users;
             }
-            catch (SqlException sqlex)
+            catch (Exception)
             {
-                Console.WriteLine(sqlex.Message);
                 throw;
             }
         }
+
         public async Task<User> GetUser(Guid id)
         {
             try
             {
                 User user = new User();
-                using (SqlConnection con = new SqlConnection(_configuration.ConnectionString))
+                using (SqlConnection con =
+                    new SqlConnection(_configuration.ConnectionString))
                 {
-
                     const string query = "select * from dbo.AspNetUsers where Id = @Id";
-                    using(SqlCommand cmd = new SqlCommand(query, con))
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddWithValue("@Id", id);
                         con.Open();
-
-                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                        using (SqlDataReader rdr = await cmd.ExecuteReaderAsync())
                         {
-                            if(reader.Read())
+                            if (rdr.Read())
                             {
-                                user.Id = Guid.Parse(reader["Id"].ToString());
-                                user.UserName = reader["Username"].ToString();
-                                user.Email = reader["Email"].ToString();
+                                user.Id = Guid.Parse(rdr["Id"].ToString());
+                                user.UserName = rdr["UserName"].ToString();
+                                user.Email = rdr["Email"].ToString();
                             }
-
                         }
                     }
                 }
                 return user;
             }
-            catch (SqlException sqlex)
+            catch (Exception)
             {
-                Console.WriteLine(sqlex.Message);
                 throw;
             }
         }
 
+        public async Task<bool> DeleteUser(Guid id)
+        {
+            try
+            {
+                using (SqlConnection con =
+                    new SqlConnection(_configuration.ConnectionString))
+                {
+                    const string query = "delete FROM dbo.AspNetUsers Where Id=@Id";
+                    SqlCommand cmd = new SqlCommand(query, con)
+                    {
+                        CommandType = CommandType.Text,
+                    };
 
+                    cmd.Parameters.AddWithValue("@Id", id);
+
+                    con.Open();
+                    int result = await cmd.ExecuteNonQueryAsync();
+
+                    //con.Close();
+                    cmd.Dispose();
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         public async Task<bool> UpdateUserRole(Guid id, User user)
         {
             try
             {
-
-                using (SqlConnection con = new SqlConnection(_configuration.ConnectionString))
+                using (SqlConnection con =
+                    new SqlConnection(_configuration.ConnectionString))
                 {
+                    const string query = "insert into dbo.AspNetUserRoles " +
+                        "(UserId,RoleId) values(@UserId, @RoleId)";
 
-                    const string query = "insert into dbo.AspNetUsers " + "(UserId,RoleId) values(@UserId, @RoleId)";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.CommandType = CommandType.Text;
@@ -105,46 +136,15 @@ namespace Justo.Data.Services
                         cmd.Parameters.AddWithValue("@RoleId", user.RoleId);
 
                         con.Open();
+                        int result = await cmd.ExecuteNonQueryAsync();
                     }
                 }
                 return true;
             }
-            catch (SqlException sqlex)
+            catch (Exception)
             {
-                Console.WriteLine(sqlex.Message);
                 throw;
             }
         }
-
-
-        public async Task<bool> DeleteUser(Guid id)
-        {
-            try
-            {
-                User user = new User();
-                using (SqlConnection con = new SqlConnection(_configuration.ConnectionString))
-                {
-
-                    const string query = "delete from dbo.AspNetUsers where Id = @Id";
-                    SqlCommand cmd = new SqlCommand(query, con)
-                    {
-                        CommandType = CommandType.Text,
-                    };
-
-                    cmd.Parameters.AddWithValue("@Id", id);
-                    con.Open();
-                    int result_linhas_afetadas =  await cmd.ExecuteNonQueryAsync();
-
-                    cmd.Dispose();
-                }
-                return true;
-            }
-            catch (SqlException sqlex)
-            {
-                Console.WriteLine(sqlex.Message);
-                throw;
-            }
-        }
-
     }
 }

@@ -1,27 +1,25 @@
-﻿@page "/AddRoleUser/{id:guid}"
+﻿@page "/addroleuser/{id:guid}"
 @using Justo.Models.Users
-@attribute [Authorize]
+
 @inject NavigationManager NavigationManager
 @inject IRoleService roleService
 @inject IUserService userService
 @inject IWebHostEnvironment Env
 
 
+<h2>Atribui Perfil ao usuário</h2>
 
-<h3>Atribui perfil ao usuário</h3>
-<br />
-
-
+<br>
 <Alerta Exibir="Exibir">
-    <h3>@Mensagem</h3>
+    <b> @Mensagem</b>
 </Alerta>
 
 <form>
     <div class="row">
-        <div class="col-8">
+        <div class="col-md-8">
             <div class="form-group">
                 <label class="control-label">Id</label>
-                <input class="form-control" @bind="@user.Id" disabled/>
+                <input class="form-control" @bind="@user.Id" disabled />
             </div>
             <div class="form-group">
                 <label class="control-label">Nome</label>
@@ -32,11 +30,11 @@
                 <input class="form-control" @bind="@user.Email" disabled />
             </div>
             <div class="form-group">
-                <label class="control-label">Roles: </label>
+                <label form="categoria">Roles: </label>
                 <select @onchange="RoleSelectionChanged" class="form-control">
-                    @if(roles != null)
+                    @if (roles != null)
                     {
-                        @foreach(var role in roles)
+                        @foreach (var role in roles)
                         {
                             <option value="@role.Id">
                                 @role.Name
@@ -44,13 +42,12 @@
                         }
                     }
                 </select>
-
             </div>
         </div>
     </div>
     <div class="row">
         <div class="form-group">
-            <input type="button" class="btn btn-primary" @onclick="@updateRole" value="Atribui" />
+            <input type="button" class="btn btn-primary" @onclick="@UpdateRole" value="Atribui Perfil ao Usuário" />
             <input type="button" class="btn" @onclick="@Cancel" value="Cancelar" />
         </div>
     </div>
@@ -61,16 +58,12 @@
     List<Role> roles;
     User user = new User();
 
-
-    public bool Exibir = false;
-
-
+    bool Exibir = false;
     [Parameter]
     public string Mensagem { get; set; }
 
     [Parameter]
     public Guid id { get; set; }
-
 
     protected override async Task OnInitializedAsync()
     {
@@ -79,18 +72,18 @@
             user = await userService.GetUser(id);
             await LoadRoles();
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Exibir = true;
-            if(Env.IsDevelopment())
+            if (Env.IsDevelopment())
             {
-                Mensagem = "Erro ao acessar os dados " + ex.StackTrace.ToString() + "\n\n " + ex.Message;
+                Mensagem = "Erro ao acessar os dados ...\n"
+                    + ex.StackTrace.ToString() + "\n\n " + ex.Message;
             }
             else
             {
-                Mensagem = "Não foi possível acessar os dados do perfil do usuário";
+                Mensagem = "Não foi possível ao acessar os dados do perfil do usuário ...";
             }
-            throw;
         }
     }
 
@@ -100,41 +93,40 @@
         user.RoleId = roles[0].Id;
     }
 
-
-    void RoleSelectionChanged(ChangeEventArgs e)
-    {
-        if(Guid.TryParse(e.Value.ToString(), out Guid id))
-        {
-            user.RoleId = id;
-        }
-    }
-
     void Cancel()
     {
         NavigationManager.NavigateTo("users");
     }
 
-    public async Task updateRole()
+    void RoleSelectionChanged(ChangeEventArgs e)
+    {
+        if (Guid.TryParse(e.Value.ToString(), out Guid id))
+        {
+            user.RoleId = id;
+        }
+    }
+
+    public async Task UpdateRole()
     {
         try
         {
             await userService.UpdateUserRole(id, user);
             Exibir = true;
-            Mensagem = $"O perfil foi atribuído ao usuário : {user.UserName} com sucesso";
+            Mensagem = $"O Perfil foi Atribuido ao usuário : {user.UserName} com sucesso";
             //NavigationManager.NavigateTo("users");
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Exibir = true;
             if (Env.IsDevelopment())
             {
-                Mensagem = "Erro ao atribuir perfil ao usuário ..." + ex.StackTrace.ToString() + "\n\n " + ex.Message;
+                Mensagem = "Erro ao atribuir perfil ao usuário...\n"
+                    + ex.StackTrace.ToString() + "\n\n " + ex.Message;
             }
             else
             {
-                Mensagem = "Não foi possível atribuir novo perfil ao usuário... Verifique se o perfil já existe.";
+                Mensagem = "Não foi possível atribuir o novo perfil ao usuário, verifique se o perfil já existe...";
             }
-            throw;
         }
     }
 
