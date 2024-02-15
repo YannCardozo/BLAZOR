@@ -28,7 +28,7 @@ builder.Services.AddDbContext<JustoDbContext>();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    //Aqui adiciona ao projeto a diferenciação dos roles pelo Identity, podendo usar authorizeview roles="seu role"
+    //Aqui adiciona ao projeto a diferenciaï¿½ï¿½o dos roles pelo Identity, podendo usar authorizeview roles="seu role"
     //ou diretamente na pagina @attribute [Authorize(Roles="seu role")]
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
