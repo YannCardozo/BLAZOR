@@ -1,9 +1,17 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿
+
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">Justo</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <AuthorizeView Roles="Admin, Advogado">
+            <div>
+                <img src="/images/senhora-justica.svg" height="45" style="filter:invert()"/>
+            </div>
+        </AuthorizeView>
     </div>
 </div>
 
@@ -16,12 +24,17 @@
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </div> *@
-        <!--<AuthorizeView Roles="Admin">
-            <NavLink class="nav-link" href="AddRoleUser">
-                <span class="oi oi-list" aria-hidden="true"></span> Permissões
+        <AuthorizeView Roles="Admin">
+            <NavLink class="nav-link" href="/Teste">
+                <span class="oi oi-list" aria-hidden="true"></span> TesteADMINLOGADO
             </NavLink>
         </AuthorizeView>
-        -->
+
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Home
+                </NavLink>
+            </div
         <div class="dropdown nav-item px-3">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="icones-menu bi bi-person"></i>
@@ -43,7 +56,6 @@
             </ul>
         </div>
 
-
     </nav>
 </div>
 
@@ -56,4 +68,5 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
+
 }

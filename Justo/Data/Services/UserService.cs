@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Justo.Services
 {
@@ -125,18 +126,33 @@ namespace Justo.Services
                 using (SqlConnection con =
                     new SqlConnection(_configuration.ConnectionString))
                 {
-                    const string query = "insert into dbo.AspNetUserRoles " +
-                        "(UserId,RoleId) values(@UserId, @RoleId)";
+                    //const string query = "insert into dbo.AspNetUserRoles " +
+                    //    "(UserId,RoleId) values(@UserId, @RoleId)";
+                    string query = "IF NOT EXISTS (SELECT 1 FROM dbo.AspNetUserRoles WHERE UserId = @UserId AND RoleId = @RoleId) " +
+                                   "BEGIN " +
+                                   "    INSERT INTO dbo.AspNetUserRoles (UserId, RoleId) VALUES (@UserId, @RoleId) " +
+                                   "END";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.CommandType = CommandType.Text;
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            cmd.CommandType = CommandType.Text;
 
-                        cmd.Parameters.AddWithValue("@UserId", id);
-                        cmd.Parameters.AddWithValue("@RoleId", user.RoleId);
+                            cmd.Parameters.AddWithValue("@UserId", id);
+                            cmd.Parameters.AddWithValue("@RoleId", user.RoleId);
 
-                        con.Open();
-                        int result = await cmd.ExecuteNonQueryAsync();
+                            con.Open();
+                            int result = await cmd.ExecuteNonQueryAsync();
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
+
+
                     }
                 }
                 return true;

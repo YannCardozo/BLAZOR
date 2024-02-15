@@ -73,6 +73,14 @@
       "PackagePath": "staticwebassets\\images\\roleuser.jpg"
     },
     {
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\images\\senhora-justica.png",
+      "PackagePath": "staticwebassets\\images\\senhora-justica.png"
+    },
+    {
+      "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\images\\senhora-justica.svg",
+      "PackagePath": "staticwebassets\\images\\senhora-justica.svg"
+    },
+    {
       "Id": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\wwwroot\\js\\bootstrap\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap\\bootstrap.bundle.min.js"
     },

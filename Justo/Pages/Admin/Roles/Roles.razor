@@ -1,6 +1,6 @@
 ﻿@page "/roles"
 @using Justo.Models.Users
-
+@attribute [Authorize(Roles = "Admin")]
 @inject IRoleService roleService
 @inject IWebHostEnvironment Env
 
