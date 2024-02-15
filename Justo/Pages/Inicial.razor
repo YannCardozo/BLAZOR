@@ -1,0 +1,116 @@
+﻿@page "/"
+@using Justo.Data
+@using Microsoft.AspNetCore.Identity
+@layout LayoutAlternado
+@inject ApplicationDbContext Apll
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject NavigationManager NavigationManager
+
+
+<a href="/home">
+    <button class="btn btn-primary">Entrar Sistema</button>
+</a>
+<div class="login-container">
+    <div class="error">@errorMessage
+    @Teste</div>
+    <form class="login-form">
+        <h1 class="login-header">Justo</h1>
+        <input type="text" @bind="username" placeholder="Usuário" class="login-input" />
+        <input type="password" @bind="password" placeholder="Senha" class="login-input" />
+        <button @onclick="@Login" class="login-button">Entrar</button>
+        <div class="text-center" style="margin-top: 10px;color: #007bff;">
+            Justo 2024
+        </div>
+    </form>
+</div>
+
+<style>
+    /* Estilos CSS */
+    .login-header {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 30px;
+    }
+
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-form {
+        width: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+    }
+
+    .login-input {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #ced4da;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+        .login-input:focus {
+            border-color: #007bff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+    .login-button {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out;
+    }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+
+    .error {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        text-align: center;
+    }
+</style>
+
+@code {
+    private string username;
+    private string password;
+    private string errorMessage;
+    public string Teste = string.Empty;
+    public async Task Login()
+    {
+
+        try
+        {
+            var result = await SignInManager.PasswordSignInAsync(username, password, false, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                NavigationManager.NavigateTo("/home");
+            }
+            else
+            {
+                errorMessage = "Usuário ou senha inválidos.";
+            }
+        }
+        catch(Exception ex)
+        {
+            Teste = "erro :" + ex.Message;
+        }
+
+    }
+
+}

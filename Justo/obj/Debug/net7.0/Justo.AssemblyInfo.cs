@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Justo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f954dbd94dff20f072140849d40a2ff6dd6be9d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5f8fe49089efe9dfdadc7c2251b0ce795820d44")]
 [assembly: System.Reflection.AssemblyProductAttribute("Justo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Justo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

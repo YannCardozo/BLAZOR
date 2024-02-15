@@ -58,20 +58,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcVXNlcnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Pages/Components/DeleteUserModal.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xEZWxldGVVc2VyTW9kYWwucmF6b3I=
+[C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+[C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Shared/Components/Alerta.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcQWxlcnRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Pages/Teste.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdGUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Shared/Alerta.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFsZXJ0YS5yYXpvcg==
+[C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Shared/LayoutAlternado.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExheW91dEFsdGVybmFkby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Shared/LoginDisplay.razor]
@@ -85,6 +81,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Pages/Inicial.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5pY2lhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-pz805hqmfb
 
 [C:/Users/yann_/REPO/Projetos/BLAZOR/Justo/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
