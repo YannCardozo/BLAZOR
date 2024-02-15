@@ -1,0 +1,98 @@
+﻿@page "/users"
+@using Justo.Data.Services
+@using Justo.Models;
+@using Justo.Models.Users
+@attribute [Authorize]
+@inject IUserService userService
+@inject IWebHostEnvironment Env
+
+
+
+<h2>Usuários</h2>
+<br />
+<a href="/listuserroles">
+    <button class="btn btn-primary">Exibir perfis dos Usuários</button>
+</a>
+
+
+<Alerta Exibir="Exibir">
+    <h3>@Mensagem</h3>
+</Alerta>
+
+@if(users == null)
+{
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only"></span>
+        </div>
+    </div>
+
+
+}
+else
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th></th>
+            </tr>        
+        </thead>
+        <tbody>
+            @foreach(var user in users)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+
+                    <td>
+                        <a href="/AddRoleUser/@user.Id">
+                            <button class="btn btn-primary">Novo Perfil</button>
+                        </a>
+                        <a href="/DeleteUser/@user.Id">
+                            <button class="btn btn-primary">Deletar</button>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+
+
+@code {
+    List<User> users;
+    bool Exibir = false;
+
+    [Parameter]
+    public string Mensagem { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            users = await userService.GetUsers();
+        }
+        catch(Exception ex)
+        {
+            Exibir = true;
+            if(Env.IsDevelopment())
+            {
+                Mensagem = "Erro ao acessar os dados ... \n" + ex.StackTrace.ToString();
+            }
+            else
+            {
+                Mensagem = "Não foi possível excluir o usuário";
+
+            }
+            Console.WriteLine("Erro em Users " + ex.Message);
+        }
+    }
+
+}

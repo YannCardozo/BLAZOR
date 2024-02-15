@@ -1,0 +1,73 @@
+﻿@page "/AddRole"
+@using Justo.Models.Users
+@inject NavigationManager NavigationManager
+@inject IRoleService roleService
+
+
+
+<h3>Criar um novo perfil</h3>
+<hr />
+
+
+
+<Alerta Exibir="Exibir">
+    <h3>@Mensagem</h3>
+</Alerta>
+
+<EditForm Model="@role" OnValidSubmit="@ValidSubmit">
+    <DataAnnotationsValidator/>
+    <div class="row">
+        <ValidationMessage For="@(() => role.Name)" />
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Name" class="control-label">Nome</label>
+                <input for="Name" class="form-control mb-3" @bind="@role.Name" placeholder="Informe o nome" />
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Salvar</button>
+                <input type="button" class="btn btn-danger" @onclick="@Cancel" value="Cancela">
+            </div>
+        </div>
+    </div>
+
+</EditForm>
+
+
+
+@code {
+    Role role = new Role();
+    bool Exibir = false;
+
+    [Parameter]
+    public string Mensagem { get; set; }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("roles");
+    }
+    private async Task ValidSubmit()
+    {
+        await CreateRole();
+    }
+
+    protected async Task CreateRole()
+    {
+        bool resultado = await roleService.CreateRole(role);
+        if(!resultado)
+        {
+            Exibir = true;
+            Mensagem = "Já existe Role Cadastrado com este nome     " + role.Name;
+            role.Name = string.Empty;
+        }
+        else
+        {
+            Exibir = true;
+            NavigationManager.NavigateTo("roles");
+        }
+    }
+}

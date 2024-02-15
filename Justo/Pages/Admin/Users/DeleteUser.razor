@@ -1,0 +1,113 @@
+﻿@page "/DeleteUser/{id:guid}"
+@using Justo.Models.Users
+@attribute [Authorize]
+@inject IUserService userService
+@inject IWebHostEnvironment Env
+@inject NavigationManager NavigationManager
+
+<h2>Confirma Exclusão?</h2>
+<p>Deseja realmente deletar este usuário de id: <b>@id</b></p>
+<br />
+<Alerta Exibir="Exibir">
+    <h3>@Mensagem</h3>
+</Alerta>
+
+<div class="col-md-4">
+    <table class="table table-hover">
+        <tr>
+            <td>Nome</td>
+            <td>@user.UserName</td>
+            <td></td>
+        </tr>
+            <tr>
+                <td>Email</td>
+                <td>@user.Email</td>
+            </tr>
+    </table>
+    <div class="form-group">
+        <input type="button" value="Deletar" @onclick="@Delete" class="btn btn-primary"/>
+        <input type="button" value="Cancelar" @onclick="@Cancel" class="btn btn-outline-primary" />
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmação de Exclusão</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Deseja realmente excluir este usuário?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" @onclick="Delete">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+@code {
+
+
+    bool Exibir = false;
+
+    [Parameter]
+    public string Mensagem { get; set; }
+
+    User user = new User();
+
+
+    [Parameter]
+    public Guid id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        user = await userService.GetUser(id);
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("users");
+    }
+
+    protected async Task Delete()
+    {
+        try
+        {
+            await userService.DeleteUser(id);
+            NavigationManager.NavigateTo("users");
+        }
+        catch(Exception ex)
+        {
+            Exibir = true;
+            if (Env.IsDevelopment())
+            {
+                Mensagem = "Erro ao acessar os dados ... \n" + ex.StackTrace.ToString();
+                Console.WriteLine("Erro em Users " + ex.Message);
+            }
+            else
+            {
+                Mensagem = "Não foi possível excluir o usuário";
+
+            }
+
+        }
+    }
+}

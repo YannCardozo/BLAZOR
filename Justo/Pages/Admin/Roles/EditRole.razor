@@ -1,0 +1,98 @@
+﻿@page "/editrole/{id:guid}"
+@using Justo.Models.Users
+@inject NavigationManager NavigationManager
+@inject IRoleService roleService
+@inject IWebHostEnvironment Env
+
+<h3>EditRole</h3>
+
+<Alerta Exibir="Exibir">
+    <h3>@Mensagem</h3>
+</Alerta>
+
+<form>
+    <div class="row">
+        <div class="col-8">
+            <div class="form-group">
+                <label class="control-label">Id</label>
+                <input class="form-control" @bind="@role.Id" disabled />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Nome</label>
+                <input class="form-control" @bind="@role.Name" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input class="form-control" @bind="@role.ConcurrencyStamp" disabled />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@UpdateRole" value="Atribui" />
+            <input type="button" class="btn" @onclick="@Cancel" value="Cancelar" />
+        </div>
+    </div>
+</form>
+
+
+
+
+
+@code {
+    Role role = new Role();
+    bool Exibir = false;
+
+    [Parameter]
+    public Guid id { get; set; }
+
+    [Parameter]
+    public string Mensagem { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            role = await roleService.GetRole(id);
+        }
+        catch(Exception)
+        {
+            Exibir = true;
+            if (Env.IsDevelopment())
+            {
+
+                Mensagem = "Erro ao acessar os dados edit role     " + role.Name;
+            }
+            else
+            {
+                Mensagem = "Não foi possível acessar os dados do perfil do usuário";
+            }
+        }
+    }
+
+    protected async Task UpdateRole()
+    {
+        try
+        {
+            bool resultado = await roleService.EditRole(id, role);
+            if(!resultado)
+            {
+                Exibir = true;
+                Mensagem = "Já existe Role cadastrado com este nome";
+            }
+            else
+            {
+                NavigationManager.NavigateTo("roles");
+            }
+        }
+        catch(Exception ex)
+        {
+            
+        }
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("roles");
+    }
+}
