@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/home"
 @using Justo.Data
 @using Microsoft.AspNetCore.Identity
 @layout LayoutAlternado
@@ -8,6 +8,18 @@
 @inject NavigationManager NavigationManager
 
 
+<AuthorizeView>
+    <Authorized>
+        <h2>
+            Olá , @context.User.Identity.Name!
+
+        </h2>
+        @if (@context.User.IsInRole("Admin"))
+        {
+            <h2>vc é adminnn</h2>
+        }
+    </Authorized>
+</AuthorizeView>
 <a href="/home">
     <button class="btn btn-primary">Entrar Sistema</button>
 </a>

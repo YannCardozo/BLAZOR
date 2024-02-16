@@ -1,20 +1,29 @@
-﻿@page "/home"
+﻿@page "/"
+@attribute [Authorize(Roles = "Admin")]
 @inject IJSRuntime js
 <PageTitle>Home</PageTitle>
-
-<h1>Blazor Server</h1>
-
-
-<br />
-
-<h2>Sistema Justo</h2>
-<div>
-    <img src="/images/senhora-justica.svg" height="155" />
-</div>
+<AuthorizeView>
+    <Authorized>
 
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <h1>Blazor Server</h1>
 
+
+
+    <br />
+
+    <h2>Sistema Justo</h2>
+    <div>
+        <img src="/images/senhora-justica.svg" height="155" />
+    </div>
+
+
+    <SurveyPrompt Title="How is Blazor working for you?" />
+    </Authorized>
+    <NotAuthorized>
+        <h2>Usuário não autorizado</h2>
+    </NotAuthorized>
+</AuthorizeView>
 
 
 @code{

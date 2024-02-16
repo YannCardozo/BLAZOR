@@ -2,7 +2,11 @@
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
             <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <Authorizing>
+                    <h1>Autorizando o usuário</h1>
+                </Authorizing>
                 <NotAuthorized>
+                    <!--falta criar um componente para exibir os não autorizados para substituir essa imagem-->
                     <img src="/images/Portugal_road_sign_B2.svg.png" width="400" height="350"/>
                 </NotAuthorized>
                 <!--<FocusOnNavigate RouteData="@routeData" Selector="h1" />-->

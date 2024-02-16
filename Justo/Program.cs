@@ -1,4 +1,5 @@
 using Justo.Areas.Identity;
+using Justo.Auth;
 using Justo.Data;
 using Justo.Data.Services;
 using Justo.Services;
@@ -20,6 +21,14 @@ var sqlconnectionConfiguration = new SqlConnectionConfiguration(builder.Configur
 builder.Services.AddSingleton(sqlconnectionConfiguration);
 
 
+//pacote de autenticação Microsoft.AspNetCore.Components.Authorization;
+builder.Services.AddAuthorizationCore();
+
+//autenticação blazor marcoratti, customizada.
+//Serviço vai ser criado uma vez sempre que o usuário solicitar algo
+builder.Services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
+
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
@@ -34,7 +43,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
+//builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
 
@@ -58,6 +67,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

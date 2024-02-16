@@ -357,3 +357,8 @@ C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\ru\Microsoft.CodeAnal
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
