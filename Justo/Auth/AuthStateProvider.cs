@@ -9,9 +9,13 @@ namespace Justo.Auth
     {
         public async override Task<AuthenticationState> GetAuthenticationStateAsync()
         {
-            await Task.Delay(4000);
+            await Task.Delay(1000);
             //indicamos se o usuário esta autenticado e os seus claims tb
             //
+
+            //aqui é fornecida a autenticação e autorização para o usuário.
+
+            //o role será atribuído ao usuário e o blazor irá entender como exatamente o perfil.
             var usuario = new ClaimsIdentity(new List<Claim>()
             {
                 new Claim("Chave", "Valor"),

@@ -1,10 +1,6 @@
 ﻿@page "/home"
 @using Justo.Data
-@using Microsoft.AspNetCore.Identity
 @layout LayoutAlternado
-@inject ApplicationDbContext Apll
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
 @inject NavigationManager NavigationManager
 
 
@@ -108,15 +104,7 @@
 
         try
         {
-            var result = await SignInManager.PasswordSignInAsync(username, password, false, lockoutOnFailure: false);
-            if (result.Succeeded)
-            {
-                NavigationManager.NavigateTo("/home");
-            }
-            else
-            {
-                errorMessage = "Usuário ou senha inválidos.";
-            }
+
         }
         catch(Exception ex)
         {

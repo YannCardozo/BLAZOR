@@ -1,10 +1,22 @@
 ﻿@page "/"
-@attribute [Authorize(Roles = "Admin")]
+
 @inject IJSRuntime js
+
+
+
+
 <PageTitle>Home</PageTitle>
-<AuthorizeView>
+<h2>valor : @Teste</h2>
+
+ <AuthorizeView Roles="Admin">
     <Authorized>
 
+        <h1>Olá @context.User.Identity.Name</h1>
+        <br />
+        @if (@context.User.IsInRole("Admin"))
+        {
+            <h1>Olá Admin</h1>
+        }
 
     <h1>Blazor Server</h1>
 
@@ -21,7 +33,7 @@
     <SurveyPrompt Title="How is Blazor working for you?" />
     </Authorized>
     <NotAuthorized>
-        <h2>Usuário não autorizado</h2>
+        <h2>Somente Admin pode ler acima</h2>
     </NotAuthorized>
 </AuthorizeView>
 
@@ -29,6 +41,38 @@
 @code{
     protected override async Task OnAfterRenderAsync(bool firstrender)
     {
+
         await js.InvokeVoidAsync("console.log", ">>> testando");
     }
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationState { get; set; }
+    public string Teste;
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     var authState = await authenticationState;
+    //     var user = authState.User;
+
+
+    //     if(user.Identity.IsAuthenticated)
+    //     {
+    //         Teste = $"Bem vindo {user.Identity.Name}";
+
+    //         Console.WriteLine($"Bem vindo {user.Identity.Name}");
+    //         if(user.IsInRole("Admin"))
+    //         {
+    //             Teste += "  Você faz parte do perfil ADMIN";
+    //             //Console.WriteLine("Você faz parte do perfil ADMIN");
+    //         }
+    //         else
+    //         {
+    //             Teste += "   Usuário não autenticado";
+
+    //             Console.WriteLine("Usuário não autenticado");
+    //         }
+    //     }
+    // }
+
+
 }

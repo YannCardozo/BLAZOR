@@ -9,11 +9,7 @@ C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Justo.pdb
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Humanizer.dll
-C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
-C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
@@ -22,9 +18,6 @@ C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.EntityFrame
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
-C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
@@ -63,7 +56,6 @@ C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\obj\Debug\net7.0\Justo.GeneratedMSBuil
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\obj\Debug\net7.0\Justo.AssemblyInfoInputs.cache
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\obj\Debug\net7.0\Justo.AssemblyInfo.cs
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\obj\Debug\net7.0\Justo.csproj.CoreCompileInputs.cache
-C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\obj\Debug\net7.0\Justo.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\obj\Debug\net7.0\Justo.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\obj\Debug\net7.0\Justo.RazorAssemblyInfo.cache
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\obj\Debug\net7.0\Justo.RazorAssemblyInfo.cs
@@ -362,3 +354,9 @@ C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\yann_\REPO\Projetos\BLAZOR\Justo\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
