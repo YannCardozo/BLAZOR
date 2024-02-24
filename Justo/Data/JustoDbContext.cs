@@ -49,6 +49,7 @@ namespace Justo.Data
             builder.ApplyConfiguration(new AdvogadoMap());
             builder.ApplyConfiguration(new Advogado_especialidadeMap());
             builder.ApplyConfiguration(new Site_ContatoMap());
+            builder.ApplyConfiguration(new Processos_ClientesReuMap());
 
 
             //relacionamentos das tabelas
@@ -71,11 +72,12 @@ namespace Justo.Data
                 .HasIndex(ae => ae.cpf)
                 .IsUnique();
 
-            builder.Entity<Advogado_especialidade>()
-                .HasOne(ae => ae.Advogados_FK) // Uma especialidade pertence a um único advogado
-                .WithMany(a => a.Advogados_Especialidades_FK) // Um advogado pode ter muitas especialidades
-                .HasForeignKey(ae => ae.AdvogadoId) // Chave estrangeira para AdvogadoId em Advogado_Especialidade
-                .OnDelete(DeleteBehavior.Cascade); // Restringir a exclusão, ou seja, não permitir a exclusão em cascata
+            //builder.Entity<Advogado_especialidade>()
+            //    .HasOne(ae => ae.Advogados_FK) // Uma especialidade pertence a um único advogado
+            //    .WithMany(a => a.Advogados_Especialidades_FK) // Um advogado pode ter muitas especialidades
+            //    .HasForeignKey(ae => ae.AdvogadoId) // Chave estrangeira para AdvogadoId em Advogado_Especialidade
+            //    .OnDelete(DeleteBehavior.NoAction);
+            //    //.OnDelete(DeleteBehavior.Cascade); // Restringir a exclusão, ou seja, não permitir a exclusão em cascata
 
         }
     }

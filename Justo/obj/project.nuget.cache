@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PcLiZOqO78VWfmB6wPs4S/TjeUyoQWXyJcxctTHbSn1MUpYTesRNqjF/ZFiAdg5dmh1tVGcz5Q9VtsA6SGe3sA==",
+  "dgSpecHash": "kwqTKs4pbaUEAjAZ4F/6v2LuegpuhFecuByQjA9ZQbDsIfWwsIqJQyIChv7I8XhccypKKiVzfpy4N9M4s4ndKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yann_\\REPO\\Projetos\\BLAZOR\\Justo\\Justo.csproj",
   "expectedPackageFiles": [
@@ -243,7 +243,11 @@
     "C:\\Users\\yann_\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\yann_\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\yann_\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\yann_\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\yann_\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\yann_\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\yann_\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\yann_\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\yann_\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.16\\microsoft.netcore.app.host.win-x64.7.0.16.nupkg.sha512"
   ],
   "logs": []
 }

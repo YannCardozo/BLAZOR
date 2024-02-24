@@ -28,7 +28,7 @@ namespace Justo.Models
         public string? Contato_de_confianca_cliente { get; set; }
         public string Email_cliente { get; set; }
 
-        
+
 
         //PF ou PJ
         public string Tipo_cliente { get; set; }
@@ -39,12 +39,18 @@ namespace Justo.Models
         public Endereco Endereco_cliente { get; set; }
 
 
-         
+
 
 
         //chaves estrangeiras
         public int EnderecoId { get; set; }
         public int ProcessoId { get; set; }
+
+
+
+
+
+        public ICollection<Processos_ClientesReu>? Processos_ClientesReu { get; set; }
 
 
     }

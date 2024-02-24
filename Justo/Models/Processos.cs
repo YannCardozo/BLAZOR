@@ -29,18 +29,20 @@ namespace Justo.Models
 
 
         //Lisconsorcio nao clientes serão a parte oposta aos clientes do advogado
-        public List<Clientes>? Lisconsorcio_reu { get; set; }
+        public ICollection<Processos_ClientesReu>? Processos_ClientesReu { get; set; }
 
         //Lisconsorcio clientes será a parte interessada do advogado
-        public List<Clientes>? Lisconsorcio_autor { get; set; }
+        public ICollection<Clientes>? Lisconsorcio_autor { get; set; }
 
-        public List<Advogado> Advogados { get; set; }
+        public ICollection<Advogado>? Advogados { get; set; }
 
 
         //chaves estrangeiras
 
-        public int ClienteId { get; set; }
-        public int AdvogadoId { get; set; }
+        //public int ClienteId { get; set; }
+        //public int AdvogadoId { get; set; }
+
+
         public int ProcessosDetalhesId { get; set; }
 
     }

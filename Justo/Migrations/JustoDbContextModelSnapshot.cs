@@ -86,6 +86,8 @@ namespace Justo.Migrations
                     b.HasIndex("Oab")
                         .IsUnique();
 
+                    b.HasIndex("ProcessosId");
+
                     b.HasIndex("cpf")
                         .IsUnique();
 
@@ -230,6 +232,9 @@ namespace Justo.Migrations
                     b.Property<int>("ProcessoId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ProcessosId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Procuracao_representacao_legal_cliente")
                         .HasMaxLength(30)
                         .HasColumnType("varchar")
@@ -271,6 +276,8 @@ namespace Justo.Migrations
 
                     b.HasKey("Id")
                         .HasName("PK_Clientes");
+
+                    b.HasIndex("ProcessosId");
 
                     b.ToTable("Clientes", "Justo-ADV");
                 });
@@ -334,6 +341,97 @@ namespace Justo.Migrations
                         .IsUnique();
 
                     b.ToTable("Endereco", "Justo-ADV");
+                });
+
+            modelBuilder.Entity("Justo.Models.Processos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Cod_processo_TJ")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Comarca_inicial")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Conteudo_inicial")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Data_abertura")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Data_fim")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nome_autor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome_cliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome_reu")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Obs_processo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Polo_cliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProcessosDetalhesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Situacao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tipo_processo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("atualizadopor")
+                        .HasColumnType("int");
+
+                    b.Property<int>("cadastradopor")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("dataatualizacao")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("data_atualizacao");
+
+                    b.Property<DateTime>("datacadastro")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("data_cadastro");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Processos", "Justo-ADV");
+                });
+
+            modelBuilder.Entity("Justo.Models.Processos_ClientesReu", b =>
+                {
+                    b.Property<int>("ProcessoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DataEntrouNoProcesso")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ProcessoId", "ClienteId");
+
+                    b.HasIndex("ClienteId");
+
+                    b.ToTable("Processos_ClientesReu", "Justo-ADV");
                 });
 
             modelBuilder.Entity("Justo.Models.Site_contato", b =>
@@ -411,6 +509,15 @@ namespace Justo.Migrations
                     b.ToTable("Site_contato", "Justo-ADV");
                 });
 
+            modelBuilder.Entity("Justo.Models.Advogado", b =>
+                {
+                    b.HasOne("Justo.Models.Processos", null)
+                        .WithMany("Advogados")
+                        .HasForeignKey("ProcessosId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Justo.Models.Advogado_especialidade", b =>
                 {
                     b.HasOne("Justo.Models.Advogado", "Advogados_FK")
@@ -422,6 +529,13 @@ namespace Justo.Migrations
                     b.Navigation("Advogados_FK");
                 });
 
+            modelBuilder.Entity("Justo.Models.Clientes", b =>
+                {
+                    b.HasOne("Justo.Models.Processos", null)
+                        .WithMany("Lisconsorcio_autor")
+                        .HasForeignKey("ProcessosId");
+                });
+
             modelBuilder.Entity("Justo.Models.Endereco", b =>
                 {
                     b.HasOne("Justo.Models.Clientes", null)
@@ -429,6 +543,25 @@ namespace Justo.Migrations
                         .HasForeignKey("Justo.Models.Endereco", "ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Justo.Models.Processos_ClientesReu", b =>
+                {
+                    b.HasOne("Justo.Models.Clientes", "Cliente")
+                        .WithMany("Processos_ClientesReu")
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Justo.Models.Processos", "Processo")
+                        .WithMany("Processos_ClientesReu")
+                        .HasForeignKey("ProcessoId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("Processo");
                 });
 
             modelBuilder.Entity("Justo.Models.Advogado", b =>
@@ -440,6 +573,17 @@ namespace Justo.Migrations
                 {
                     b.Navigation("Endereco_cliente")
                         .IsRequired();
+
+                    b.Navigation("Processos_ClientesReu");
+                });
+
+            modelBuilder.Entity("Justo.Models.Processos", b =>
+                {
+                    b.Navigation("Advogados");
+
+                    b.Navigation("Lisconsorcio_autor");
+
+                    b.Navigation("Processos_ClientesReu");
                 });
 #pragma warning restore 612, 618
         }
