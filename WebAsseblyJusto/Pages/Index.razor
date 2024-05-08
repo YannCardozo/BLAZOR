@@ -15,6 +15,7 @@ else
         @foreach(var teste in _advogados)
             {
                 <p>@teste.CPF</p>
+                <p>@teste.NOME</p>
             }
 }
 
@@ -29,6 +30,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         await Task.Delay(500);
+        //url da api
         _advogados = await Http.GetFromJsonAsync<Advogado[]>("/api/ListarAdvogados");
 
 
