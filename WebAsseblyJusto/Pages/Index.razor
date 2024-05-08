@@ -1,0 +1,37 @@
+﻿@page "/"
+@using WebAsseblyJusto.Pages.models
+@inject HttpClient Http
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+@if(_advogados == null)
+{
+    <p>Carregando</p>
+}
+else
+{
+        @foreach(var teste in _advogados)
+            {
+                <p>@teste.CPF</p>
+            }
+}
+
+@code
+{
+    private Advogado[] _advogados;
+    // protected override void OnInitialized()
+    // {
+    //     Console.WriteLine("Teste");
+    //     base.OnInitialized();
+    // }
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(500);
+        _advogados = await Http.GetFromJsonAsync<Advogado[]>("/api/ListarAdvogados");
+
+
+        base.OnInitialized();
+    }
+}
